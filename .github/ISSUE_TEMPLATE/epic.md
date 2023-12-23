@@ -1,6 +1,6 @@
 ---
 name: epic
-about: set up working enviroment.
+about: Restaurant-Tamariam
 title: ''
 labels: ''
 assignees: ''
@@ -8,11 +8,3 @@ assignees: ''
 ---
 
 As a **role** I can **capability** so that **received benefit**
-
-- Acceptance criteria 1
-
-- Acceptance criteria 2
-
-- Acceptance criteria 3
-
-**Tasks**
