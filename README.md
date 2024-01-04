@@ -14,7 +14,7 @@ Welcome to the Django Restaurant Reservation Site! This web application empowers
   - [Wireframes](#wireframes)
   - [Database Schema](#database-schema)
 -[Deployment](#dployment)
-  - [Heroku Deployment](#heroku-deployment)
+   - [Heroku Deployment](#heroku-deployment)
    - [ElephantSQL Database](#elephantsql-database)
    - [Cloudinary API](#cloudinary-api)
    - [Forking the Repository](#forking-the-repository)
