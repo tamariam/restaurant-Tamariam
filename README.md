@@ -12,6 +12,8 @@ Welcome to the Django Restaurant Reservation Site! This web application empowers
   - [Project-Goalss](#project-goals)
   - [User Stories and Epics](#user-stories-and-epics)
   - [Wireframes](#wireframes)
+  - [Typography and Colors](#typography and colors)
+     - [Typography](#typography)
   - [Database Schema](#database-schema)
 -[Deployment](#dployment)
    - [Heroku Deployment](#heroku-deployment)
@@ -19,6 +21,7 @@ Welcome to the Django Restaurant Reservation Site! This web application empowers
    - [Cloudinary API](#cloudinary-api)
    - [Forking the Repository](#forking-the-repository)
    - [Cloning The Repository](#cloning-the-repository)
+
 
 
 # Planning and Design
@@ -45,6 +48,16 @@ so that I can **quickly set up a robust development environment and kickstart my
 Please check all user storys[here](https://github.com/users/tamariam/projects/9)
 
 ## Wireframes
+
+
+## Typography and Colors
+
+### Typography  
+
+This project incorporates carefully selected Google Fonts to enhance the visual appeal:
+"Montserrat" with sans-serif as secondary font, "Lobster "
+"Dancing Script".
+The mix of these  fonts contributes to a visually engaging and invitind user experience.
 
 ## Database Schema
 
