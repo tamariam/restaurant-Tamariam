@@ -97,4 +97,12 @@ chosen colors:
         font-size:26px;
     }
 
-    } 
+}
+
+ /*styles for Home page */
+
+ .background-image{
+    background-image:url("/static/images/nick-karvounis-Ciqxn7FE4vE-unsplash.jpg");
+    background-size: cover;
+    min-height:70vh;
+ }
