@@ -101,11 +101,11 @@ chosen colors:
 
  /*styles to Home page */
 /* add background image */
- .background-image{
+  .background-image{
     background-image:url("/static/images/background-image.jpg");
     background-size: cover;
     background-position:center;
     width:100vw;;
     height:100vh;
-    background-color: rgba(255, 255, 255,0.9); 
- }
+ } 
+
