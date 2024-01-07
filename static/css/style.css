@@ -7,26 +7,41 @@ chosen colors:
 */
 
 /* Common styles for mobile ,tablet and desktop screens */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+/*give styles for Logo *  */ 
 .navbar-brand{
-    color:Red !important;
+    color:red !important;
     font-size:40px;
     font-family:"Lobster";
     font-weight:600;
     letter-spacing:1px;
 }
 
-.nav-link{
-    color:#ffb703 !important;
+/* give styles to navigation links */
+ .nav-link{
+    color: #ffb703 !important;
     font-family:'Montserrat', sans-serif;
     font-family:700;
-    font-size:18px;
+    font-size:20px;
+} 
 
+.nav-link:hover{
+    color:red !important;
+} 
+
+.footer a{
+    text-decoration:none;
 }
 
 .footer{
     font-family:'Montserrat', sans-serif;
     font-family:700;
 }
+
 .footer h3, .footer span{
     color:#c1121f;
 }
@@ -36,43 +51,50 @@ chosen colors:
     font-size:18px;
 }
 
-
 .folow-us{
-    color:#c1121f !important;
+    color:#c1121f ;
     font-size:20px;
 }
 
-
+/* give styule to  social media icons */
 .fab{
-    color:#ffb703 !important;
+    color:#ffb703 !important ;
     font-size:25px;
     cursor:pointer;
 }
+
 .fab:hover {
-    background-color: red; /* Change this to your desired hover color */
-   
+    background-color:red; 
 }
+/* give style to footer text:for educational purposes only */
 .purpose{
-    color:#fb5607 !important;
-    }
+    color:#fb5607 !important ;
+}
 
 /* styles for Tablet screen size */
-@media only screen and (min-width:767px) {
+ @media only screen and (min-width:767px) {
 .nav-link, .footer p {
     font-size:22px;
-}
+} 
+
 .footer h3{
     font-size:24px;
 }
+
 }
+
+/* styles for Desktop screen */
 @media only screen and (min-width:767px) {
     .navbar-brand{
         letter-spacing:5px;
     }
+
     .nav-link, .footer p {
         font-size:24px;
     }
+
     .footer h3{
         font-size:26px;
     }
-    }
+
+    } 

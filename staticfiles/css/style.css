@@ -7,22 +7,29 @@ chosen colors:
 */
 
 /* Common styles for mobile ,tablet and desktop screens */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
 .navbar-brand{
-    color:Red !important;
+    color:red !important;
     font-size:40px;
     font-family:"Lobster";
     font-weight:600;
     letter-spacing:1px;
 }
-
-.nav-link{
-    color:#ffb703 !important;
+ .nav-link{
+    color: #ffb703 !important;
     font-family:'Montserrat', sans-serif;
     font-family:700;
     font-size:18px;
 
-}
+} 
 
+.nav-link:hover{
+    color:red !important;
+} 
 .footer{
     font-family:'Montserrat', sans-serif;
     font-family:700;
@@ -38,29 +45,29 @@ chosen colors:
 
 
 .folow-us{
-    color:#c1121f !important;
+    color:#c1121f ;
     font-size:20px;
 }
 
 
 .fab{
-    color:#ffb703 !important;
+    color:#ffb703 !important ;
     font-size:25px;
     cursor:pointer;
 }
 .fab:hover {
-    background-color: red; /* Change this to your desired hover color */
+    background-color:red; 
    
 }
 .purpose{
-    color:#fb5607 !important;
+    color:#fb5607 ;
     }
 
 /* styles for Tablet screen size */
-@media only screen and (min-width:767px) {
+ @media only screen and (min-width:767px) {
 .nav-link, .footer p {
     font-size:22px;
-}
+} 
 .footer h3{
     font-size:24px;
 }
@@ -75,4 +82,4 @@ chosen colors:
     .footer h3{
         font-size:26px;
     }
-    }
+    } 
