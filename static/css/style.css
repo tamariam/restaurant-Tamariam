@@ -107,5 +107,11 @@ chosen colors:
     background-position:center;
     width:100vw;;
     height:100vh;
+   
  } 
-
+/* styling main heading */
+.main-heading{
+    color:white;
+    font-family:"Dancing-Script",cursive;
+    font-weight:700;
+}
