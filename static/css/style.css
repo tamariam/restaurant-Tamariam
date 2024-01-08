@@ -111,7 +111,38 @@ chosen colors:
  } 
 /* styling main heading */
 .main-heading{
-    color:white;
+    color:black;
     font-family:"Dancing-Script",cursive;
     font-weight:700;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius:9px;
+   opacity:0.8;
+   width:95vw;
+}
+
+/* give styles to main-message div */
+.main-message {
+    color:white;
+    background-color:black;
+    opacity:0.8;
+    border:3px solid  #c1121f;
+    width:95vw;
+    height:20%;
+    border-radius:9px;
+
+}
+
+.btn{
+    margin-top:10px;
+    width:80%;
+    opacity:0.7;
+}
+.about-us{
+    color:white;
+    background-color:black;
+    opacity:0.8;
+    border:3px solid  #c1121f;
+    width:95vw;
+    height:20%;
+    border-radius:9px;
 }
