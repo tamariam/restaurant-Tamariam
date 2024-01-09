@@ -3,10 +3,14 @@ chosen colors:
 #c1121f red
 #FFD700 golden
 #fb5607 orange;
+#f5cac3;pink
+#f0e6ef; white
 
 */
 
 /* Common styles for mobile ,tablet and desktop screens */
+/* styles for base html:nav and footer  */
+@media only screen and (min-width:375px) {
 * {
     margin: 0;
     padding: 0;
@@ -71,6 +75,75 @@ chosen colors:
     color:#fb5607 !important ;
 }
 
+/* styles for Home page main content */
+/* add background image */
+.background-image{
+    background-image:url("/static/images/background-image.jpg");
+    background-size: cover;
+    background-position:center;
+    width:100vw;;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ } 
+/* styling main heading */
+.main-heading{
+    color:black;
+    font-family:"Dancing-Script",cursive;
+    font-weight:700;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius:9px;
+   opacity:0.8;
+   width:95vw;
+   
+}
+
+/* give styles to main-message div */
+.main-message, .about-us {
+     color:#f0e6ef; 
+    font-family:'Montserrat', sans-serif;
+    font-weight:600;
+    font-size:20px;
+    background-color:black;
+    /* opacity:0.9; */
+    border:2px solid #c1121f; 
+    width:95vw;
+    border-radius:9px;
+ 
+}
+
+.about-us{
+   border:none;
+}
+.about-us-heading{
+    font-size:28px;
+    font-weight:700;
+    color:#c1121f;
+    
+ }
+
+.btn{
+    margin-top:10px;
+    width:80%;
+    opacity:0.9;
+    font-family:'Lobster';
+    Font-weight:700;
+    letter-spacing:2px;
+    color:black;
+    background-color:#ffb703;
+    border-radius:9px;
+    font-size:30px;
+    border: 2px dotted black;
+}
+
+.btn:hover{
+    background-color:#f5cac3;
+    border:none;
+  
+}
+}
 /* styles for Tablet screen size */
  @media only screen and (min-width:767px) {
 .nav-link, .footer p {
@@ -84,7 +157,7 @@ chosen colors:
 }
 
 /* styles for Desktop screen */
-@media only screen and (min-width:767px) {
+@media only screen and (min-width:992px) {
     .navbar-brand{
         letter-spacing:5px;
     }
@@ -96,53 +169,28 @@ chosen colors:
     .footer h3{
         font-size:26px;
     }
-
-}
-
- /*styles to Home page */
-/* add background image */
-  .background-image{
-    background-image:url("/static/images/background-image.jpg");
-    background-size: cover;
-    background-position:center;
-    width:100vw;;
+   .background-image{
     height:100vh;
-   
- } 
-/* styling main heading */
-.main-heading{
-    color:black;
-    font-family:"Dancing-Script",cursive;
-    font-weight:700;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius:9px;
-   opacity:0.8;
-   width:95vw;
-}
+   }
 
-/* give styles to main-message div */
-.main-message {
-    color:white;
-    background-color:black;
-    opacity:0.8;
-    border:3px solid  #c1121f;
-    width:95vw;
-    height:20%;
-    border-radius:9px;
-
-}
-
-.btn{
-    margin-top:10px;
-    width:80%;
-    opacity:0.7;
+   .main-heading{
+    width:80vw;
+   }
+ 
+   .main-message{
+    width:500px;
+    height:250px;
 }
 .about-us{
-    color:white;
-    background-color:black;
-    opacity:0.8;
-    border:3px solid  #c1121f;
-    width:95vw;
-    height:20%;
-    border-radius:9px;
+    width:500px;
+    height:400px;
 }
+   .btn{
+    width:250px;
+   }
+}
+
+
+
+
+
