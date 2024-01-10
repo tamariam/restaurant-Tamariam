@@ -12,17 +12,17 @@ Welcome to the Django Restaurant Reservation Site! This web application empowers
   - [Design Elements](#design-elements)
    - [Typography](#typography)
   - [Database Schema](#database-schema) 
--[Features](#features)
+- [Features](#features)
    - [Navigation Bar](#navigation-bar) 
    - [Homepage](#homepage)
    - [Footer](#footer)
--[Deployment](#dployment)
+- [Deployment](#dployment)
    - [Heroku Deployment](#heroku-deployment)
    - [ElephantSQL Database](#elephantsql-database)
    - [Cloudinary API](#cloudinary-api)
    - [Forking the Repository](#forking-the-repository)
    - [Cloning The Repository](#cloning-the-repository)
--[Testing](#testing)
+- [Testing](#testing)
   - [lighthouse Testing](#lightehouse-testing)
 
 
@@ -86,12 +86,12 @@ Home: Users are directed to the home page, with an 'active' indicator if the cur
 Menu: Navigates to the menu section.
 Book: Provides a link to the booking section.
 
-![Navigation - Desktop](/docs/features/navigation%20desktop.png)
+![Navigation - Desktop](/docs/features/navigation-desktop.png)
 
 <details>
   <summary>Navigation - Mobile (click to expand)</summary>
 
-![Navigation - Mobile](./docs/features/navigation%20mobile.png)
+![Navigation - Mobile](./docs/features/navigation-mobile.png)
 
 </details>
 
@@ -104,12 +104,12 @@ The responsive homepage starts with a captivating background image, setting the 
   - Menu
   - Book a Table
 
-![Homepage-desktop](/docs/features/homepage%20desktop.png)
+![Homepage-desktop](/docs/features/homepage-desktop.png)
 
 <details>
   <summary>Homepage - Tablet (click to expand)</summary>
 
-![Homepage - Tablet](./docs/features/homepage%20tablet.png)
+![Homepage - Tablet](./docs/features/homepage-tablet.png)
 
 </details>
 
@@ -117,7 +117,7 @@ The responsive homepage starts with a captivating background image, setting the 
  <details>
   <summary>Homepage - Mobile (click to expand)</summary>
 
-![Homepage - Tablet](./docs/features/Homepage%20mobile.png)
+![Homepage - Tablet](./docs/features/homepage-tablet.png)
 
 </details>
 
@@ -126,19 +126,19 @@ The responsive homepage starts with a captivating background image, setting the 
 
 The footer of  Tamariam Restaurant website provides essential information and additional ways to connect with restaurnt staff..
 
-![Footer-detktop](/docs/features/footer%20desktop.png)
+![Footer-detktop](/docs/features/footer-desktop.png)
 
  <details>
   <summary>Footer - Tablet (click to expand)</summary>
 
-![Footer - Tablet](./docs/features/footer%20tablet.png)
+![Footer - Tablet](./docs/features/footer-tablet.png)
 
 </details>
 
  <details>
   <summary>Footer - Mobile (click to expand)</summary>
 
-![Footer-Mobile](./docs/features/footer%20mobile.png)
+![Footer-Mobile](./docs/features/footer-mobile.png)
 
 </details>
 
@@ -154,17 +154,17 @@ Chrome DevTools Lighthouse was used to test Performance, Accessibility, Best Pra
  <details>
   <summary>lighthouse-Testing-Desktop (click to expand)</summary>
 
-![Footer-Mobile](./docs/lighthouse%20testing/dekstop%20home.png)
+![Footer-Mobile](./docs/lighthouse%20testing/dekstop-home.png)
 
 </details>
 
 
 - Mobile  Testing with [Chrome DevTools Lighthouse](https://developers.google.com/web/tools/lighthouse)
 
-
+<details>
  <summary>lighthouse-Testing-Mobile (click to expand)</summary>
 
-![Footer-Mobile](./docs/lighthouse%20testing/Mobile%20Homepage.png)
+![Footer-Mobile](./docs/lighthouse%20testing/Mobile-Homepage.png)
 
 </details>
 
