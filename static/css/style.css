@@ -8,6 +8,17 @@ chosen colors:
 
 */
 
+ /* Font Family Classes 
+ Add these classes to elements to apply specific font families  */
+.lobster{
+    font-family:"Lobster";
+}
+.montserrat{
+    font-family:'Montserrat', sans-serif;
+}
+.dancing-script{
+    font-family:"Dancing-Script",cursive;
+}
 /* Common styles for mobile ,tablet and desktop screens */
 /* styles for base html:nav and footer  */
 @media only screen and (min-width:375px) {
@@ -20,7 +31,6 @@ chosen colors:
 .navbar-brand{
     color:red !important;
     font-size:40px;
-    font-family:"Lobster";
     font-weight:600;
     letter-spacing:1px;
 }
@@ -36,13 +46,12 @@ chosen colors:
 .nav-link:hover{
     color:red !important;
 } 
-
+/* style for footer and its elements */
 .footer a{
     text-decoration:none;
 }
 
 .footer{
-    font-family:'Montserrat', sans-serif;
     font-family:700;
 }
 
@@ -60,7 +69,7 @@ chosen colors:
     font-size:20px;
 }
 
-/* give styule to  social media icons */
+/* give style to  social media icons */
 .fab{
     color:#ffb703 !important ;
     font-size:25px;
@@ -91,44 +100,58 @@ chosen colors:
 /* styling main heading */
 .main-heading{
     color:black;
-    font-family:"Dancing-Script",cursive;
     font-weight:700;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius:9px;
    opacity:0.8;
    width:95vw;
-   
+   display:inline-block;
 }
 
-/* give styles to main-message div */
+.main-heading span{
+    color:#c1121f;
+    background-color: black;
+    border-radius:9px;
+   padding:0 4px 0 4px;
+    display:block;
+    padding:4px 0;
+} 
+
+/* give styles to main-message and about us  */
 .main-message, .about-us {
-     color:#f0e6ef; 
-    font-family:'Montserrat', sans-serif;
+     color:white; 
     font-weight:600;
     font-size:20px;
-    background-color:black;
-    /* opacity:0.9; */
-    border:2px solid #c1121f; 
-    width:95vw;
+     width:95vw;
     border-radius:9px;
- 
+ }
+
+.main-message{
+    background-color:Red;
+    opacity:0.9;  
 }
 
 .about-us{
-   border:none;
+    background-color:black;
+    opacity:0.9;  
+    border:2px solid red;
 }
+
+.about-us-text{
+    margin-bottom:10px;
+}
+
 .about-us-heading{
     font-size:28px;
     font-weight:700;
     color:#c1121f;
-    
- }
+}
 
+/* styles fot buttons */
 .btn{
     margin-top:10px;
     width:80%;
     opacity:0.9;
-    font-family:'Lobster';
     Font-weight:700;
     letter-spacing:2px;
     color:black;
@@ -141,9 +164,10 @@ chosen colors:
 .btn:hover{
     background-color:#f5cac3;
     border:none;
-  
 }
+
 }
+
 /* styles for Tablet screen size */
  @media only screen and (min-width:767px) {
 .nav-link, .footer p {
@@ -169,21 +193,25 @@ chosen colors:
     .footer h3{
         font-size:26px;
     }
+
    .background-image{
     height:100vh;
    }
 
    .main-heading{
-    width:80vw;
-   }
+    width:60vw;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+   } 
  
    .main-message{
     width:500px;
     height:250px;
 }
+
 .about-us{
     width:500px;
-    height:400px;
+    height:330px;
 }
    .btn{
     width:250px;
