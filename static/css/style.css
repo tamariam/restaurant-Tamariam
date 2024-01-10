@@ -11,13 +11,13 @@ chosen colors:
  /* Font Family Classes 
  Add these classes to elements to apply specific font families  */
 .lobster{
-    font-family:"Lobster";
+    font-family:"Lobster", cursive;
 }
 .montserrat{
     font-family:'Montserrat', sans-serif;
 }
 .dancing-script{
-    font-family:"Dancing-Script",cursive;
+    font-family:"Dancing-Script",cursive, sans-serif;
 }
 
 /* Common styles for mobile ,tablet and desktop screens */
@@ -100,22 +100,23 @@ chosen colors:
  } 
 /* styling main heading */
 .main-heading{
-    color:black;
+    color:black; 
+    font-size:30px;
     font-weight:700;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.6);
     border-radius:9px;
-   opacity:0.8;
-   width:95vw;
-   display:inline-block;
+    opacity:0.8;
+    width:95vw;
+    display:inline-block;
 }
 
 .main-heading span{
     color:#c1121f;
-    background-color: black;
     border-radius:9px;
-   padding:0 4px 0 4px;
+    background-color: black;
     display:block;
-    padding:4px 0;
+    width:95%;
+    margin:auto;
 } 
 
 /* give styles to main-message and about us  */
@@ -125,10 +126,10 @@ chosen colors:
     font-size:20px;
      width:95vw;
     border-radius:9px;
- }
+}
 
 .main-message{
-    background-color:Red;
+    background-color:#c1121f;
     opacity:0.9;  
 }
 
@@ -203,11 +204,15 @@ chosen colors:
     width:60vw;
     letter-spacing: 5px;
     margin-bottom: 20px;
+    font-size:38px;
    } 
  
+   .main-heading span{
+    font-size:42px;
+   }
    .main-message{
     width:500px;
-    height:250px;
+    height:230px;
 }
 
 .about-us{

@@ -11,13 +11,13 @@ chosen colors:
  /* Font Family Classes 
  Add these classes to elements to apply specific font families  */
 .lobster{
-    font-family:"Lobster";
+    font-family:"Lobster", cursive;
 }
 .montserrat{
     font-family:'Montserrat', sans-serif;
 }
 .dancing-script{
-    font-family:"Dancing-Script",cursive;
+    font-family:"Dancing-Script",cursive, sans-serif;
 }
 
 /* Common styles for mobile ,tablet and desktop screens */
@@ -113,7 +113,6 @@ chosen colors:
     color:#c1121f;
     background-color: black;
     border-radius:9px;
-   padding:0 4px 0 4px;
     display:block;
     padding:4px 0;
 } 
@@ -125,6 +124,7 @@ chosen colors:
     font-size:20px;
      width:95vw;
     border-radius:9px;
+    
  }
 
 .main-message{
@@ -207,7 +207,7 @@ chosen colors:
  
    .main-message{
     width:500px;
-    height:250px;
+    height:230px;
 }
 
 .about-us{
