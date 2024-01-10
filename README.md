@@ -10,7 +10,7 @@ Welcome to the Django Restaurant Reservation Site! This web application empowers
   - [User Stories and Epics](#user-stories-and-epics)
   - [Wireframes](#wireframes)
   - [Design Elements](#design-elements)
-     - [Typography](#typography)
+   - [Typography](#typography)
   - [Database Schema](#database-schema) 
 -[Features](#features)
    - [Navigation Bar](#navigation-bar) 
@@ -45,6 +45,9 @@ Presented below is a compilation of completed and closed user stories for this p
 so that I can **quickly set up a robust development environment and kickstart my web projects with confidence**..
    - As a developer, my goal is to **establish a secure environment for managing confidential configuration variables**., so that **sensitive information remains confidential, allowing me to uphold the privacy of critical data within the system**.
    - As a developer I want to **deploy the website on Heroku** so that i can **test its functionality in a live environment and make the completed site accessible to the public**.
+
+- Epic- User Experience
+ - [As a site user I want to **navigate through landing page** so that **i can easily access various sections**]
 
 Please check all user storys[here](https://github.com/users/tamariam/projects/9)
 
@@ -84,7 +87,7 @@ Book: Provides a link to the booking section.
 ![Navigation - Desktop](/docs/features/navigation%20desktop.png)
 
 <details>
-  <summary>Homepage - Mobile (click to expand)</summary>
+  <summary>Navigation - Mobile (click to expand)</summary>
 
 ![Navigation - Mobile](./docs/features/navigation%20mobile.png)
 
