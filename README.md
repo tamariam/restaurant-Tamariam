@@ -22,6 +22,8 @@ Welcome to the Django Restaurant Reservation Site! This web application empowers
    - [Cloudinary API](#cloudinary-api)
    - [Forking the Repository](#forking-the-repository)
    - [Cloning The Repository](#cloning-the-repository)
+-[Testing](#testing)
+  - [lighthouse Testing](#lightehouse-testing)
 
 
 
@@ -141,7 +143,30 @@ The footer of  Tamariam Restaurant website provides essential information and ad
 </details>
 
 
+# Testing 
 
+## Lighthouse testing
+
+Chrome DevTools Lighthouse was used to test Performance, Accessibility, Best Practices and SEO.
+- Desktop  Testing with [Chrome DevTools Lighthouse](https://developers.google.com/web/tools/lighthouse)
+
+
+ <details>
+  <summary>lighthouse-Testing-Desktop (click to expand)</summary>
+
+![Footer-Mobile](./docs/lighthouse%20testing/dekstop%20home.png)
+
+</details>
+
+
+- Mobile  Testing with [Chrome DevTools Lighthouse](https://developers.google.com/web/tools/lighthouse)
+
+
+ <summary>lighthouse-Testing-Mobile (click to expand)</summary>
+
+![Footer-Mobile](./docs/lighthouse%20testing/Mobile%20Homepage.png)
+
+</details>
 
 
 # Deployment
