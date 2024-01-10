@@ -19,6 +19,7 @@ chosen colors:
 .dancing-script{
     font-family:"Dancing-Script",cursive;
 }
+
 /* Common styles for mobile ,tablet and desktop screens */
 /* styles for base html:nav and footer  */
 @media only screen and (min-width:375px) {
@@ -87,7 +88,7 @@ chosen colors:
 /* styles for Home page main content */
 /* add background image */
 .background-image{
-    background-image:url("/static/images/background-image.jpg");
+    background-image:url("/static/images/background-image.avif");
     background-size: cover;
     background-position:center;
     width:100vw;;
