@@ -1,6 +1,3 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)   
-
-
 # Restaurant Tamariam
 
 Welcome to the Django Restaurant Reservation Site! This web application empowers users to explore our restaurant's delightful menu and seamlessly make reservations online. Built on Django, a high-level Python web framework, this project aims to provide a comprehensive solution for managing restaurant reservations while offering an exceptional user experience.Please check live Url here ![link](https://tamariamrestaurant-d81c96b3d785.herokuapp.com/)
@@ -12,9 +9,13 @@ Welcome to the Django Restaurant Reservation Site! This web application empowers
   - [Project-Goalss](#project-goals)
   - [User Stories and Epics](#user-stories-and-epics)
   - [Wireframes](#wireframes)
-  - [Typography and Colors](#typography and colors)
+  - [Design Elements](#design-elements)
      - [Typography](#typography)
-  - [Database Schema](#database-schema)
+  - [Database Schema](#database-schema) 
+-[Features](#features)
+   - [Navigation Bar](#navigation-bar) 
+   - [Homepage](#homepage)
+   - [Footer](#footer)
 -[Deployment](#dployment)
    - [Heroku Deployment](#heroku-deployment)
    - [ElephantSQL Database](#elephantsql-database)
@@ -50,7 +51,7 @@ Please check all user storys[here](https://github.com/users/tamariam/projects/9)
 ## Wireframes
 
 
-## Typography and Colors
+## Design Elements
 
 ### Typography  
 
@@ -60,6 +61,84 @@ This project incorporates carefully selected Google Fonts to enhance the visual 
 The mix of these  fonts contributes to a visually engaging and invitind user experience.
 
 ## Database Schema
+
+
+# Features
+
+## Navigation Bar
+
+The project showcases a modern and responsive navigation bar,designed with bootstrap, enhancing user experience across various devices. Key features of the navigation bar include:
+
+- Navbar Brand:
+ - A centered brand link, titled "Tamariam," serves as a clickable link to the home page, ensuring a clear and prominent identity.
+Navbar Toggler:
+
+- A responsive toggle button is incorporated for smaller screens, enabling easy access to navigation links on mobile devices.
+Navigation Links:
+
+The navigation links consist of:
+Home: Users are directed to the home page, with an 'active' indicator if the current page is the home page.
+Menu: Navigates to the menu section.
+Book: Provides a link to the booking section.
+
+![Navigation - Desktop](/docs/features/navigation%20desktop.png)
+
+<details>
+  <summary>Homepage - Mobile (click to expand)</summary>
+
+![Navigation - Mobile](./docs/features/navigation%20mobile.png)
+
+</details>
+
+
+## Homepage
+The responsive homepage starts with a captivating background image, setting the mood for a delightful dining experience.
+- the homepage includes essential information about the restaurant. This ensures that visitors not only enjoy the aesthetics but also gather key details about what makes place special.
+- To enhance user experience, two prominent buttons are strategically placed:
+
+  - Menu
+  - Book a Table
+
+![Homepage-desktop](/docs/features/homepage%20desktop.png)
+
+<details>
+  <summary>Homepage - Tablet (click to expand)</summary>
+
+![Homepage - Tablet](./docs/features/homepage%20tablet.png)
+
+</details>
+
+
+ <details>
+  <summary>Homepage - Mobile (click to expand)</summary>
+
+![Homepage - Tablet](./docs/features/Homepage%20mobile.png)
+
+</details>
+
+
+## Footer
+
+The footer of  Tamariam Restaurant website provides essential information and additional ways to connect with restaurnt staff..
+
+![Footer-detktop](/docs/features/footer%20desktop.png)
+
+ <details>
+  <summary>Footer - Tablet (click to expand)</summary>
+
+![Footer - Tablet](./docs/features/footer%20tablet.png)
+
+</details>
+
+ <details>
+  <summary>Footer - Mobile (click to expand)</summary>
+
+![Footer-Mobile](./docs/features/footer%20mobile.png)
+
+</details>
+
+
+
 
 
 # Deployment
