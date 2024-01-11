@@ -56,6 +56,10 @@ INSTALLED_APPS = [
     'home',
 ]
 
+
+# Django site and authentication settings
+
+
 SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
@@ -131,6 +135,8 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+# inform Django not to expect email verification.
 
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
