@@ -180,6 +180,9 @@ chosen colors:
     font-size:24px;
 }
 
+.fab{
+    font-size:38px;
+}
 }
 
 /* styles for Desktop screen */
@@ -221,6 +224,9 @@ chosen colors:
 }
    .btn{
     width:250px;
+   }
+   .fab{
+    font-size:40px;
    }
 }
 
