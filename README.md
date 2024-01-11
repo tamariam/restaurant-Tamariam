@@ -78,9 +78,6 @@ Please check all user storys[here](https://github.com/users/tamariam/projects/9)
 </details>
 
 
-
-
-
 ## Design Elements
 
 ### Typography  
