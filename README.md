@@ -23,7 +23,7 @@ Welcome to the Django Restaurant Reservation Site! This web application empowers
    - [Forking the Repository](#forking-the-repository)
    - [Cloning The Repository](#cloning-the-repository)
 - [Testing](#testing)
-  - [lighthouse Testing](#lightehouse-testing)
+  - [lighthouse Testing](#lighthouse-testing)
 
 
 
@@ -49,11 +49,36 @@ so that I can **quickly set up a robust development environment and kickstart my
    - As a developer I want to **deploy the website on Heroku** so that i can **test its functionality in a live environment and make the completed site accessible to the public**.
 
 - Epic- User Experience
- - [As a site user I want to **navigate through landing page** so that **i can easily access various sections**]
+   - As a site user I want to **navigate through landing page** so that **i can easily access various sections**]
 
 Please check all user storys[here](https://github.com/users/tamariam/projects/9)
 
 ## Wireframes
+ I used [Balsamique](https://balsamiq.com/) to create wireframes for my project.These were adapted and improved upon throughout the development process. Here are the wireframes for the main pages:
+
+ <details>
+  <summary>Homepage - Desktop (click to expand)</summary>
+
+![Homepage - Desktop](/docs/wireframes/homepage-wireframe.png)
+
+</details>
+
+<details>
+  <summary>Homepage - Tablet (click to expand)</summary>
+
+![Homepage - Tablet](/docs/wireframes/Homepage-Tablet.png)
+
+</details>
+
+<details>
+  <summary>Homepage - Mobile (click to expand)</summary>
+
+![Homepage - Mobile](/docs/wireframes/Homepage-mobile.png)
+
+</details>
+
+
+
 
 
 ## Design Elements
@@ -154,7 +179,7 @@ Chrome DevTools Lighthouse was used to test Performance, Accessibility, Best Pra
  <details>
   <summary>lighthouse-Testing-Desktop (click to expand)</summary>
 
-![Footer-Mobile](./docs/lighthouse%20testing/dekstop-home.png)
+![Footer-Mobile](./docs/testing/lighthouse/dekstop-home.png)
 
 </details>
 
@@ -164,7 +189,7 @@ Chrome DevTools Lighthouse was used to test Performance, Accessibility, Best Pra
 <details>
  <summary>lighthouse-Testing-Mobile (click to expand)</summary>
 
-![Footer-Mobile](./docs/lighthouse%20testing/Mobile-Homepage.png)
+![Footer-Mobile](./docs/testing/lighthouse/Mobile-Homepage.png)
 
 </details>
 
