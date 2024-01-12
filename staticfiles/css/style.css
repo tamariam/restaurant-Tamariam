@@ -167,6 +167,14 @@ chosen colors:
     background-color:#f5cac3;
     border:none;
 }
+/* give styles to form elements */
+
+.form-heading{
+    font-size:30px;
+    font-weight:700;
+    color:red;
+
+}
 
 }
 
@@ -180,6 +188,9 @@ chosen colors:
     font-size:24px;
 }
 
+.fab{
+    font-size:38px;
+}
 }
 
 /* styles for Desktop screen */
@@ -221,6 +232,9 @@ chosen colors:
 }
    .btn{
     width:250px;
+   }
+   .fab{
+    font-size:40px;
    }
 }
 
