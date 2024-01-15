@@ -171,6 +171,7 @@ chosen colors:
 .login-container{
     background-color: #f5cac3;
 }
+
 .form-heading{
     font-size:30px;
     font-weight:700;
@@ -187,16 +188,22 @@ chosen colors:
     font-weight:700;
 }
 
+.sign-in{
+    text-decoration: none;
+    font-size:20px;
+    font-weight:700;
+}
+
+
 form{
-    height:50vh;
-    padding-top:20px;
+    padding:20px 0;
     border-radius:9px;
 }
-form label{
+ form label{
 font-size:20px;
 font-weight:600;
 text-align:Center;
-}
+} 
 #id_login{
     font-size:18px;
   text-align:Center;
@@ -206,11 +213,11 @@ text-align:Center;
     font-size:18px;
     text-align:Center;
 }
-form input{
+ form input{
     border-radius:9px;
     padding:5px 0;
     outline:none;
-}
+} 
 form input:hover{
     border:2px solid red;;
 }
@@ -248,17 +255,13 @@ form button{
     font-size:38px;
 }
 .login-container{
+    padding-bottom:10px;
     height:90%;
     margin-top:15px;
     border:1px solid black;
     border-radius:9px;
 }
-.logout-container{
-    width:500px;
-    height:50%;
-    border:1px solid black;
-    margin-top:40px;
-}
+
 }
 
 /* styles for Desktop screen */

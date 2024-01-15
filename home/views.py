@@ -5,3 +5,7 @@ from django.shortcuts import render
 
 def home_page(request):
     return render(request, 'home/index.html', {'home_url': 'home_page'})
+
+
+def profile_page(request):
+   return render(request, 'home/userprofile.html', {'profile_url': 'profile_page'})

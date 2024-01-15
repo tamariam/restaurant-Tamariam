@@ -3,6 +3,7 @@
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
+{% url 'profile_page' as profile_url %}
 
 <!DOCTYPE html>
 <html class="h-100" lang="en">
@@ -52,9 +53,12 @@
               </li>
               {% if user.is_authenticated %}
                <!-- Display logout link when the user is authenticated -->
-                <li class="nav-item">
+               <li class="nav-item">
+                <a class="nav-link {% if request.path == profile_url %}active{% endif %}" aria-current="page" href="{% url 'profile_page' %}">Profile</a>
+              </li> 
+                 <li class="nav-item">
                   <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
-                </li>
+                </li> 
                 {% else %}
                 <!-- Display registration and login links when the user is not authenticated -->
                 <li class="nav-item">
