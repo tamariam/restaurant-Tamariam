@@ -41,12 +41,11 @@ class CustomProfileUpdateForm(UserChangeForm):
     email = forms.EmailField(max_length=30, label='Email', required=True)
 
     class Meta:
-        model = User  # Use the default User model
+        model = User 
         fields = ['username', 'first_name', 'last_name', 'email']
     
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        # Remove the help text about raw passwords
         self.fields.pop('password', None)
 
     def save(self, commit=True):
@@ -59,3 +58,5 @@ class CustomProfileUpdateForm(UserChangeForm):
         if commit:
             user.save()
         return user
+
+
