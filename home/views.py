@@ -8,4 +8,5 @@ def home_page(request):
 
 
 def profile_page(request):
-   return render(request, 'home/userprofile.html', {'profile_url': 'profile_page'})
+    return render(request, 'home/user_profile.html', {'profile_url': 'profile_page'})
+ 

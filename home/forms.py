@@ -12,6 +12,12 @@ class CustomSignupForm(SignupForm):
     last_name = forms.CharField(max_length=30, label='Last Name')
     email = forms.EmailField(max_length=30, label='Email', required=True)
 
+    def clean_email(self):
+        email = self.cleaned_data.get('email')
+        if not email:
+            raise forms.ValidationError("This field is required.")
+        return email
+        
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         # Set new label for the email field
