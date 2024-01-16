@@ -153,6 +153,11 @@ ACCOUNT_FORMS = {
 'signup': 'home.forms.CustomSignupForm',
 }
 
+# message storage
+
+
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
