@@ -1,6 +1,6 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render, redirect
 from django.contrib import messages
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
 from .forms import CustomProfileUpdateForm
 
 
@@ -13,7 +13,7 @@ def home_page(request):
 
 def profile_page(request):
     return render(request, 'home/user_profile.html', {'profile_url': 'profile_page'})
-    
+
 
 def update_user(request):
     user = request.user
@@ -22,14 +22,12 @@ def update_user(request):
         form = CustomProfileUpdateForm(request.POST, instance=user)
         if form.is_valid():
             form.save()
-            messages.add_message(request, messages.SUCCESS,
-            'Profile updated succesfully')
-    
+            messages.add_message(request, messages.SUCCESS, 'Profile updated succesfully')
             return redirect('profile_page')
         else:
             messages.warning(request, "Profile update failed. Please correct the errors below.")
     else:
-        form = CustomProfileUpdateForm(instance=user)  
+        form = CustomProfileUpdateForm(instance=user)
 
     return render(request, "home/update_profile.html", {'form': form})
 
@@ -45,5 +43,4 @@ def account_delete(request):
             return redirect('home')
         else:
             messages.error(request, 'You can only delete your own account.')
-    
     return render(request, "home/delete_account.html")

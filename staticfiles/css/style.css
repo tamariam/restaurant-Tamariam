@@ -168,15 +168,78 @@ chosen colors:
     border:none;
 }
 /* give styles to form elements */
+.login-container{
+    background-color: #f5cac3;
+}
 
 .form-heading{
     font-size:30px;
     font-weight:700;
-    color:red;
-
+}
+.form-text{
+    font-size:18px;
+    font-weight:600;
+     width:90%; 
+    color:black;
+}
+.sign-up{
+    text-decoration: none;
+    font-size:20px;
+    font-weight:700;
 }
 
+.sign-in{
+    text-decoration: none;
+    font-size:20px;
+    font-weight:700;
 }
+
+
+form{
+    padding:20px 0;
+    border-radius:9px;
+}
+ form label{
+font-size:20px;
+font-weight:600;
+text-align:Center;
+} 
+#id_login{
+    font-size:18px;
+  text-align:Center;
+}
+
+#id_password{
+    font-size:18px;
+    text-align:Center;
+}
+ form input{
+    border-radius:9px;
+    padding:5px 0;
+    outline:none;
+} 
+form input:hover{
+    border:2px solid red;;
+}
+
+form button{
+    border:none;
+    text-align:Center;
+    width:200px;
+    padding:10px 0;
+    background-color: #c1121f;
+    color:white;
+    font-size:20px;
+    font-weight:700;
+    border-radius:9px;
+}
+
+.password{
+    text-decoration: none;
+    font-size:19px;
+    font-weight:700;
+}
+
 
 /* styles for Tablet screen size */
  @media only screen and (min-width:767px) {
@@ -191,6 +254,14 @@ chosen colors:
 .fab{
     font-size:38px;
 }
+.login-container{
+    padding-bottom:10px;
+    height:90%;
+    margin-top:15px;
+    border:1px solid black;
+    border-radius:9px;
+}
+
 }
 
 /* styles for Desktop screen */
@@ -235,6 +306,9 @@ chosen colors:
    }
    .fab{
     font-size:40px;
+   }
+   .login-container{
+    width:720px;
    }
 }
 

@@ -1,7 +1,7 @@
 from django import forms
 from allauth.account.forms import SignupForm
 from django.contrib.auth.forms import UserChangeForm
-from django.contrib.auth.models import User  
+from django.contrib.auth.models import User
 
 '''
 This is a custom signup form that extends the base SignupForm.
@@ -19,7 +19,7 @@ class CustomSignupForm(SignupForm):
         if not email:
             raise forms.ValidationError("This field is required.")
         return email
-        
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         # Set new label for the email field
@@ -34,6 +34,12 @@ class CustomSignupForm(SignupForm):
         return user
 
 
+'''
+This is a custom profileupdate form that extends the base UserChangeForm.this form gives ability to
+updating user profiles, excluding the password field, and saving the changes to the database when necessary.
+It adds fields for first name, last name, and modifies the email field.
+'''
+
 class CustomProfileUpdateForm(UserChangeForm):
     username = forms.CharField(max_length=30, label='Username')
     first_name = forms.CharField(max_length=30, label='First Name')
@@ -41,9 +47,9 @@ class CustomProfileUpdateForm(UserChangeForm):
     email = forms.EmailField(max_length=30, label='Email', required=True)
 
     class Meta:
-        model = User 
+        model = User
         fields = ['username', 'first_name', 'last_name', 'email']
-    
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields.pop('password', None)
@@ -54,9 +60,7 @@ class CustomProfileUpdateForm(UserChangeForm):
         user.first_name = self.cleaned_data['first_name']
         user.last_name = self.cleaned_data['last_name']
         user.email = self.cleaned_data['email']
-        
+
         if commit:
             user.save()
         return user
-
-
