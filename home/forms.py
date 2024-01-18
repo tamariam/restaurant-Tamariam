@@ -12,18 +12,13 @@ It adds fields for first name, last name, and modifies the email field.
 class CustomSignupForm(SignupForm):
     first_name = forms.CharField(max_length=30, label='First Name')
     last_name = forms.CharField(max_length=30, label='Last Name')
-    email = forms.EmailField(max_length=30, label='Email', required=True)
-
-    def clean_email(self):
-        email = self.cleaned_data.get('email')
-        if not email:
-            raise forms.ValidationError("This field is required.")
-        return email
+    email = forms.EmailField(max_length=30, label='Email')
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         # Set new label for the email field
-        self.fields['email'].label = 'Email *'
+        self.fields['email'].required = True
+        self.fields['email'].label = 'Email'
 
     def save(self, request):
         user = super(CustomSignupForm, self).save(request)
@@ -39,6 +34,7 @@ This is a custom profileupdate form that extends the base UserChangeForm.this fo
 updating user profiles, excluding the password field, and saving the changes to the database when necessary.
 It adds fields for first name, last name, and modifies the email field.
 '''
+
 
 class CustomProfileUpdateForm(UserChangeForm):
     username = forms.CharField(max_length=30, label='Username')
