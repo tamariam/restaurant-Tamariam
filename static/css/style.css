@@ -157,7 +157,7 @@ chosen colors:
     Font-weight:700;
     letter-spacing:2px;
     color:black;
-    background-color:#ffb703;
+    background-color:#ffb703; 
     border-radius:9px;
     font-size:30px;
     border: 2px dotted black;
@@ -166,6 +166,7 @@ chosen colors:
 .btn:hover{
     background-color:#f5cac3;
     border:none;
+    
 }
 /* give styles to form elements */
 .login-container{
@@ -224,7 +225,7 @@ form input:hover{
 
 form button{
     border:none;
-    text-align:Center;
+    text-align:center;
     width:150px;
     padding:10px 0;
     background-color: #c1121f;
@@ -235,17 +236,18 @@ form button{
 }
 
 /* / give style to user-profile buttons */
-
 .btn-link{
     text-decoration:none;
     text-align:Center;
-    width:160px;
+    width:200px;
     padding:5px;
     font-size:20px;
     font-weight:700;
     border-radius:9px;
     color:black;
+    
 }
+
 
 .btn-link:hover{
     color:white;
@@ -352,8 +354,4 @@ form button,.btn-link{
     width:200px;
    }
 }
-
-
-
-
-
+}
