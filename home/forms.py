@@ -40,7 +40,7 @@ class CustomProfileUpdateForm(UserChangeForm):
     username = forms.CharField(max_length=30, label='Username')
     first_name = forms.CharField(max_length=30, label='First Name')
     last_name = forms.CharField(max_length=30, label='Last Name')
-    email = forms.EmailField(max_length=30, label='Email', required=True)
+    email = forms.EmailField(max_length=30, label='Email')
 
     class Meta:
         model = User
@@ -49,6 +49,7 @@ class CustomProfileUpdateForm(UserChangeForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields.pop('password', None)
+        self.fields['email'].required = True
 
     def save(self, commit=True):
         user = self.instance

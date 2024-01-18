@@ -3,15 +3,19 @@
 
 {% block content %}
 <div class="container-fluid">
-    <div class="row">
-   <h2> hello {{user}}</h2>
-    <h3>Here is your details:</h3>
-    <p>username:{{user.username}}</p>
-<p> email:{{user.email}}</p>
-<a href="{% url 'update_page' %}" class="btn btn-secondary">Update profile</a>
-<a href="{% url 'account_delete_page' %}" class="btn btn-secondary">Delete account</a>
-       </section>
-             </main>
+    <div class="row  d-flex justify-content-center align-items-center mt-3 montserrat">
+        <div class="col-md-4">
+   <h2 class="text-center"> Hello {{user.first_name}} {{user.last_name}}!</h2>
+    <h3 class="text-center user-details">Here is your details:</h3>
+    <hr>
+    <p class="user-text text-center "><span>Username:</span> {{ user.username }}</p>
+    <p class="center user-text  text-center"><span>Email:</span> {{ user.email }}</p>
+  
+<div class="d-flex justify-content-center">
+<a href="{% url 'update_page' %}" class=" btn-danger btn-link m-2" >Update profile</a>
+<a href="{% url 'account_delete_page' %}" class="btn-warning btn-link m-2">Delete account</a>
+       </div>
+       </div>
              </div>
             </div>
         </div>
