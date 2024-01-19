@@ -157,7 +157,7 @@ chosen colors:
     Font-weight:700;
     letter-spacing:2px;
     color:black;
-    background-color:#ffb703;
+    background-color:#ffb703; 
     border-radius:9px;
     font-size:30px;
     border: 2px dotted black;
@@ -166,6 +166,7 @@ chosen colors:
 .btn:hover{
     background-color:#f5cac3;
     border:none;
+    
 }
 /* give styles to form elements */
 .login-container{
@@ -222,23 +223,56 @@ form input:hover{
     border:2px solid red;;
 }
 
-form button{
+/* form button{
     border:none;
-    text-align:Center;
-    width:200px;
+    text-align:center;
+    width:150px;
     padding:10px 0;
     background-color: #c1121f;
     color:white;
     font-size:20px;
     font-weight:700;
     border-radius:9px;
+} */
+
+/* / give style to user-profile buttons */
+.btn-link{
+    text-decoration:none;
+    text-align:Center;
+    width:200px;
+    padding:5px;
+    font-size:20px;
+    font-weight:700;
+    border-radius:9px;
+    color:black;
+    
 }
 
+
+.btn-link:hover{
+    color:white;
+}
 .password{
     text-decoration: none;
     font-size:19px;
     font-weight:700;
 }
+/* style for user-profile  */
+.user-details{
+    color:#c1121f;
+    font-weight:600;
+}
+.user-text{
+    font-size:18px;
+    font-weight:600;
+    
+}  
+.user-text span{
+    font-weight:700;
+    font-size:20px;
+    color:#c1121f;
+}
+
 
 
 /* styles for Tablet screen size */
@@ -260,6 +294,12 @@ form button{
     margin-top:15px;
     border:1px solid black;
     border-radius:9px;
+}
+form button,.btn-link{
+    width:180px;
+}
+.btn-link{
+    padding:10px;
 }
 
 }
@@ -310,9 +350,8 @@ form button{
    .login-container{
     width:720px;
    }
+   form button{
+    width:200px;
+   }
 }
-
-
-
-
-
+}
