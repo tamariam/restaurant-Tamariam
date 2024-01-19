@@ -23,9 +23,10 @@
     <!-- {{ form.as_p}} -->
     
    {{ form|crispy }}
-    <button type="submit" class="btn">Save</button>
+    <button type="submit" class="btn-success rounded p-2">Save</button>
     
-  <a class="btn" href="{% url 'profile_page' %}">{% trans "cancel"%}</a>
+  <!-- <a class="btn" href="{% url 'profile_page' %}">{% trans "cancel"%}</a> -->
+  <button onclick="window.history.back();" class="btn-danger rounded p-2" type="button">Cancel</button>
 </form>
 </div>
     </div> 
