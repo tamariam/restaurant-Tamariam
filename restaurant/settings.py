@@ -146,10 +146,8 @@ AUTH_PASSWORD_VALIDATORS = [
 # inform Django not to expect email verification.
 
 
-
-
 ACCOUNT_FORMS = {
-'signup': 'home.forms.CustomSignupForm',
+ 'signup': 'home.forms.CustomSignupForm',
 }
 
 # message storage
@@ -187,7 +185,6 @@ EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 # EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_PASSWORD")
 
 
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
@@ -197,5 +194,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 
-ACCOUNT_CHANGE_PASSWORD_REDIRECT_URL = 'profile_page'
+
 

@@ -50,7 +50,6 @@ def account_delete(request):
             messages.error(request, 'You can only delete your own account.')
     return render(request, "home/delete_account.html")
 
-
     def form_valid(self, form):
         response = super().form_valid(form)
         messages.success(self.request, 'Password changed successfully.')
