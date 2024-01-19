@@ -12,14 +12,14 @@
 <p class="form-text text-center">{% trans 'Are you sure you want to sign out?' %}</p>
 <div class="d-flex justify-content-center">
   <form class="text-center" method="get" action="{% url 'home' %}">
-    <button type="submit" class="m-2  btn-warning">{% trans 'Home' %}</button>
+    <button type="submit" class="m-2  btn-warning rounded p-2">{% trans 'Home' %}</button>
   </form>
 <form class="text-center" method="post" action="{% url 'account_logout' %}">
   {% csrf_token %}
   {% if redirect_field_value %}
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
   {% endif %}
-  <button type="submit" class="m-2 btn-danger ">{% trans 'Sign Out' %}</button>
+  <button type="submit" class="m-2 btn-danger rounded p-2 ">{% trans 'Sign Out' %}</button>
  </form>
  
 </div>
