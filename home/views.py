@@ -2,9 +2,12 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 # from django.contrib.auth.models import User
 from .forms import CustomProfileUpdateForm
+from allauth.account.views import PasswordChangeView 
+from django.urls import reverse_lazy
 
 
-
+class CustomPasswordChangeView(PasswordChangeView):
+    success_url = reverse_lazy('profile_page')
 # Create your views here.
 
 
@@ -23,7 +26,8 @@ def update_user(request):
         form = CustomProfileUpdateForm(request.POST, instance=user)
         if form.is_valid():
             form.save()
-            messages.add_message(request, messages.SUCCESS, 'Profile updated succesfully')
+            # messages.add_message(request, messages.SUCCESS, 'Profile updated succesfully')
+            messages.success(request, ('Account updated successfully'))
             return redirect('profile_page')
         else:
             messages.warning(request, "Profile update failed. Please correct the errors below.")
@@ -45,3 +49,14 @@ def account_delete(request):
         else:
             messages.error(request, 'You can only delete your own account.')
     return render(request, "home/delete_account.html")
+
+
+    def form_valid(self, form):
+        response = super().form_valid(form)
+        messages.success(self.request, 'Password changed successfully.')
+        return response
+
+
+
+
+
