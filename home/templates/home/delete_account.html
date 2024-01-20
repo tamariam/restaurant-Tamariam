@@ -9,7 +9,6 @@
   <form method="post" action="{% url 'account_delete_page' %}">
     {% csrf_token %}
     <button type="submit" class="m-2 btn-danger rounded p-2  p-2">Confirm</button>
-    <!-- <a class="m-2 btn -2" href="{% url 'profile_page' %}">{% trans 'Cancel'%}</a> -->
     <button onclick="window.history.back();" class="btn-success p-2" type="button">Cancel</button>
     </form>
     </div>
