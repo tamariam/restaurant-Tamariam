@@ -49,7 +49,12 @@ so that I can **quickly set up a robust development environment and kickstart my
    - As a developer I want to **deploy the website on Heroku** so that i can **test its functionality in a live environment and make the completed site accessible to the public**.
 
 - Epic- User Experience
-   - As a site user I want to **navigate through landing page** so that **i can easily access various sections**]
+   - As a **site user** I want to **navigate through landing page** so that **i can easily access various sections**
+   - As a **user** I can **register my account** so that I can **log in and log out** in my account.
+   - As a **user** I can **login or logout** from my account so that i **can use all features of site.**
+   - As a **logged in user** I can **view my details** so that i can **review and manage my personal information.**
+   - As a **logged in user** I can **change my account details** so that i can **keep my personal info up to date.**
+   - As a **logged in user** I can **change my password** so that I can **keep my account secure.**
 
 Please check all user storys[here](https://github.com/users/tamariam/projects/9)
 
