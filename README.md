@@ -16,6 +16,7 @@ Welcome to the Django Restaurant Reservation Site! This web application empowers
    - [Navigation Bar](#navigation-bar) 
    - [Homepage](#homepage)
    - [Footer](#footer)
+   - [Account Managament](#account-managament)
 - [Deployment](#dployment)
    - [Heroku Deployment](#heroku-deployment)
    - [ElephantSQL Database](#elephantsql-database)
@@ -123,6 +124,7 @@ Book: Provides a link to the booking section.
 </details>
 
 
+
 ## Homepage
 The responsive homepage starts with a captivating background image, setting the mood for a delightful dining experience.
 - the homepage includes essential information about the restaurant. This ensures that visitors not only enjoy the aesthetics but also gather key details about what makes place special.
@@ -168,6 +170,69 @@ The footer of  Tamariam Restaurant website provides essential information and ad
 ![Footer-Mobile](./docs/features/footer-mobile.png)
 
 </details>
+
+
+## Account Managment
+In my project, I utilized Django Allauth to implement a user-friendly and well-designed account management system.
+
+ - Sign Up
+A first-time visitor to the page will observe a registration button positioned at the top right of the navigation bar. Upon clicking this button, the user will be taken to the sign-up page. After filling out the required forms and clicking the sign-up button, the user will have successfully registered.
+
+
+![SIgnUp](/docs/features/signup.png)
+
+ - Login 
+  A registered user can log in to the page by clicking on the login button in the navigation menu. The user only needs to enter their username and password.
+
+![login](/docs/features/login.png)
+
+ Once logged in, a message will be displayed on the page to confirm that user is logged in.
+  
+![login-message](/docs/features/login-alert.png)
+
+- logout
+When a user is already logged in, they can access the logout option in the navigation menu. Upon clicking this option, the user will be prompted to confirm if they wish to log out. If the user confirms, they will be logged out, and an appropriate message will be displayed on the page to confirm that the user has been successfully logged out.
+
+
+![logaut](/docs/features/logout.png)
+![logout-message](/docs/features/logout-alert.png)
+
+- Update  Profile
+Registered users have the ability to update their profile details by selecting the appropriate option from the profile page.When a user opts to modify their account, a form pre-filled with their existing information is presented. After submitting the updated details, the user's account is successfully modified.
+
+![update-profile](/docs/features/update-profile.png)
+
+
+After the profile is updated, a relevant message will be displayed on the page.
+
+
+![update-message](/docs/features/update-alert.png)
+
+- Change password 
+
+
+Logged-in users also have the option to change their passwords if they wish. A link to facilitate password changes is provided on the update profile page. Upon clicking the link, users will be redirected to the change password page. After entering their current password, confirming the new one, and clicking the "Change Password" button, the password will be updated, and a relevant message will be displayed.
+
+
+![change-password](/docs/features/change-password.png)
+![update-message](/docs/features/changepassword-alert.png) 
+
+- Delete account
+
+Registered users have the option to delete their accounts at any time directly from the profile page by clicking the "Delete Account" button. Upon clicking, they will receive a warning indicating that confirming deletion will result in the loss of all their data. Users can either change their minds and click "Cancel" or, if they confirm deletion, their account will be permanently deleted.
+
+
+![update-message](/docs/features/delete-account.png) 
+![update-message](/docs/features/delete-alert.png) 
+
+
+
+
+
+
+
+
+
 
 
 # Testing 
