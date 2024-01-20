@@ -223,18 +223,6 @@ form input:hover{
     border:2px solid red;;
 }
 
-/* form button{
-    border:none;
-    text-align:center;
-    width:150px;
-    padding:10px 0;
-    background-color: #c1121f;
-    color:white;
-    font-size:20px;
-    font-weight:700;
-    border-radius:9px;
-} */
-
 /* / give style to user-profile buttons */
 .btn-link{
     text-decoration:none;
@@ -248,7 +236,6 @@ form input:hover{
     
 }
 
-
 .btn-link:hover{
     color:white;
 }
@@ -257,23 +244,23 @@ form input:hover{
     font-size:19px;
     font-weight:700;
 }
+
 /* style for user-profile  */
 .user-details{
     color:#c1121f;
     font-weight:600;
 }
+
 .user-text{
     font-size:18px;
     font-weight:600;
-    
 }  
+
 .user-text span{
     font-weight:700;
     font-size:20px;
     color:#c1121f;
 }
-
-
 
 /* styles for Tablet screen size */
  @media only screen and (min-width:767px) {
@@ -288,6 +275,7 @@ form input:hover{
 .fab{
     font-size:38px;
 }
+
 .login-container{
     padding-bottom:10px;
     height:90%;
@@ -295,14 +283,15 @@ form input:hover{
     border:1px solid black;
     border-radius:9px;
 }
+
 form button,.btn-link{
     width:180px;
 }
+
 .btn-link{
     padding:10px;
 }
-
-}
+ }
 
 /* styles for Desktop screen */
 @media only screen and (min-width:992px) {
