@@ -174,9 +174,9 @@ Chrome DevTools Lighthouse was used to test Performance, Accessibility, Best Pra
 
 
  <details>
-  <summary>lighthouse-Testing-Desktop (click to expand)</summary>
+  <summary>lighthouse-Testing--Home-Desktop (click to expand)</summary>
 
-![Footer-Mobile](./docs/testing/lighthouse/dekstop-home.png)
+![Footer-Desktop](./docs/testing/lighthouse/dekstop-home.png)
 
 </details>
 
@@ -184,11 +184,102 @@ Chrome DevTools Lighthouse was used to test Performance, Accessibility, Best Pra
 - Mobile  Testing with [Chrome DevTools Lighthouse](https://developers.google.com/web/tools/lighthouse)
 
 <details>
- <summary>lighthouse-Testing-Mobile (click to expand)</summary>
+ <summary>lighthouse-Testing-Home-Mobile (click to expand)</summary>
 
 ![Footer-Mobile](./docs/testing/lighthouse/Mobile-Homepage.png)
 
 </details>
+
+
+### Account authentication testing with lighthouse:
+
+<details>
+  <summary>lighthouse-Testing-SignUp-Desktop (click to expand)</summary>
+
+![Signup-Desktop](./docs/testing/lighthouse/signup-desktop.png)
+
+</details>
+
+<details>
+  <summary>lighthouse-Testing-SignUp-Mobile (click to expand)</summary>
+
+![Signup-Mobile](./docs/testing/lighthouse/signup-mobile.png)
+
+</details>
+
+<details>
+  <summary>lighthouse-Testing-Login-Mobile (click to expand)</summary>
+
+![Login-Mobile](./docs/testing/lighthouse/login-mobile.png)
+
+</details>
+
+<details>
+  <summary>lighthouse-Testing-Login-Desktop (click to expand)</summary>
+
+![Login-Desktop](./docs/testing/lighthouse/login-desktop.png)
+
+</details>
+
+<details>
+  <summary>lighthouse-Testing-Logout-Desktop (click to expand)</summary>
+
+![Logout-Desktop](./docs/testing/lighthouse/logout-desktop.png)
+
+</details>
+
+<details>
+  <summary>lighthouse-Testing-Logout-Mobile (click to expand)</summary>
+
+![Logout-Mobile](./docs/testing/lighthouse/logout-mobile.png)
+
+</details>
+
+<details>
+  <summary>lighthouse-Testing-Update-profile-Mobile (click to expand)</summary>
+
+![Update-Profile-Mobile](./docs/testing/lighthouse/updateprofile-mobile.png)
+
+</details>
+
+<details>
+  <summary>lighthouse-Testing-Logout-Desktop (click to expand)</summary>
+
+![Logout-Desktop](./docs/testing/lighthouse/updateprofile-desktop.png)
+
+</details>
+
+<details>
+  <summary>lighthouse-Testing-Change-Password-Mobile (click to expand)</summary>
+
+![Change Password-Mobile](./docs/testing/lighthouse/changepassword-mobile.png)
+
+</details>
+
+<details>
+  <summary>lighthouse-Testing-Change-Password-Desktop (click to expand)</summary>
+
+![Change-Password-Desktop](./docs/testing/lighthouse/changepassword-desktop.png)
+
+</details>
+
+<details>
+  <summary>lighthouse-Testing-Password-Reset-Mobile (click to expand)</summary>
+
+![Password-Reset-Mobile](./docs/testing/lighthouse/passwordreset-mobile.png)
+
+</details>
+
+<details>
+  <summary>lighthouse-Testing-Password-Reset-Desktop (click to expand)</summary>
+
+![Password-Reset-Desktop](./docs/testing/lighthouse/passwordreset-desktop.png)
+
+</details>
+
+
+
+
 
 
 # Deployment
