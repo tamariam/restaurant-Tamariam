@@ -113,7 +113,7 @@ Home: Users are directed to the home page, with an 'active' indicator if the cur
 Menu: Navigates to the menu section.
 Book: Provides a link to the booking section.
 
-![Navigation - Desktop](/docs/features/navigation-desktop.png)
+![Navigation - Desktop](/docs/features/navigation.png)
 
 <details>
   <summary>Navigation - Mobile (click to expand)</summary>
