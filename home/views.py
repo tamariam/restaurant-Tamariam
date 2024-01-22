@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 # from django.contrib.auth.models import User
 from .forms import CustomProfileUpdateForm
-from allauth.account.views import PasswordChangeView 
+from allauth.account.views import PasswordChangeView
 from django.urls import reverse_lazy
 
 
@@ -17,7 +17,7 @@ class CustomPasswordChangeView(PasswordChangeView):
 
 
 def home_page(request):
-    return render(request, 'home/index.html', {'home_url': 'home_page'})
+    return render(request, 'home/index.html', {'home_url': 'home'})
 
 
 def profile_page(request):
@@ -56,10 +56,3 @@ def account_delete(request):
         else:
             messages.error(request, 'You can only delete your own account.')
     return render(request, "home/delete_account.html")
-
-   
-
-
-
-
-
