@@ -24,15 +24,17 @@ def profile_page(request):
     return render(request, 'home/user_profile.html', {'profile_url': 'profile_page'})
 
 
+# user update view.
+
+
 def update_user(request):
     user = request.user
-
     if request.method == 'POST':
         form = CustomProfileUpdateForm(request.POST, instance=user)
         if form.is_valid():
             form.save()
-            # messages.add_message(request, messages.SUCCESS, 'Profile updated succesfully')
-            messages.success(request, ('Account updated successfully'))
+            messages.add_message(request, messages.SUCCESS, 'Profile updated succesfully')
+            # messages.success(request, ('Account updated successfully'))
             return redirect('profile_page')
         else:
             messages.warning(request, "Profile update failed. Please correct the errors below.")
