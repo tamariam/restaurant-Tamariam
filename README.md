@@ -60,7 +60,7 @@ so that I can **quickly set up a robust development environment and kickstart my
 Please check all user storys[here](https://github.com/users/tamariam/projects/9)
 
 ## Wireframes
- I used [Balsamique](https://balsamiq.com/) to create wireframes for my project.These were adapted and improved upon throughout the development process. Here are the wireframes for the main pages:
+ I used [Balsamique](https://balsamiq.com/) to create wireframes for my project.These were adapted and improved upon throughout the development process.The wireframes encompass the main pages of the project, with each page extending the base HTML structure that includes navigation and footer elements Here are the wireframes for the main pages:
 
  <details>
   <summary>Homepage - Desktop (click to expand)</summary>
@@ -96,8 +96,6 @@ Please check all user storys[here](https://github.com/users/tamariam/projects/9)
 ![login-Wirefreame](/docs/wireframes/login-wireframe.png)
 
 </details>
-
-
 
 
 ## Design Elements
@@ -239,15 +237,6 @@ After the profile is updated, a relevant message will be displayed on the page.
 
 ![update-message](/docs/features/delete-account.png) 
 ![update-message](/docs/features/delete-alert.png) 
-
-
-
-
-
-
-
-
-
 
 
 # Testing 

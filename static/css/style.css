@@ -308,13 +308,13 @@ form button,.btn-link{
     }
 
    .background-image{
-    height:100vh;
+    height:100%;
    }
 
    .main-heading{
     width:60vw;
     letter-spacing: 5px;
-    margin-bottom: 20px;
+    margin-top: 30px;
     font-size:38px;
    } 
  

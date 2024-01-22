@@ -1,6 +1,6 @@
-// create set time out function to clear aler messages after 3 seconds
-
-
+// create set time out function to clear aler messages after 2 seconds
 setTimeout(() => {
-  document.querySelectorALL('.alert-message') .remove() 
-}, 3000);
+  const element=document.getElementById('msg') 
+  if(element){element.remove() 
+  }
+}, 2000);
