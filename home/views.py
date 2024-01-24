@@ -9,12 +9,6 @@ from django.urls import reverse_lazy
 class CustomPasswordChangeView(PasswordChangeView):
     success_url = reverse_lazy('profile_page')
 
-    # def form_valid(self, form):
-    #     response = super().form_valid(form)
-    #     messages.success(self.request, 'Password changed successfully.')
-    #     return response
-# Create your views here.
-
 
 def home_page(request):
     return render(request, 'home/index.html', {'home_url': 'home'})
