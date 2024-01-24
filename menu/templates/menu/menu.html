@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% load i18n %}
+
+{% block head_title %}{% trans "Sign In" %}{% endblock head_title %}
+
+{% block content %}
+<div class="container  login-container">
+  <div class="row justify-content-center align-items-center">
+<h1 class="text-center form-heading montserrat mt-3">{% trans "Sign In" %}</h1>
+<form class="login montserrat d-flex flex-column justify-content-center  align-items-center" method="POST" action="{% url 'account_login' %}">
+  <p class="form-text text-center">Do not have an account? Then please 
+    <a class="primaryAction sign-up" href="{% url 'account_signup' %}">{% trans "Sign Up" %}</a><p></p>
+  {% csrf_token %}
+  {{ form|crispy }}
+  <!-- {{ form.as_p }} -->
+  {% if redirect_field_value %}
+  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+  {% endif %}
+  <button class="primaryAction btn-danger rounded p-2" type="submit">{% trans "Sign In" %}</button><br>
+  <a class="secondaryAction password" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a><br>
+  </form>
+</div>
+</div>
+{% endblock content %}
