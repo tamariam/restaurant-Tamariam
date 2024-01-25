@@ -5,7 +5,7 @@
 
 <div class="container-fluid">
   <div class="row text-center">
-    <h1 class="Text-center border-bottom border-dark border-3 p-2">Menu</h1>
+    <h1 class="Text-center p-2">Menu</h1>
     <div class="col-4 d-block d-md-none">
       <a href="#starter" class="menu-link">Starters</a>
   </div>
@@ -18,13 +18,17 @@
   
     <!-- Starters Section -->
       
-         <div class="col-md-6 mt-2"> 
+         <div class="col-md-6 mt-2 "> 
           <h2 id="starter"  class="bg-danger p-2 rounded">Starters</h2>
         {% if starters %}
           {% for item in starters %}
-            <h3 class=>{{ item.name | safe }}</h3>
+            <h3>{{ item.name | safe }}</h3>
             <h4 class="text-center">{{ item.ingredients | safe }}</h4>
-            <h5 class="text-danger">£{{ item.price }}</h5>
+            {% if forloop.last%}
+              <h5 class="text-danger ">£{{ item.price }}</h5>
+            {% else%}
+              <h5 class="text-danger border-bottom">£{{ item.price }}</h5>
+            {% endif %}
           {% endfor %}
         {% endif %}
        </div>  
@@ -36,7 +40,11 @@
           {% for item in mains %}
             <h3>{{ item.name | safe }}</h3>
             <h4 class="text-center">{{ item.ingredients | safe }}</h4>
-            <h5 class="text-danger">£{{item.price }}</h5>
+            {% if forloop.last%}
+              <h5 class="text-danger ">£{{ item.price }}</h5>
+            {% else%}
+              <h5 class="text-danger border-bottom">£{{ item.price }}</h5>
+            {% endif %}
           {% endfor %}
         {% endif %}
       </div>
@@ -51,7 +59,11 @@
           {% for item in desserts %}
             <h3>{{ item.name | safe }}</h3>
             <h4 class="text-center">{{ item.ingredients | safe }}</h4>
-            <h5 class="text-danger">£{{ item.price }}</h5>
+            {% if forloop.last%}
+              <h5 class="text-danger ">£{{ item.price }}</h5>
+            {% else%}
+              <h5 class="text-danger border-bottom">£{{ item.price }}</h5>
+            {% endif %}
           {% endfor %}
         {% endif %}
       </div>
