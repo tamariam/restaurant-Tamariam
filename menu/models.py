@@ -6,7 +6,7 @@ from cloudinary.models import CloudinaryField
 
 # Define choices for menu courses
 
-MENU_COURSES = (("mtarter", "starter"), ("main", "main"), ("dessert", "dessert"))
+MENU_COURSES = (("starter", "starter"), ("main", "main"), ("dessert", "dessert"))
 
 # Define choices for status
 
