@@ -4,65 +4,63 @@
 {% block content %}
 
 <div class="container-fluid">
-  <div class="row text-center">
-    <h1 class="Text-center p-2">Menu</h1>
-    <div class="col-4 d-block d-md-none">
+  <div class="row text-center montserrat">
+    <h1 class="p-2 lobster menu-heading">Menu</h1>
+    <div class="col-4 d-block d-md-none mb-2">
       <a href="#starter" class="menu-link">Starters</a>
   </div>
-  <div class="col-4 d-block d-md-none">
+  <div class="col-4 d-block d-md-none mb-2">
       <a href="#main-course" class="menu-link">Mains</a>
   </div>
-  <div class="col-4 d-block d-md-none">
+  <div class="col-4 d-block d-md-none mb-2">
       <a href="#dessert" class="menu-link">Deserts</a>
   </div>
   
     <!-- Starters Section -->
       
-         <div class="col-md-6 mt-2 "> 
-          <h2 id="starter"  class="bg-danger p-2 rounded">Starters</h2>
+         <div class="col-md-6"> 
+          <h2 id="starter"  class="bg-danger p-2 rounded lobster ">Starters</h2>
         {% if starters %}
           {% for item in starters %}
             <h3>{{ item.name | safe }}</h3>
             <h4 class="text-center">{{ item.ingredients | safe }}</h4>
             {% if forloop.last%}
-              <h5 class="text-danger ">£{{ item.price }}</h5>
+              <h5 class="text-danger  ">£{{ item.price }}</h5>
             {% else%}
-              <h5 class="text-danger border-bottom">£{{ item.price }}</h5>
+              <h5 class="text-danger border-bottom pb-3 ">£{{ item.price }}</h5>
             {% endif %}
           {% endfor %}
         {% endif %}
        </div>  
 
     <!-- Main Course Section -->
-      <div class="col-md-6">
-        <h2 id="main-course" class="bg-danger p-2 rounded mt-2">Main Course</h2>
+      <div class="col-md-6  ">
+        <h2 id="main-course" class="bg-danger p-2 rounded  lobster">Main Course</h2>
         {% if mains %}
           {% for item in mains %}
             <h3>{{ item.name | safe }}</h3>
             <h4 class="text-center">{{ item.ingredients | safe }}</h4>
             {% if forloop.last%}
-              <h5 class="text-danger ">£{{ item.price }}</h5>
+              <h5 class="text-danger">£{{ item.price }}</h5>
             {% else%}
-              <h5 class="text-danger border-bottom">£{{ item.price }}</h5>
+              <h5 class="text-danger border-bottom pb-3 ">£{{ item.price }}</h5>
             {% endif %}
           {% endfor %}
         {% endif %}
       </div>
 
-    <!-- Image Section (Desktop Only) -->
-
   <!-- Desserts Section -->
 
-      <div class="col-md-6 mx-auto">
-        <h2 id="dessert" class="bg-danger p-2 rounded mt-2">Desserts</h2>
+      <div class="col-md-5 mx-auto ">
+        <h2 id="dessert" class="bg-danger p-2 rounded mt-2 lobster">Desserts</h2>
         {% if desserts %}
           {% for item in desserts %}
             <h3>{{ item.name | safe }}</h3>
             <h4 class="text-center">{{ item.ingredients | safe }}</h4>
             {% if forloop.last%}
-              <h5 class="text-danger ">£{{ item.price }}</h5>
+              <h5 class="text-danger pb-3 ">£{{ item.price }}</h5>
             {% else%}
-              <h5 class="text-danger border-bottom">£{{ item.price }}</h5>
+              <h5 class="text-danger border-bottom pb-3 ">£{{ item.price }}</h5>
             {% endif %}
           {% endfor %}
         {% endif %}
