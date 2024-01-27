@@ -24,13 +24,17 @@
           {% for item in starters %}
             <h3>{{ item.name | safe }}</h3>
             {% if "placeholder" in item.featured_image.url %}
-            <img src="https://res.cloudinary.com/dxleotfxz/image/upload/v1706365241/placeholder_althgk.jpg">
+            <img  class="rounded"  src="https://res.cloudinary.com/dxleotfxz/image/upload/v1706365241/placeholder_althgk.jpg" alt="{{item.name}}">
         {% else %}
-            <img src="{{ item.featured_image.url }}">
+            <img class="rounded" src="{{ item.featured_image.url }}" alt="{{item.name}}">
         {% endif %}
             <h4 class="text-center">{{ item.ingredients | safe }}</h4>
             {% if not item.availability %}
-            <p class="text-danger">Currently unavailable</p>
+            {% if forloop.last %}
+            <p class="text-danger pb-3">Currently unavailable</p>
+            {% else %}
+            <p class="text-danger border-bottom pb-3">Currently unavailable</p>
+            {% endif %}
         {% else %}
             {% if forloop.last %}
                 <h5 class="text-danger pb-3">£{{ item.price }}</h5>
@@ -49,13 +53,18 @@
           {% for item in mains %}
             <h3>{{ item.name | safe }}</h3>
             {% if "placeholder" in item.featured_image.url %}
-            <img src="https://res.cloudinary.com/dxleotfxz/image/upload/v1706365241/placeholder_althgk.jpg">
+            <img class="rounded" src="https://res.cloudinary.com/dxleotfxz/image/upload/v1706365241/placeholder_althgk.jpg" alt="{{item.name}}">
         {% else %}
-            <img src="{{ item.featured_image.url }}">
+            <img class="rounded" src="{{ item.featured_image.url }}"
+             alt="{{item.name}}">
         {% endif %}
             <h4 class="text-center">{{ item.ingredients | safe }}</h4>
             {% if not item.availability %}
-            <p class="text-danger">Currently unavailable</p>
+            {% if forloop.last %}
+            <p class="text-danger pb-3">Currently unavailable</p>
+            {% else %}
+            <p class="text-danger border-bottom pb-3">Currently unavailable</p>
+            {% endif %}
         {% else %}
             {% if forloop.last %}
                 <h5 class="text-danger pb-3">£{{ item.price }}</h5>
@@ -75,13 +84,17 @@
           {% for item in desserts %}
             <h3>{{ item.name | safe }}</h3>
             {% if "placeholder" in item.featured_image.url %}
-            <img src="https://res.cloudinary.com/dxleotfxz/image/upload/v1706365241/placeholder_althgk.jpg">
+            <img class="rounded" src="https://res.cloudinary.com/dxleotfxz/image/upload/v1706365241/placeholder_althgk.jpg" alt="{{item.name}}">
         {% else %}
-            <img src="{{ item.featured_image.url }}">
+            <img class="rounded" src="{{ item.featured_image.url }}" alt="{{item.name}}">
         {% endif %}
             <h4 class="text-center">{{ item.ingredients | safe }}</h4>
             {% if not item.availability %}
-            <p class="text-danger">Currently unavailable</p>
+            {% if forloop.last %}
+            <p class="text-danger pb-3">Currently unavailable</p>
+            {% else %}
+            <p class="text-danger border-bottom pb-3">Currently unavailable</p>
+            {% endif %}
         {% else %}
             {% if forloop.last %}
                 <h5 class="text-danger pb-3">£{{ item.price }}</h5>
