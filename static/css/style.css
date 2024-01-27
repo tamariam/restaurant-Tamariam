@@ -262,7 +262,7 @@ form input:hover{
     font-size:20px;
     color:#c1121f;
 }
-/* styles for menu links */
+/* styles for menu page */
 .menu-link{
     text-decoration: none;
     font-size:20px;
@@ -272,6 +272,13 @@ form input:hover{
 .menu-link:hover{
     border-bottom:2px solid red;
     color:black;
+}
+.menu-img{
+    transition: transform 0.4s ease-in-out;
+}
+
+.menu-img:hover{
+    transform:scale(1.1)
 }
 /* styles for Tablet screen size */
  @media only screen and (min-width:767px) {
