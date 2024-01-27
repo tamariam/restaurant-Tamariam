@@ -23,7 +23,11 @@
         {% if starters %}
           {% for item in starters %}
             <h3>{{ item.name | safe }}</h3>
-            <img src="{{item.featured_image.url}}">
+            {% if "placeholder" in item.featured_image.url %}
+            <img src="https://res.cloudinary.com/dxleotfxz/image/upload/v1706365241/placeholder_althgk.jpg">
+        {% else %}
+            <img src="{{ item.featured_image.url }}">
+        {% endif %}
             <h4 class="text-center">{{ item.ingredients | safe }}</h4>
             {% if forloop.last%}
               <h5 class="text-danger  ">£{{ item.price }}</h5>
@@ -40,7 +44,11 @@
         {% if mains %}
           {% for item in mains %}
             <h3>{{ item.name | safe }}</h3>
-            <img src="{{item.featured_image.url}}">
+            {% if "placeholder" in item.featured_image.url %}
+            <img src="https://res.cloudinary.com/dxleotfxz/image/upload/v1706365241/placeholder_althgk.jpg">
+        {% else %}
+            <img src="{{ item.featured_image.url }}">
+        {% endif %}
             <h4 class="text-center">{{ item.ingredients | safe }}</h4>
             {% if forloop.last%}
               <h5 class="text-danger">£{{ item.price }}</h5>
@@ -58,7 +66,11 @@
         {% if desserts %}
           {% for item in desserts %}
             <h3>{{ item.name | safe }}</h3>
-            <img src="{{item.featured_image.url}}">
+            {% if "placeholder" in item.featured_image.url %}
+            <img src="https://res.cloudinary.com/dxleotfxz/image/upload/v1706365241/placeholder_althgk.jpg">
+        {% else %}
+            <img src="{{ item.featured_image.url }}">
+        {% endif %}
             <h4 class="text-center">{{ item.ingredients | safe }}</h4>
             {% if forloop.last%}
               <h5 class="text-danger pb-3 ">£{{ item.price }}</h5>
