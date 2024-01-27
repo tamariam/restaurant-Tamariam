@@ -29,11 +29,15 @@
             <img src="{{ item.featured_image.url }}">
         {% endif %}
             <h4 class="text-center">{{ item.ingredients | safe }}</h4>
-            {% if forloop.last%}
-              <h5 class="text-danger  ">£{{ item.price }}</h5>
-            {% else%}
-              <h5 class="text-danger border-bottom pb-3 ">£{{ item.price }}</h5>
+            {% if not item.availability %}
+            <p class="text-danger">Currently unavailable</p>
+        {% else %}
+            {% if forloop.last %}
+                <h5 class="text-danger pb-3">£{{ item.price }}</h5>
+            {% else %}
+                <h5 class="text-danger border-bottom pb-3">£{{ item.price }}</h5>
             {% endif %}
+        {% endif %}
           {% endfor %}
         {% endif %}
        </div>  
@@ -50,11 +54,15 @@
             <img src="{{ item.featured_image.url }}">
         {% endif %}
             <h4 class="text-center">{{ item.ingredients | safe }}</h4>
-            {% if forloop.last%}
-              <h5 class="text-danger">£{{ item.price }}</h5>
-            {% else%}
-              <h5 class="text-danger border-bottom pb-3 ">£{{ item.price }}</h5>
+            {% if not item.availability %}
+            <p class="text-danger">Currently unavailable</p>
+        {% else %}
+            {% if forloop.last %}
+                <h5 class="text-danger pb-3">£{{ item.price }}</h5>
+            {% else %}
+                <h5 class="text-danger border-bottom pb-3">£{{ item.price }}</h5>
             {% endif %}
+        {% endif %}
           {% endfor %}
         {% endif %}
       </div>
@@ -72,11 +80,15 @@
             <img src="{{ item.featured_image.url }}">
         {% endif %}
             <h4 class="text-center">{{ item.ingredients | safe }}</h4>
-            {% if forloop.last%}
-              <h5 class="text-danger pb-3 ">£{{ item.price }}</h5>
-            {% else%}
-              <h5 class="text-danger border-bottom pb-3 ">£{{ item.price }}</h5>
+            {% if not item.availability %}
+            <p class="text-danger">Currently unavailable</p>
+        {% else %}
+            {% if forloop.last %}
+                <h5 class="text-danger pb-3">£{{ item.price }}</h5>
+            {% else %}
+                <h5 class="text-danger border-bottom pb-3">£{{ item.price }}</h5>
             {% endif %}
+        {% endif %}
           {% endfor %}
         {% endif %}
       </div>
