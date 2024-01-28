@@ -370,8 +370,19 @@ Chrome DevTools Lighthouse was used to test Performance, Accessibility, Best Pra
 
 </details>
 
+### Menu testing with lighthouse
 
+  <summary>lighthouse-Testing-Password-Reset-Desktop (click to expand)</summary>
 
+![Menu-Desktop](./docs/testing/lighthouse/menu-desktop.png)
+
+</details>
+
+  <summary>lighthouse-Testing-Password-Reset-Desktop (click to expand)</summary>
+
+![menu-mobile](./docs/testing/lighthouse/menu-mobile.png)
+
+</details>
 
 
 
