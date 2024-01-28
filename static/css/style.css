@@ -278,7 +278,7 @@ form input:hover{
 }
 
 .menu-img:hover{
-    transform:scale(1.1)
+    transform:scale(1.1);
 }
 /* styles for Tablet screen size */
  @media only screen and (min-width:767px) {
