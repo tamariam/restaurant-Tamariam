@@ -160,7 +160,7 @@ The responsive homepage starts with a captivating background image, setting the 
  <details>
   <summary>Homepage - Mobile (click to expand)</summary>
 
-![Homepage - Tablet](./docs/features/homepage-tablet.png)
+![Homepage - mobile](./docs/features/homepage-mobile.png)
 
 </details>
 
@@ -237,6 +237,25 @@ After the profile is updated, a relevant message will be displayed on the page.
 
 ![update-message](/docs/features/delete-account.png) 
 ![update-message](/docs/features/delete-alert.png) 
+
+
+## Menu
+
+Menu page provides a smooth navigation experience, particularly on mobile devices. Users can easily navigate through different sections of the menu using the navigation links.
+To provide real-time information to our users, the menu page dynamically adjusts the display based on item availability. If a menu item is unavailable, it's clearly indicated as "Currently Unavailable" instead of displaying the price.The menu page showcases three types of dish courses: starters, mains, and desserts. Each course is presented with its name, price, and a visually appealing image, enhancing the overall user interface.
+
+![Menu-Desktop](/docs/features/menu-desktop-1.png.png) ![menu-desktop](/docs/features/menu-desktop-2.png.png) 
+
+ <details>
+  <summary>Menu - Mobile (click to expand)</summary>
+
+![Menu - Mobile](./docs/features/menu-mobile.png.png)
+
+</details>
+
+
+
+
 
 
 # Testing 
