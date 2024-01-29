@@ -17,6 +17,7 @@ Welcome to the Django Restaurant Reservation Site! This web application empowers
    - [Homepage](#homepage)
    - [Footer](#footer)
    - [Account Managament](#account-managament)
+   - [Menu](#menu)
 - [Deployment](#dployment)
    - [Heroku Deployment](#heroku-deployment)
    - [ElephantSQL Database](#elephantsql-database)
@@ -91,9 +92,23 @@ Please check all user storys[here](https://github.com/users/tamariam/projects/9)
 </details>
 
 <details>
-  <summary>Signup-Wireframe (click to expand)</summary>
+  <summary>Login-Wireframe (click to expand)</summary>
 
 ![login-Wirefreame](/docs/wireframes/login-wireframe.png)
+
+</details>
+
+<details>
+  <summary>Menu-Wireframe-Desktop (click to expand)</summary>
+
+![login-Wirefreame](/docs/wireframes/menu-wireframe-desktop.png)
+
+</details>
+
+<details>
+  <summary>Menu-Wireframe-Mobile (click to expand)</summary>
+
+![login-Wirefreame](/docs/wireframes/menu-wireframe-mobile.png)
 
 </details>
 
@@ -244,7 +259,8 @@ After the profile is updated, a relevant message will be displayed on the page.
 Menu page provides a smooth navigation experience, particularly on mobile devices. Users can easily navigate through different sections of the menu using the navigation links.
 To provide real-time information to our users, the menu page dynamically adjusts the display based on item availability. If a menu item is unavailable, it's clearly indicated as "Currently Unavailable" instead of displaying the price.The menu page showcases three types of dish courses: starters, mains, and desserts. Each course is presented with its name, price, and a visually appealing image, enhancing the overall user interface.
 
-![Menu-Desktop](/docs/features/menu-desktop-1.png.png) ![menu-desktop](/docs/features/menu-desktop-2.png.png) 
+![Menu-Desktop](/docs/features/menu-desktop-1.png.png) 
+![menu-desktop](/docs/features/menu-desktop-2.png.png) 
 
  <details>
   <summary>Menu - Mobile (click to expand)</summary>
@@ -252,10 +268,6 @@ To provide real-time information to our users, the menu page dynamically adjusts
 ![Menu - Mobile](./docs/features/menu-mobile.png.png)
 
 </details>
-
-
-
-
 
 
 # Testing 
