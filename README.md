@@ -57,6 +57,7 @@ so that I can **quickly set up a robust development environment and kickstart my
    - As a **logged in user** I can **view my details** so that i can **review and manage my personal information.**
    - As a **logged in user** I can **change my account details** so that i can **keep my personal info up to date.**
    - As a **logged in user** I can **change my password** so that I can **keep my account secure.**
+   - As a **user** I can **view Menu** so that i can **check available food choices**
 
 Please check all user storys[here](https://github.com/users/tamariam/projects/9)
 
