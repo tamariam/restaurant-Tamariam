@@ -114,6 +114,9 @@ Please check all user storys[here](https://github.com/users/tamariam/projects/9)
 
 </details>
 
+## ERD
+
+![ERD-diagram](/docs/erd-diagram/erddiagram.png)
 
 ## Design Elements
 
