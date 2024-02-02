@@ -57,6 +57,7 @@ so that I can **quickly set up a robust development environment and kickstart my
    - As a **logged in user** I can **view my details** so that i can **review and manage my personal information.**
    - As a **logged in user** I can **change my account details** so that i can **keep my personal info up to date.**
    - As a **logged in user** I can **change my password** so that I can **keep my account secure.**
+   - As a **logged in user** I can **reset my password** so that **i can still login my account if i forget my password**
    - As a **user** I can **view Menu** so that i can **check available food choices**
 
 Please check all user storys[here](https://github.com/users/tamariam/projects/9)
@@ -206,10 +207,18 @@ The footer of  Tamariam Restaurant website provides essential information and ad
 In my project, I utilized Django Allauth to implement a user-friendly and well-designed account management system.
 
  - Sign Up
-A first-time visitor to the page will observe a registration button positioned at the top right of the navigation bar. Upon clicking this button, the user will be taken to the sign-up page. After filling out the required forms and clicking the sign-up button, the user will have successfully registered.
+
+The signup feature allows users to create a new account on the platform. Upon signing up, users are required to verify their email address for account activation. This feature is implemented using django-allauth.
 
 
 ![SIgnUp](/docs/features/signup.png)
+
+
+  - Upon submitting the signup form, the system sends a verification link to the user's provided email address and users are redirected to a page confirming that a verification link has been sent to their email address.
+
+
+![SIgnUp](/docs/features/signup-verify-email.png)
+
 
  - Login 
    - A registered user can log in to the page by clicking on the login button in the navigation menu. The user only needs to enter their username and password.
@@ -245,6 +254,29 @@ After the profile is updated, a relevant message will be displayed on the page.
 
 ![change-password](/docs/features/change-password.png)
 ![update-message](/docs/features/changepassword-alert.png) 
+
+
+- Password Reset
+
+  - The password reset feature allows users to reset their passwords in case they forget them. This feature is also implemented using django-allauth.
+If a user forgets their password, they can click on the "Forgot Password" link on the login page.Upon clicking the "Forgot Password" link, the user is redirected to the password reset page.On the password reset page, the user can enter their email address associated with their account and click the "Reset Password" button.
+
+![reset-password](/docs/features/password-reset.png)
+
+  - Clicking on the password reset link redirects the user to a page confirming that the password reset link has been sent to their email address.
+
+  
+![reset-password-sent](/docs/features/password-reset-sent.png)
+
+  - The user follows the instructions in the email and clicks on the password reset link.
+This action redirects the user to a page where they can enter a new password and confirm it.
+After successfully resetting the password from the email, the user is redirected to a page confirming that their password has been successfully reset.
+
+![reset-password-sent](/docs/features/password-reset-done.png)
+
+
+
+
 
 - Delete account
 
