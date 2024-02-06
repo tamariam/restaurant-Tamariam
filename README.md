@@ -2,7 +2,8 @@
 ![amIresponsive](/docs/features/amiresponsive.png)
 
 
-Welcome to the Django Restaurant Reservation Site! This web application empowers users to explore our restaurant's delightful menu and seamlessly make reservations online. Built on Django, a high-level Python web framework, this project aims to provide a comprehensive solution for managing restaurant reservations while offering an exceptional user experience.Please check live Url here ![link](https://tamariamrestaurant-d81c96b3d785.herokuapp.com/)
+Welcome to the Django Restaurant Reservation Site! This web application empowers users to explore our restaurant's delightful menu and seamlessly make reservations online. Built on Django, a high-level Python web framework, this project aims to provide a comprehensive solution for managing restaurant reservations while offering an exceptional user experience.
+Please check live  [URL](https://tamariamrestaurant-d81c96b3d785.herokuapp.com)
 
 
 # Table of Contents
@@ -11,9 +12,9 @@ Welcome to the Django Restaurant Reservation Site! This web application empowers
   - [Project-Goalss](#project-goals)
   - [User Stories and Epics](#user-stories-and-epics)
   - [Wireframes](#wireframes)
+  - [Database Schema](#database-schema) 
   - [Design Elements](#design-elements)
    - [Typography](#typography)
-  - [Database Schema](#database-schema) 
 - [Features](#features)
    - [Navigation Bar](#navigation-bar) 
    - [Homepage](#homepage)
@@ -116,7 +117,7 @@ Please check all user storys[here](https://github.com/users/tamariam/projects/9)
 
 </details>
 
-## ERD
+## Database Schema
 
 ![ERD-diagram](/docs/erd-diagram/erddiagram.png)
 
@@ -128,8 +129,6 @@ This project incorporates carefully selected Google Fonts to enhance the visual 
 "Montserrat" with sans-serif as secondary font, "Lobster "
 "Dancing Script".
 The mix of these  fonts contributes to a visually engaging and invitind user experience.
-
-## Database Schema
 
 
 # Features
@@ -277,6 +276,9 @@ If a user forgets their password, they can click on the "Forgot Password" link o
 This action redirects the user to a page where they can enter a new password and confirm it.
 After successfully resetting the password from the email, the user is redirected to a page confirming that their password has been successfully reset.
 
+
+![reset-password-form](/docs/features/password-reset-form.png)
+
 ![reset-password-sent](/docs/features/password-reset-done.png)
 
 
@@ -354,6 +356,27 @@ Chrome DevTools Lighthouse was used to test Performance, Accessibility, Best Pra
 </details>
 
 <details>
+  <summary>lighthouse-Testing-Verification-Sent(click to expand)</summary>
+
+![verification-sent](./docs/testing/lighthouse/verification-sent.png)
+
+</details>
+
+<details>
+  <summary>lighthouse-Testing-Confirm-Email-mobile (click to expand)</summary>
+
+![confirm-email-mobile](./docs/testing/lighthouse/confirm-email-mobile.png)
+
+</details>
+
+<details>
+  <summary>lighthouse-Testing-Confirm-Email-Desktop (click to expand)</summary>
+
+![confirm-email-desktop](./docs/testing/lighthouse/confirm-email-desktop.png)
+
+</details>
+
+<details>
   <summary>lighthouse-Testing-Login-Mobile (click to expand)</summary>
 
 ![Login-Mobile](./docs/testing/lighthouse/login-mobile.png)
@@ -422,6 +445,29 @@ Chrome DevTools Lighthouse was used to test Performance, Accessibility, Best Pra
 ![Password-Reset-Desktop](./docs/testing/lighthouse/passwordreset-desktop.png)
 
 </details>
+
+
+<details>
+  <summary>lighthouse-Testing-Password-Reset-form-mobile (click to expand)</summary>
+
+![Password-Reset-form-mobile](./docs/testing/lighthouse/password-reset-form-mobile.png)
+
+</details>
+
+<details>
+  <summary>lighthouse-Testing-Password-Reset-form-desktop (click to expand)</summary>
+
+![Password-Reset-form-desktop](./docs/testing/lighthouse/password-reset-form-desktop.png)
+
+</details>
+
+<details>
+  <summary>lighthouse-Testing-succesfully-reset-password (click to expand)</summary>
+
+![succesfully-reset-password](./docs/testing/lighthouse/succesfully-reset-password.png)
+
+</details>
+
 
 ### Menu testing with lighthouse
 
