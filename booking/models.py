@@ -13,9 +13,8 @@ PEOPLE = ((1, "1 person"),
           (4, "4 person"),
           (5, "5 person"),
           (6, "6 person"),
-          (7, "7 person"),
-          (8, "8 person"))
-                     
+          (7, "7 person"))
+
 
 class Booking(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -27,7 +26,6 @@ class Booking(models.Model):
     request_date = models.DateTimeField(auto_now_add=True)
     date = models.DateField()
     time = models.TimeField()
-
 
     def __str__(self):
         return self.first_name
