@@ -6,7 +6,7 @@ from .models import Booking
 # Create your views here.Menu.objects.filter(status=1, category='starter')
 
 
-def booking_page(self, request):
+def booking_page(request):
     if request.method == "POST":
         form = BookingForm(data=request.POST,)
         if form.is_valid():
