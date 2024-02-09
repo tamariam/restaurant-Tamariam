@@ -2,11 +2,12 @@
 {% load crispy_forms_tags %}
 
 
-
 {% block content %}
+
 <div class="container-fluid">
     <div class="col-md-3"> 
         <form method="post" action="{% url 'booking' %}">
+            <h2>Book a Table</h2>
             {% csrf_token %}
             {{ form|crispy }}
             <button type="submit" class="btn-success rounded p-2">Submit</button>
