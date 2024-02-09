@@ -4,17 +4,20 @@
     <div class="row">
       <!-- Background Image Section -->
         <div class="background-image d-flex align-items-center justify-content-center">
+          <div class=" text-centercol-md-2 d-flex justify-content-center align-items-center">
             <!-- display django messages -->
             {% if messages %}
-       {% for message in messages %}
-      <div class="text-center bg-warning text-dark border-radius-9 montserrat mt-2  alert {{ message.tags }} alert-dismissible
+        {% for message in messages %}
+        <div class="text-center bg-warning text-dark border-radius-9 montserrat mt-2  alert {{ message.tags }} alert-dismissible
         fade show " id="msg" role="alert">
         {{ message | safe }}
         <button type="button" class="btn-close"
           data-bs-dismiss="alert" aria-label="Close"></button>
-      </div>
-      {% endfor %}  
-      {% endif %}
+        </div>
+        {% endfor %}  
+        {% endif %}
+        </div>
+    
            <!-- Main Content Container -->
           <div class="main-content text-center">
                 <!-- Header Section -->

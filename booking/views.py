@@ -10,8 +10,8 @@ from django.contrib.auth.decorators import login_required
        
 def booking_page(request):
     if request.user.is_authenticated:
+        form = BookingForm(data=request.POST) if request.method == "POST" else BookingForm()
         if request.method == "POST":
-            form = BookingForm(data=request.POST,)
             if form.is_valid():
                 booking = form.save(commit=False)
                 booking.email = request.user.email
@@ -25,7 +25,7 @@ def booking_page(request):
                 messages.warning(request, "Booking failed. Please correct the errors below.")
         return render(request, "booking/booking.html", {'form': form})
     else:
-        messages.add_message(request, messages.WARNING, 'pLEASE SIGN UP OR LIGIN FIRST TO MAKE  BOOKING')
+        messages.add_message(request, messages.WARNING, 'PLEASE SIGN UP OR LIGIN FIRST TO MAKE  BOOKING')
         return redirect('account_login')
 
     
