@@ -1,7 +1,7 @@
 from django.db import models
 # from datetime import datetime, date
 from django.contrib.auth.models import User
-from django.forms import ModelForm
+# from django.forms import ModelForm
 # Create your models here.
 
 STATUS = (
@@ -19,8 +19,8 @@ PEOPLE = ((1, "1 person"),
 
 class Booking(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    first_name = models.CharField(max_length=100, unique=True)
-    last_name = models. CharField(max_length=100, unique=True)
+    first_name = models.CharField(max_length=100)
+    last_name = models. CharField(max_length=100)
     email = models.EmailField(max_length=254)
     status = models.IntegerField(choices=STATUS, default=0)
     num_of_people = models.IntegerField(choices=PEOPLE, default=1)
@@ -32,7 +32,4 @@ class Booking(models.Model):
         return self.first_name
 
 
-class BookingForm(ModelForm):
-    class Meta:
-        model = Booking
-        fields = ["date", "time", "num_of_people"]
+
