@@ -1,11 +1,14 @@
 {% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+
 
 {% block content %}
 <div class="container-fluid">
     <div class="col-md-3"> 
         <form method="post" action="{% url 'booking' %}">
             {% csrf_token %}
-            {{ form.as_p }}
+            {{ form|crispy }}
             <button type="submit" class="btn-success rounded p-2">Save</button>
           <button onclick="window.history.back();" class="btn-danger rounded p-2" type="button">Cancel</button>
         </form>
