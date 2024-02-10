@@ -16,6 +16,8 @@ PEOPLE = ((1, "1 person"),
           (6, "6 person"),
           (7, "7 person"))
 
+TIME = ((0, "18:00"), (1, "19:00"), (2, "20:00"), (3, "21:00"),  (4, "22:00"), (5, "23:00"))
+
 
 class Booking(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -26,7 +28,7 @@ class Booking(models.Model):
     num_of_people = models.IntegerField(choices=PEOPLE, default=1)
     request_date = models.DateTimeField(auto_now_add=True)
     date = models.DateField()
-    time = models.TimeField()
+    time = models.TimeField(choices=TIME, default=0)
 
     def __str__(self):
         return self.first_name
