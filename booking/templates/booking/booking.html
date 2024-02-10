@@ -5,6 +5,7 @@
 {% block content %}
 
 <div class="container-fluid">
+    <div class="row">
     <div class="col-md-3"> 
         <form method="post" action="{% url 'booking' %}">
             <h2>Book a Table</h2>
@@ -14,5 +15,8 @@
             <button onclick="window.location.href='{% url 'home' %}';" class="btn-danger rounded p-2" type="button">Cancel</button>
         </form>
     </div>
+    </div>
+    </div>
+    
 
 {% endblock %}
