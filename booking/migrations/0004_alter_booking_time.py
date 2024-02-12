@@ -13,6 +13,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='booking',
             name='time',
-            field=models.TimeField(choices=[(0, '18:00'), (1, '19:00'), (2, '20:00'), (3, '21:00'), (4, '22:00'), (5, '23:00')])
+            field=models.TimeField(choices=[(0, '18:00'), (1, '19:00'), (2, '20:00'), (3, '21:00'), (4, '22:00'), (5, '23:00')]),
         ),
     ]

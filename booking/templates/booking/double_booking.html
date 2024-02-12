@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-{% load crispy_forms_tags %}
 
 
 {% block content %}
@@ -16,19 +15,7 @@ fade show " id="msg" role="alert">
 {% endfor %}  
 {% endif %}
 </div>
-<div class="container-fluid">
-    <div class="row">
-    <div class="col-md-3"> 
-        <form method="post" action="{% url 'booking' %}">
-            <h2>Book a Table</h2>
-            {% csrf_token %}
-            {{ form|crispy }}
-            <button type="submit" class="btn-success rounded p-2">Submit</button>
-            <button onclick="window.location.href='{% url 'home' %}';" class="btn-danger rounded p-2" type="button">Cancel</button>
-        </form>
-    </div>
-    </div>
-    </div>
+<h5>double booking</h5>
     
 
 {% endblock %}
