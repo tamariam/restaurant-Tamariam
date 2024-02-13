@@ -1,9 +1,8 @@
 from django.shortcuts import render, redirect
 from .forms import BookingForm
 from django.contrib import messages
-from django.contrib.auth.decorators import login_required
 from . models import Booking
-from django.utils import timezone
+
 
 
 
@@ -31,30 +30,63 @@ from django.utils import timezone
 #         messages.add_message(request, messages.WARNING, 'PLEASE SIGN UP OR LIGIN FIRST TO MAKE  BOOKING')
 #         return redirect('account_login')
 
+# def booking_page(request):
+#     if request.user.is_authenticated:
+#         form = BookingForm(data=request.POST) if request.method == "POST" else BookingForm()
+#         if request.method == "POST":
+#             if form.is_valid():
+#                 booking = form.save(commit=False)
+#                 booking.email = request.user.email
+#                 booking.user = request.user
+#                 booking.first_name = request.user.first_name
+#                 booking.last_name = request.user.last_name
+#                 booked = Booking.objects.filter(date=booking.date, time=booking.time, user=request.user)
+#                 if booked:
+#                     messages.add_message(request, messages.SUCCESS, 'You are already booked for this date and time please select another time ')
+#                 else:
+#                     booking.save()
+#                     messages.add_message(request, messages.SUCCESS, 'Your booking request has been sent')
+#                     return redirect('profile_page')
+#             else:
+#                 messages.warning(request, "Booking failed. Please correct the errors below.")
+#         return render(request, "booking/booking.html", {'form': form})
+#     else:
+#         messages.add_message(request, messages.WARNING, 'PLEASE SIGN UP OR LOGIN FIRST TO MAKE  BOOKING')
+#         return redirect('account_login')
+
+
 def booking_page(request):
     if request.user.is_authenticated:
         form = BookingForm(data=request.POST) if request.method == "POST" else BookingForm()
         if request.method == "POST":
             if form.is_valid():
                 booking = form.save(commit=False)
-                booking.email = request.user.email
-                booking.user = request.user
-                booking.first_name = request.user.first_name
-                booking.last_name = request.user.last_name
-                booked = Booking.objects.filter(date=booking.date, time=booking.time, user=request.user)
-                if booked:
-                    messages.add_message(request, messages.SUCCESS, 'You are already booked for this date and time please select another time ')
+                current_bookings = Booking.objects.filter(date=booking.date, status=1)
+                total_people_booked = sum(booking.num_of_people for booking in current_bookings)
+                requested_people = booking.num_of_people
+                max_capacity = 7
+                if total_people_booked >= max_capacity:
+                    messages.error(request, 'OOPS')
+                elif requested_people + total_people_booked > max_capacity:
+                    messages.error(request,  'nonononon')
                 else:
-                    booking.save()
-                    messages.add_message(request, messages.SUCCESS, 'Your booking request has been sent')
-                    return redirect('profile_page')
+                    booking.email = request.user.email
+                    booking.user = request.user
+                    booking.first_name = request.user.first_name
+                    booking.last_name = request.user.last_name
+                    booked = Booking.objects.filter(date=booking.date, time=booking.time, user=request.user)
+                    if booked:
+                        messages.add_message(request, messages.SUCCESS, 'You are already booked for this date and time please select another time ')
+                    else:
+                        booking.save()
+                        messages.add_message(request, messages.SUCCESS, 'Your booking request has been sent')
+                        return redirect('profile_page')
             else:
                 messages.warning(request, "Booking failed. Please correct the errors below.")
         return render(request, "booking/booking.html", {'form': form})
     else:
         messages.add_message(request, messages.WARNING, 'PLEASE SIGN UP OR LOGIN FIRST TO MAKE  BOOKING')
         return redirect('account_login')
-
 
     
 
