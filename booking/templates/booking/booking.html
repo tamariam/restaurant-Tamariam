@@ -16,18 +16,30 @@ fade show " id="msg" role="alert">
 {% endfor %}  
 {% endif %}
 </div>
-<div class="container-fluid">
-    <div class="row">
+<div class="container-fluid ">
+    <div class="row d-flex justify-content-center align-items-center">
     <div class="col-md-3"> 
-        <form method="post" action="{% url 'booking' %}">
-            <h2>Book a Table</h2>
-            {% csrf_token %}
-            {{ form|crispy }}
-            <button type="submit" class="btn-success rounded p-2">Submit</button>
-            <button onclick="window.location.href='{% url 'home' %}';" class="btn-danger rounded p-2" type="button">Cancel</button>
-        </form>
+        <h2>Reservation Guidelines</h2>
+    <p>Thank you for choosing to book with us! Please note the following instructions before proceeding:</p>
+    <ul>
+        <li>Our restaurant opens in the evening from 6:00 PM onwards.</li>
+        <li>Online bookings for today are not available. The minimum booking date is tomorrow. if you would like to book a table for today then please contact us directly via phone.</li>
+        <li>Upon submitting your booking request, you will receive feedback from us regarding the status of your booking within 24 hours.</li>
+        <li>You can also check the status of your booking in the "My Bookings" section of your profile page.</li>
+    </ul>
     </div>
     </div>
+    <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-md-3"> 
+            <form method="post" action="{% url 'booking' %}">
+                <h2>Book a Table</h2>
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button type="submit" class="btn-success rounded p-2">Submit</button>
+                <button onclick="window.location.href='{% url 'home' %}';" class="btn-danger rounded p-2" type="button">Cancel</button>
+            </form>
+        </div>
+        </div>
     </div>
     
 
