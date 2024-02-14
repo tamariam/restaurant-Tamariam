@@ -23,3 +23,4 @@ class BookingForm(forms.ModelForm):
         # calculate minimum date
         tomorrow = timezone.now().date()+timedelta(days=1)
         self.fields['date'].widget.attrs['min'] = tomorrow
+        self.fields['date'].queryset = Booking.objects.order_by('-date')
