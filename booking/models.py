@@ -7,7 +7,7 @@ from datetime import time
 
 # Choices for booking status
 STATUS = (
-    (0, "Pending"), (1, "Approved"), (2, "Rejected")
+    ("pending", "Pending"), ("approved", "Approved"), ("rejected", "Rejected")
     )
 
 # Choices for number of people
@@ -39,7 +39,7 @@ class Booking(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     email = models.EmailField(max_length=254)
-    status = models.IntegerField(choices=STATUS, default=0)
+    status = models.CharField(max_length=20,choices=STATUS, default="pending")
     num_of_people = models.IntegerField(choices=PEOPLE, default=0)
     request_date = models.DateTimeField(auto_now_add=True)
     date = models.DateField()
