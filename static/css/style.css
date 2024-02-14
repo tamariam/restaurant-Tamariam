@@ -280,6 +280,25 @@ form input:hover{
 .menu-img:hover{
     transform:scale(1.1);
 }
+
+/* styles for booking app pages */
+
+.booking-h2{
+    color:#c1121f;
+    background-color: black;
+    border-radius:9px;
+    padding:5px 0 5px 0;
+    margin-bottom:5px;
+}
+
+.booking-button{
+    width:30%;
+    font-weight:700;
+    font-size:20px;
+}
+.booking-guidelines-list{
+    font-size:18px;
+}
 /* styles for Tablet screen size */
  @media only screen and (min-width:767px) {
 .nav-link, .footer p {
@@ -302,9 +321,9 @@ form input:hover{
     border-radius:9px;
 }
 
-form button,.btn-link{
+ form button,.btn-link{
     width:180px;
-}
+} 
 
 .btn-link{
     padding:10px;
@@ -364,5 +383,9 @@ form button,.btn-link{
     font-size:50px;
     letter-spacing:2px;
    }
+   .booking-button{
+    font-size:20px;
+   
+}
 }
 }

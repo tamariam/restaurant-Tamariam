@@ -3,4 +3,4 @@ setTimeout(() => {
   const element=document.getElementById('msg') 
   if(element){element.remove() 
   }
-}, 2000);
+}, 5000);

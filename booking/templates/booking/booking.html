@@ -16,12 +16,13 @@ fade show " id="msg" role="alert">
 {% endfor %}  
 {% endif %}
 </div>
-<div class="container-fluid ">
+<div class="container-fluid mt-3 ">
     <div class="row d-flex justify-content-center align-items-center">
-    <div class="col-md-3"> 
-        <h2>Reservation Guidelines</h2>
-    <p>Thank you for choosing to book with us! Please note the following instructions before proceeding:</p>
-    <ul>
+    <div class="col-md-7 montserrat"> 
+        <h2 class="text-center booking-h2 mb-3 ">Reservation Guidelines</h2>
+    <h3 class="text-center">Please note the following instructions before proceeding:</h3>
+    <hr>
+    <ul class="booking-guidelines-list">
         <li>Our restaurant opens in the evening from 6:00 PM onwards.</li>
         <li>Online bookings for today are not available. The minimum booking date is tomorrow. if you would like to book a table for today then please contact us directly via phone.</li>
         <li>Upon submitting your booking request, you will receive feedback from us regarding the status of your booking within 24 hours.</li>
@@ -29,14 +30,16 @@ fade show " id="msg" role="alert">
     </ul>
     </div>
     </div>
-    <div class="row d-flex justify-content-center align-items-center">
-        <div class="col-md-3"> 
+    <div class="row justify-content-center align-items-center">
+        <div class="col-md-7"> 
             <form method="post" action="{% url 'booking' %}">
-                <h2>Book a Table</h2>
+                <h2 class="text-center booking-h2 mb-3">Book a Table</h2>
                 {% csrf_token %}
                 {{ form|crispy }}
-                <button type="submit" class="btn-success rounded p-2">Submit</button>
-                <button onclick="window.location.href='{% url 'home' %}';" class="btn-danger rounded p-2" type="button">Cancel</button>
+                <div class="d-flex justify-content-around align-items-center">
+                <button type="submit" class="btn-success rounded p-2 booking-button">Submit</button>
+                <button onclick="window.location.href='{% url 'home' %}';" class="btn-danger rounded p-2 booking-button" type="button">Cancel</button>
+                </div>
             </form>
         </div>
         </div>
