@@ -1,6 +1,7 @@
 from .models import Booking
 from django import forms
 from django.utils import timezone
+from datetime import timedelta
 
 
 class BookingForm(forms.ModelForm):
@@ -14,5 +15,11 @@ class BookingForm(forms.ModelForm):
         model = Booking
         fields = ["date", "time", "num_of_people"]
         widgets = {
-            'date': forms.DateInput(attrs={'type': 'date', 'min': timezone.now().date()})
+            'date': forms.DateInput(attrs={'type': 'date'})
         }
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        # calculate minimum date
+        tomorrow = timezone.now().date()+timedelta(days=1)
+        self.fields['date'].widget.attrs['min'] = tomorrow
