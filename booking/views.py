@@ -48,10 +48,3 @@ def booking_page(request):
     else:
         messages.add_message(request, messages.WARNING, 'PLEASE SIGN UP OR LOGIN FIRST TO MAKE  BOOKING')
         return redirect('account_login')
-
-    
-
-    
-
-
-

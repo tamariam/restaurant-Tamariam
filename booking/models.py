@@ -23,7 +23,7 @@ PEOPLE = ((1, "1 person"),
 # Choices for booking time
 TIME = (
     (time(18, 0), "18:00"),
-    (time(19, 0), "19:00"), 
+    (time(19, 0), "19:00"),
     (time(20, 0), "20:00"),
     (time(21, 0), "21:00"),
     (time(22, 0), "22:00"),
@@ -50,6 +50,3 @@ class Booking(models.Model):
         Returns a string representation of the booking.
         """
         return self.first_name
-
-
-
