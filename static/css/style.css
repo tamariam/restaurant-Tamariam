@@ -85,7 +85,6 @@ chosen colors:
 .purpose{
     color:#fb5607 !important ;
 }
-
 /* styles for Home page main content */
 /* add background image */
 .background-image{
@@ -289,6 +288,7 @@ form input:hover{
     border-radius:9px;
     padding:5px 0 5px 0;
     margin-bottom:5px;
+    font-weight:700;
 }
 
 .booking-button{

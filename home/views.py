@@ -4,6 +4,7 @@ from django.contrib import messages
 from .forms import CustomProfileUpdateForm
 from allauth.account.views import PasswordChangeView
 from django.urls import reverse_lazy 
+from booking.models import Booking
 
 
 
@@ -16,7 +17,9 @@ def home_page(request):
 
 
 def profile_page(request):
-    return render(request, 'home/user_profile.html', {'profile_url': 'profile_page'})
+    user=request.user
+    bookings=Booking.objects.filter(user=user)
+    return render(request, 'home/user_profile.html', {'profile_url': 'profile_page', 'bookings': bookings})
 
 
 # user update view.

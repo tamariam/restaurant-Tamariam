@@ -16,7 +16,7 @@ fade show " id="msg" role="alert">
 {% endif %}
 </div>
 <div class="container-fluid">
-    <div class="row  d-flex justify-content-center align-items-center mt-5 montserrat">
+    <!-- <div class="row  d-flex justify-content-center align-items-center mt-5 montserrat">
         <div class="col-md-4">
    <h2 class="text-center"> Hello {{user.first_name}} {{user.last_name}}!</h2>
     <h3 class="text-center user-details">Here is your details:</h3>
@@ -28,10 +28,37 @@ fade show " id="msg" role="alert">
 <a href="{% url 'account_delete_page' %}" class="btn-warning btn-link m-2">Delete account</a>
        </div>
        </div>
-             </div>
+             </div> -->
+             <div class="row">
+                <div class="col-md-3 col-12">
+           <h2 class="text-center"> Hello {{user.first_name}} {{user.last_name}}!</h2>
+            <h3 class="text-center user-details">Welcome to your profile management area.</h3>
+            <ul>
+                <li>Update your profile details by clicking the "Update Profile" button.</li>
+                <li>Delete your profile by clicking the "Delete Account" button.<span>Note that deleting your profile will also delete any related bookings.</span></li>
+                <li>Manage your bookings by visiting the "My Bookings" section.You can view, modify, or delete, and  and check the status of your existing bookings.</li>
+
+            </ul>
+            <hr>
+               </div>
+
+                        <div class="col-md-3 col-12 mt-5">
+                    <h2 class="text-center user-details">My Details:</h2>
+                    <p class="user-text text-center "><span>Username:</span> {{ user.username }}</p>
+                    <p class="user-text text-center"><span>Email:</span> {{ user.email }}</p>
+                <div class="d-flex justify-content-center">
+                <a href="{% url 'update_page' %}" class=" btn-danger btn-link m-2" >Update profile</a>
+                <a href="{% url 'account_delete_page' %}" class="btn-warning btn-link m-2">Delete account</a>
+                       </div>
+                       </div>
+                       <div class="col-md-3 col-12 mt-5">
+                        <h2 class="text-center user-details">My Bookings:</h2>
+                        {% if user.booking in bookings %}
+                          <p>{{user.booking.date}}</p>
+                        {% endif %}
+                            </div>
+                            </div>
             </div>
-        </div>
-    </div>
    
 
 {% endblock content %}
