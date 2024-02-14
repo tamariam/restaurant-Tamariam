@@ -25,9 +25,9 @@ def booking_page(request):
                 max_capacity = 7
                 # Check if booking exceeds maximum capacity or clashes with existing bookings
                 if total_people_booked >= max_capacity:
-                    messages.error(request, 'OOPS')
+                    messages.error(request, 'We are currently fully booked for this date. Please choose another date or time.')
                 elif requested_people + total_people_booked > max_capacity:
-                    messages.error(request,  'nonononon')
+                    messages.error(request,  'Sorry, your booking request exceeds the maximum capacity for this date. Please select fewer people or choose another date or time.')
                 else:
                     # Update booking details and save to database
                     booking.email = request.user.email
@@ -37,14 +37,14 @@ def booking_page(request):
                     # Check if user has already booked for the same date and time
                     booked = Booking.objects.filter(date=booking.date, time=booking.time, user=request.user)
                     if booked:
-                        messages.add_message(request, messages.SUCCESS, 'You are already booked for this date and time please select another time ')
+                        messages.add_message(request, messages.SUCCESS, 'You already have a booking for this date and time. Please choose a different time slot.')
                     else:
                         booking.save()
-                        messages.add_message(request, messages.SUCCESS, 'Your booking request has been sent')
+                        messages.add_message(request, messages.SUCCESS, 'Your booking request has been successfully submitted! You will receive feedback from us within the next 24 hours regarding the status of your booking.')
                         return redirect('profile_page')
             else:
                 messages.warning(request, "Booking failed. Please correct the errors below.")
         return render(request, "booking/booking.html", {'form': form})
     else:
-        messages.add_message(request, messages.WARNING, 'PLEASE SIGN UP OR LOGIN FIRST TO MAKE  BOOKING')
+        messages.add_message(request, messages.WARNING, 'To make a booking, please sign up or log in first')
         return redirect('account_login')
