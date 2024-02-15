@@ -22,7 +22,7 @@ chosen colors:
 
 /* Common styles for mobile ,tablet and desktop screens */
 /* styles for base html:nav and footer  */
-@media only screen and (min-width:320px) {
+@media only screen and (min-width:360px) {
 * {
     margin: 0;
     padding: 0;
@@ -85,7 +85,6 @@ chosen colors:
 .purpose{
     color:#fb5607 !important ;
 }
-
 /* styles for Home page main content */
 /* add background image */
 .background-image{
@@ -247,7 +246,10 @@ form input:hover{
 }
 
 /* style for user-profile  */
-.user-details{
+.profile-h1{
+    color:#540b0e
+}
+.profile-h2{
     color:#c1121f;
     font-weight:600;
 }
@@ -260,7 +262,11 @@ form input:hover{
 .user-text span{
     font-weight:700;
     font-size:20px;
-    color:#c1121f;
+    color:#540b0e;
+}
+.profile-management-list{
+    font-size:18px;
+    font-weight:500;
 }
 /* styles for menu page */
 .menu-link{
@@ -289,6 +295,7 @@ form input:hover{
     border-radius:9px;
     padding:5px 0 5px 0;
     margin-bottom:5px;
+    font-weight:700;
 }
 
 .booking-button{
