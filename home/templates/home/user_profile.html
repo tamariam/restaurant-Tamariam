@@ -15,7 +15,7 @@ fade show " id="msg" role="alert">
 {% endfor %}  
 {% endif %}
 </div>
-<div class="container-fluid">
+<div class="container">
     <!-- <div class="row  d-flex justify-content-center align-items-center mt-5 montserrat">
         <div class="col-md-4">
    <h2 class="text-center"> Hello {{user.first_name}} {{user.last_name}}!</h2>
@@ -30,7 +30,7 @@ fade show " id="msg" role="alert">
        </div>
              </div> -->
              <div class="row">
-                <div class="col-md-3 col-12">
+                <div class="col-md-12 col-12">
            <h2 class="text-center"> Hello {{user.first_name}} {{user.last_name}}!</h2>
             <h3 class="text-center user-details">Welcome to your profile management area.</h3>
             <ul>
@@ -41,30 +41,41 @@ fade show " id="msg" role="alert">
             </ul>
             <hr>
                </div>
-
-                        <div class="col-md-3 col-12 mt-5">
-                    <h2 class="text-center user-details">My Details:</h2>
-                    <p class="user-text text-center "><span>Username:</span> {{ user.username }}</p>
-                    <p class="user-text text-center"><span>Email:</span> {{ user.email }}</p>
-                    <p class="user-text text-center "><span>Firstname:</span> {{ user.first_name }}</p>
-                    <p class="user-text text-center"><span>Lastname:</span> {{ user.last_name }}</p>
-                <div class="d-flex justify-content-center">
-                <a href="{% url 'update_page' %}" class=" btn-danger btn-link m-2" >Update profile</a>
-                <a href="{% url 'account_delete_page' %}" class="btn-warning btn-link m-2">Delete account</a>
-                       </div>
-                       </div>
-                       <div class="col-md-3 col-12 mt-5">
-                        <h2 class="text-center user-details">My Bookings:</h2>
-                        {% if bookings %}
+               </div>
+               <div class="row">
+               <div class="d-flex flex-column align-items-start">
+            <h2 class="text-center user-details">My Details:</h2>
+                <p class="user-text text-center "><span>Username:</span> {{ user.username }}</p>
+                <p class="user-text text-center"><span>Email:</span> {{ user.email }}</p>
+            <div class="d-flex justify-content-center">
+            <a href="{% url 'update_page' %}" class=" btn-danger btn-link m-2 text-center" >Update profile</a>
+            <a href="{% url 'account_delete_page' %}" class="btn-warning btn-link m-2">Delete account</a>
+                   </div>
+                       <table class="booking-table col-md-6 col-12 text-center">
+                        <h2 class="user-details">My Bookings</h2>
+                        <!-- <table> -->
+                            <tr>
+                              <th>Date</th>
+                              <th>Time</th>
+                              <th>Number of People</th>
+                              <th>Booking status</th>
+                              <th>Update booking</th>
+                              <th>Delete Booking</th>
+                            </tr>
+                            {% if bookings %}
                         {% for booking in bookings%}
-                        <p>Date{{booking.date}}</p>
-                        <p>Time{{booking.time}}</p>
-                        <p>Number of people{{booking.num_of_people}}</p>
-                        <p>Booking status{{booking.status}}</p>
-
+                            <tr>
+                                <td>{{booking.date}}</td>
+                                <td>{{booking.time}}</td>
+                                <td>{{booking.num_of_people}}</td>
+                                <td>{{booking.status}}</td>
+                               <td><a href="{% url 'update_page' %}" >Update </a></td>
+                                <td><a href="{% url 'account_delete_page' %}">Delete </a></td>
+                            </tr>
+                            <!-- </table> -->
                           {% endfor %}
                         {% endif %}
-                            </div>
+                        </table>
                             </div>
             </div>
    
