@@ -249,12 +249,13 @@ form input:hover{
 .profile-h1{
     color:#540b0e
 }
-.my-bookings,.my-details{
+.my-bookings,.my-details,.profile-h2{
     color:#c1121f;
     font-weight:600;
+}
+.my-bookings{
     text-align: center;
 }
-
 .user-text{
     font-size:18px;
     font-weight:600;
@@ -273,6 +274,12 @@ form input:hover{
     font-weight:700;
     color:black;
 }
+
+.scroll-note{
+    color:#540b0e;
+    font-size:16px;
+}
+
 /* styles for menu page */
 .menu-link{
     text-decoration: none;
@@ -310,6 +317,12 @@ form input:hover{
 }
 .booking-guidelines-list{
     font-size:18px;
+}
+@media only screen and (min-width:482px){
+    .scroll-note{
+        display:none;
+
+    }
 }
 /* styles for Tablet screen size */
  @media only screen and (min-width:767px) {
