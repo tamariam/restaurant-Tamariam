@@ -249,9 +249,10 @@ form input:hover{
 .profile-h1{
     color:#540b0e
 }
-.profile-h2{
+.my-bookings,.my-details{
     color:#c1121f;
     font-weight:600;
+    text-align: center;
 }
 
 .user-text{
@@ -268,7 +269,7 @@ form input:hover{
     font-size:18px;
     font-weight:500;
 }
-.table-btn{
+.table-btn,.details-btn{
     font-weight:700;
     color:black;
 }
@@ -338,6 +339,9 @@ form input:hover{
 
 .btn-link{
     padding:10px;
+}
+.my-bookings{
+    text-align: start;
 }
  }
 
