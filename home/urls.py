@@ -12,4 +12,5 @@ urlpatterns = [
     path("update/profile/", update_user, name='update_profile'),
     path("delete/account/", account_delete, name='account_delete_page'),
     path('accounts/change/password/', CustomPasswordChangeView.as_view(), name='account_change_password'),
+    
 ]
