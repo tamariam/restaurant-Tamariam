@@ -1,23 +1,10 @@
-<!-- update_profile.html -->
-{% extends "base.html" %}
-{% load i18n %}
-{% load crispy_forms_tags %} 
-{% block content %}
-
-
 <div class="container">
   <div class="row d-flex justify-content-center align-items-center montserrat">
     <div class=" md-col-6">
-  <h2>Update Profile</h2>
-  <hr>
-  <p>If you want to change your password, please go to this link: 
-    <a href="{% url 'account_change_password' %}">{% trans "Change Password" %}</a>
-  </p>
-  <div>
     <div>
     
   
-  <form method="post" action="{% url 'update_profile' %}">
+  <form method="post" action="{% url 'update_booking' %}">
     {% csrf_token %}
     {{ form|crispy }}
     <button type="submit" class="btn-success rounded p-2">Save</button>
@@ -29,4 +16,3 @@
 </div>
 </div>
 </div>
-{% endblock %}
