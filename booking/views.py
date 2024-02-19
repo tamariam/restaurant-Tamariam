@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .forms import BookingForm
 from django.contrib import messages
 from . models import Booking
+from django.shortcuts import get_object_or_404
 
 
 # Create your views here.Menu.objects.filter(status=1, category='starter')
@@ -51,11 +52,10 @@ def booking_page(request):
 
 
 def update_booking(request):
+    booking = Booking.objects.filter(user=request.user).first()
     if request.method == "POST":
-        form = BookingForm(request.POST)
+        form = BookingForm(request.POST, instance=booking)
         if form.is_valid():
-            booking = form.save(commit=False)
-            booking.user = request.user
             booking.save()
             messages.add_message(request, messages.SUCCESS, 'booking updated succesfully')
             return redirect('update_booking')
@@ -63,9 +63,7 @@ def update_booking(request):
             message.error(request,'ups')
             
     else:
-        form = BookingForm()
+        form = BookingForm(instance=booking)
         return render(request, "booking/update_booking", {'form': form})
 
 
-    
-        

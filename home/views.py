@@ -32,7 +32,6 @@ def update_user(request):
         if form.is_valid():
             form.save()
             messages.add_message(request, messages.SUCCESS, 'Profile updated succesfully')
-            # messages.success(request, ('Account updated successfully'))
             return redirect('profile_page')
         else:
             messages.warning(request, "Profile update failed. Please correct the errors below.")
