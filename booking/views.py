@@ -48,3 +48,24 @@ def booking_page(request):
     else:
         messages.add_message(request, messages.WARNING, 'To make a booking, please sign up or log in first')
         return redirect('account_login')
+
+
+def update_booking(request):
+    if request.method == "POST":
+        form = BookingForm(request.POST)
+        if form.is_valid():
+            booking = form.save(commit=False)
+            booking.user = request.user
+            booking.save()
+            messages.add_message(request, messages.SUCCESS, 'booking updated succesfully')
+            return redirect('update_booking')
+        else:
+            message.error(request,'ups')
+            
+    else:
+        form = BookingForm()
+        return render(request, "booking/update_booking", {'form': form})
+
+
+    
+        
