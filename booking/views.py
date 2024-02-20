@@ -74,9 +74,8 @@ def booking_page(request):
 
 
 
-def update_booking(request, booking_id):
-    bookings = Booking.objects.all()
-    booking = get_object_or_404(bookings, id=booking_id)
+def update_booking(request,pk):
+    booking = get_object_or_404(Booking, id=pk)
     
     if request.method == "POST":
         edit_form = BookingForm(data=request.POST, instance=booking)
@@ -88,11 +87,11 @@ def update_booking(request, booking_id):
             booking.last_name = request.user.last_name
             booking.save()
             messages.success(request, 'Booking updated successfully')
-            return redirect('update_booking', id=booking_id)
+            return redirect('update_booking', pk=pk)
         else:
             messages.error(request, 'There was an error updating the booking.')
     else:
         edit_form = BookingForm(instance=booking)
         
-    return render(request, "home/update_profile.html", {'form': edit_form})
+    return render(request, "booking/update_booking.html", {'form': edit_form, 'booking': booking})
 

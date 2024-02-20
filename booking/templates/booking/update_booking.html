@@ -10,7 +10,7 @@
     <div>
     
   
-  <form method="post" action="{% url 'update_booking' id=booking_id %}">
+   <form method="post" action="{% url 'update_booking' pk=booking.id %}">
     {% csrf_token %}
     {{ form|crispy }}
     <button type="submit" class="btn-success rounded p-2">Save</button>
