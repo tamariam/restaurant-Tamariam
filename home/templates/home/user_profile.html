@@ -64,7 +64,7 @@ fade show " id="msg" role="alert">
                                 <td>{{booking.time}}</td>
                                 <td >{{booking.num_of_people}}</td>
                                 <td>{{booking.status}}</td> 
-                               <td ><a href="{% url 'update_booking' %} "class="table-btn btn-warning p-2 text-decoration-none rounded-2">Update </a></td>
+                               <td ><a href="{% url 'update_booking' booking_id=booking.id %} "class="table-btn btn-warning p-2 text-decoration-none rounded-2">Update </a></td>
                                 <td><a href="{% url 'account_delete_page' %}"class=" table-btn btn-danger p-2 text-decoration-none rounded-2">Delete </a></td>
                             </tr>
                           {% endfor %}

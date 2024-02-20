@@ -17,7 +17,7 @@ class BookingForm(forms.ModelForm):
         widgets = {
             'date': forms.DateInput(attrs={'type': 'date'})
         }
-
+        
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         # calculate minimum date

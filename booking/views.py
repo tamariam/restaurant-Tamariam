@@ -51,19 +51,48 @@ def booking_page(request):
         return redirect('account_login')
 
 
-def update_booking(request):
-    booking = Booking.objects.filter(user=request.user).first()
-    if request.method == "POST":
-        form = BookingForm(request.POST, instance=booking)
-        if form.is_valid():
-            booking.save()
-            messages.add_message(request, messages.SUCCESS, 'booking updated succesfully')
-            return redirect('update_booking')
-        else:
-            message.error(request,'ups')
+# def update_booking(request, booking_id):
+#     if request.method == "POST":
+#         booking = get_object_or_404(Booking, booking_id=booking_id)
+    
+#         edit_form = BookingForm(data=request.POST, instance=booking)
+#         if edit_form.is_valid():
+#             booking = edit_form.save(commit=False)
+#             booking.email = request.user.email
+#             booking.user = request.user
+#             booking.first_name = request.user.first_name
+#             booking.last_name = request.user.last_name
+#             booking.save()
+#             messages.add_message(request, messages.SUCCESS, 'booking updated succesfully')
+#             return redirect('update_booking', booking_id=booking_id)
+#         else:
+#             messages.error(request,'ups')
             
-    else:
-        form = BookingForm(instance=booking)
-        return render(request, "booking/update_booking", {'form': form})
+#     else:
+#         edit_form = BookingForm(instance=booking)
+#         return render(request, "booking/update_booking", {'form': edit_form})
 
+
+
+def update_booking(request, booking_id):
+    bookings = Booking.objects.all()
+    booking = get_object_or_404(bookings, id=booking_id)
+    
+    if request.method == "POST":
+        edit_form = BookingForm(data=request.POST, instance=booking)
+        if edit_form.is_valid():
+            booking = edit_form.save(commit=False)
+            booking.email = request.user.email
+            booking.user = request.user
+            booking.first_name = request.user.first_name
+            booking.last_name = request.user.last_name
+            booking.save()
+            messages.success(request, 'Booking updated successfully')
+            return redirect('update_booking', id=booking_id)
+        else:
+            messages.error(request, 'There was an error updating the booking.')
+    else:
+        edit_form = BookingForm(instance=booking)
+        
+    return render(request, "home/update_profile.html", {'form': edit_form})
 
