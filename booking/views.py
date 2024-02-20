@@ -51,10 +51,17 @@ def booking_page(request):
         return redirect('account_login')
 
 
-
 def update_booking(request, pk):
+    """
+        Update a booking view:
+        - Updates the booking with the provided primary key.
+        - Performs additional validation to ensure the user does not:
+        - Update the booking with a date or time that overlaps with existing bookings.
+        - Exceed the maximum capacity for the requested number of people.
+        - Displays error messages if the validation fails.
+        - Redirects the user to the profile page upon successful booking update.
+    """
     booking = get_object_or_404(Booking, id=pk)
-    
     if request.method == "POST":
         edit_form = BookingForm(data=request.POST, instance=booking)
         if edit_form.is_valid():
