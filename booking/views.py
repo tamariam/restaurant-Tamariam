@@ -51,47 +51,39 @@ def booking_page(request):
         return redirect('account_login')
 
 
-# def update_booking(request, booking_id):
-#     if request.method == "POST":
-#         booking = get_object_or_404(Booking, booking_id=booking_id)
-    
-#         edit_form = BookingForm(data=request.POST, instance=booking)
-#         if edit_form.is_valid():
-#             booking = edit_form.save(commit=False)
-#             booking.email = request.user.email
-#             booking.user = request.user
-#             booking.first_name = request.user.first_name
-#             booking.last_name = request.user.last_name
-#             booking.save()
-#             messages.add_message(request, messages.SUCCESS, 'booking updated succesfully')
-#             return redirect('update_booking', booking_id=booking_id)
-#         else:
-#             messages.error(request,'ups')
-            
-#     else:
-#         edit_form = BookingForm(instance=booking)
-#         return render(request, "booking/update_booking", {'form': edit_form})
 
-
-
-def update_booking(request,pk):
+def update_booking(request, pk):
     booking = get_object_or_404(Booking, id=pk)
     
     if request.method == "POST":
         edit_form = BookingForm(data=request.POST, instance=booking)
         if edit_form.is_valid():
             booking = edit_form.save(commit=False)
-            booking.email = request.user.email
-            booking.user = request.user
-            booking.first_name = request.user.first_name
-            booking.last_name = request.user.last_name
-            booking.save()
-            messages.success(request, 'Booking updated successfully')
-            return redirect('update_booking', pk=pk)
+            current_bookings = Booking.objects.filter(date=booking.date, status=1)
+            total_people_booked = sum(booking.num_of_people for booking in current_bookings)
+            requested_people = booking.num_of_people
+            max_capacity = 7
+            if total_people_booked >= max_capacity:
+                messages.error(request, 'We are currently fully booked for this date. Please choose another date or time.')
+            elif requested_people + total_people_booked > max_capacity:
+                messages.error(request,  'Sorry, your booking request exceeds the maximum capacity for this date. Please select fewer people or choose another date or time.')
+            else:
+                booking.email = request.user.email
+                booking.user = request.user
+                booking.first_name = request.user.first_name
+                booking.last_name = request.user.last_name
+                booked = Booking.objects.filter(date=booking.date, time=booking.time, user=request.user)
+                if booked:
+                    messages.add_message(request, messages.SUCCESS, 'You already have a booking for this date and time. Please choose a different time slot.')
+                else:
+                    booking.save()
+                    messages.success(request, 'Booking updated successfully')
+                    return redirect('profile_page')
         else:
             messages.error(request, 'There was an error updating the booking.')
     else:
         edit_form = BookingForm(instance=booking)
         
     return render(request, "booking/update_booking.html", {'form': edit_form, 'booking': booking})
+    
 
