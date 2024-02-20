@@ -249,11 +249,13 @@ form input:hover{
 .profile-h1{
     color:#540b0e
 }
-.profile-h2{
+.my-bookings,.my-details,.profile-h2{
     color:#c1121f;
     font-weight:600;
 }
-
+.my-bookings{
+    text-align: center;
+}
 .user-text{
     font-size:18px;
     font-weight:600;
@@ -268,6 +270,21 @@ form input:hover{
     font-size:18px;
     font-weight:500;
 }
+.table-btn,.details-btn{
+    font-weight:700;
+    color:black;
+}
+
+.scroll-note{
+    color:#540b0e;
+    font-size:16px;
+    font-weight:600;
+}
+.fas{
+    color:#000814;
+    font-size:18px;
+    margin-left:5px;
+}
 /* styles for menu page */
 .menu-link{
     text-decoration: none;
@@ -275,6 +292,7 @@ form input:hover{
     color:black;
     font-weight:700;
 }
+
 .menu-link:hover{
     border-bottom:2px solid red;
     color:black;
@@ -306,6 +324,13 @@ form input:hover{
 .booking-guidelines-list{
     font-size:18px;
 }
+/* breakpoint for scroll-note */
+@media only screen and (min-width:483px){
+    .scroll-note{
+        display:none;
+
+    }
+}
 /* styles for Tablet screen size */
  @media only screen and (min-width:767px) {
 .nav-link, .footer p {
@@ -334,6 +359,9 @@ form input:hover{
 
 .btn-link{
     padding:10px;
+}
+.my-bookings{
+    text-align: start;
 }
  }
 
