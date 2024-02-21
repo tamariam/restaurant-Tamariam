@@ -71,7 +71,7 @@ fade show " id="msg" role="alert">
                                         {% else %}
                                     <td><a href="{% url 'update_booking' pk=booking.id %}" class="table-btn btn-warning p-2 text-decoration-none rounded-2">Update</a></td>
                                         {% endif %}
-                                    <td><a href="{% url 'delete_booking' %}" class="table-btn btn-danger p-2 text-decoration-none rounded-2">Delete</a></td>
+                                    <td><a href="{% url 'delete_booking' pk=booking.id %}" class="table-btn btn-danger p-2 text-decoration-none rounded-2">Delete</a></td>
                                 </tr>
                             {% endfor %}
                         {% endif %}

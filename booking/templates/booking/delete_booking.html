@@ -6,7 +6,7 @@
   <h2>If you delete account you all data will be lost</h2>
   <hr>
   <h4>Please click confirm if you want to delete your account?</h4>
-  <form method="post" action="{% url 'account_delete_page' %}">
+  <form method="post" action="{% url 'delete_booking' pk=booking.id %}">
     {% csrf_token %}
     <button type="submit" class="m-2 btn-danger rounded p-2  p-2">Confirm</button>
     <button onclick="window.history.back();" class="btn-success p-2" type="button">Cancel</button>

@@ -93,5 +93,19 @@ def update_booking(request, pk):
     return render(request, "booking/update_booking.html", {'form': edit_form, 'booking': booking})
 
 
-def delete_booking(request):
-    return render(request, "booking/delete_booking.html")
+def delete_booking(request, pk):
+    '''
+    This view is responsible for processing requests to delete a booking. 
+    When a user clicks "delete" on the profile page's "My Bookings" section, 
+    this view is invoked to delete the specified booking identified by its primary key (pk).'''
+
+    booking = get_object_or_404(Booking, id=pk)
+    if request.method == "POST":
+        if booking.user == request.user:
+            booking.delete()
+            messages.success(request, 'Your Booking has been deleted.')
+            return redirect('profile_page')
+        else:
+            messages.warning(request, "You can only delete your own bookings")
+
+    return render(request, "booking/delete_booking.html", {'booking': booking})

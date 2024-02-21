@@ -51,5 +51,5 @@ def account_delete(request):
             messages.success(request, 'Your account has been deleted.')
             return redirect('home')
         else:
-            messages.error(request, 'You can only delete your own account.')
+            messages.error(request, 'You can only delete your own Bookings.')
     return render(request, "home/delete_account.html")
