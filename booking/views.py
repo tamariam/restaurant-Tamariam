@@ -91,3 +91,7 @@ def update_booking(request, pk):
     else:
         edit_form = BookingForm(instance=booking)
     return render(request, "booking/update_booking.html", {'form': edit_form, 'booking': booking})
+
+
+def delete_booking(request):
+    return render(request, "booking/delete_booking.html")
