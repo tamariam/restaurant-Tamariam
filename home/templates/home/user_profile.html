@@ -48,6 +48,9 @@ fade show " id="msg" role="alert">
                        <table class="table">
                         <h2 class="my-bookings">My Bookings</h2>
                         <p class="scroll-note text-center">Scroll right for entire Booking details <i class="fas fa-arrow-right"></i></p>
+                        {% if not  bookings %}
+                        <p class="fw-bold">You have not Bookings, {{user.first_name}}, Book it now.</p>
+                        {% else %}
                        <thead>
                             <tr class="table-primary">
                             <th scope="col">Date</th>
@@ -59,9 +62,8 @@ fade show " id="msg" role="alert">
                             </tr>
                         </thead>
                         <tbody>
-                            {% if bookings %}
                             {% for booking in bookings %}
-                                <tr class="table-danger">
+                                 <tr class="table-danger">
                                     <td>{{booking.date}}</td>
                                     <td>{{booking.time}}</td>
                                     <td>{{booking.num_of_people}}</td>
