@@ -90,7 +90,4 @@ def update_booking(request, pk):
             messages.error(request, 'There was an error updating the booking.')
     else:
         edit_form = BookingForm(instance=booking)
-        
     return render(request, "booking/update_booking.html", {'form': edit_form, 'booking': booking})
-    
-

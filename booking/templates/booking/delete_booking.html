@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+<div class="container">
+  <div class="row justify-content-center align-items-center mt-5 montserrat">
+  <h2>If you delete account you all data will be lost</h2>
+  <hr>
+  <h4>Please click confirm if you want to delete your account?</h4>
+  <form method="post" action="{% url 'account_delete_page' %}">
+    {% csrf_token %}
+    <button type="submit" class="m-2 btn-danger rounded p-2  p-2">Confirm</button>
+    <button onclick="window.history.back();" class="btn-success p-2" type="button">Cancel</button>
+    </form>
+    </div>
+    </div>
+{% endblock %}
