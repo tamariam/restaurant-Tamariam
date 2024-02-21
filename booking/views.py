@@ -95,8 +95,8 @@ def update_booking(request, pk):
 
 def delete_booking(request, pk):
     '''
-    This view is responsible for processing requests to delete a booking. 
-    When a user clicks "delete" on the profile page's "My Bookings" section, 
+    This view is responsible for processing requests to delete a booking.
+    When a user clicks "delete" on the profile page's "My Bookings" section,
     this view is invoked to delete the specified booking identified by its primary key (pk).'''
 
     booking = get_object_or_404(Booking, id=pk)

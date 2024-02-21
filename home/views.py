@@ -41,15 +41,15 @@ def update_user(request):
     return render(request, "home/update_profile.html", {'form': form})
 
 
-'''delete account'''
 
 
 def account_delete(request):
+    '''This view handles too delete account'''
     if request.method == 'POST':
         if request.user == request.user:
             request.user.delete()
             messages.success(request, 'Your account has been deleted.')
             return redirect('home')
         else:
-            messages.error(request, 'You can only delete your own Bookings.')
+            messages.error(request, 'You can only delete your own account.')
     return render(request, "home/delete_account.html")
