@@ -30,8 +30,9 @@ class CustomSignupForm(SignupForm):
 
 
 '''
-This is a custom profileupdate form that extends the base UserChangeForm.this form gives ability to
-updating user profiles, excluding the password field, and saving the changes to the database when necessary.
+This is a custom profileupdate form that extends the base UserChangeForm.
+this form gives ability toupdating user profiles, excluding the password
+field, and saving the changes to the database when necessary.
 It adds fields for first name, last name, and modifies the email field.
 '''
 

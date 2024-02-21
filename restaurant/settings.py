@@ -154,7 +154,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 ACCOUNT_FORMS = {
- 'signup': 'home.forms.CustomSignupForm',
+    'signup': 'home.forms.CustomSignupForm',
 }
 
 # message storage

@@ -17,10 +17,10 @@ class BookingForm(forms.ModelForm):
         widgets = {
             'date': forms.DateInput(attrs={'type': 'date'})
         }
-        
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         # calculate minimum date
-        tomorrow = timezone.now().date()+timedelta(days=1)
+        tomorrow = timezone.now().date() + timedelta(days=1)
         self.fields['date'].widget.attrs['min'] = tomorrow
         self.fields['date'].queryset = Booking.objects.order_by('-date')
