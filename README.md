@@ -62,6 +62,10 @@ so that I can **quickly set up a robust development environment and kickstart my
    - As a **logged in user** I can **change my password** so that I can **keep my account secure.**
    - As a **logged in user** I can **reset my password** so that **i can still login my account if i forget my password**
    - As a **user** I can **view Menu** so that i can **check available food choices**
+   - As a **logged in user** I can **book a table** so that i can **reserve place in restaurant** for a specific time.
+   - As a **Logged in user** I can **view my booking details** so that i can **make sure everything is correct**.
+   - As a **logged in user** I can **change my bookings** so that i can **change any details of booking** if i need.
+   - As a **logged in user** I can **cancel my existing booking** so that i **do not need to call to restaurant to cancel it.**
 
 Please check all user storys[here](https://github.com/users/tamariam/projects/9)
 
