@@ -18,17 +18,13 @@
 {% csrf_token %}
     <button class="btn-success rounded p-2 border-0" type="submit">{% trans 'Confirm' %}</button>
 </form>
-{% else %}
-<p>{% blocktrans %}Unable to confirm {{ email }} because it is already confirmed by a different account.{% endblocktrans %}</p>
-{% endif %}
 
 {% else %}
-
 {% url 'account_email' as email_url %}
 
-<p>This email confirmation link expired or is already confirmed, go back to home page.</p>
-
+<p>{% blocktrans %}Unable to confirm {{ email }} because it is expired or already confirmed by a different account.{% endblocktrans %}</p>
 {% endif %}
+
 </div>
 </div>
 {% endblock content %}
