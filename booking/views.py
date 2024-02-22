@@ -57,7 +57,7 @@ def booking_page(request):
                         messages.add_message(
                             request,
                             messages.SUCCESS,
-                            'Your booking request has been successfully submitted! You will receive feedback from us within the next 24 hours regarding the status of your booking.')
+                            'Your booking request has been successfully submitted!')
                         return redirect('profile_page')
             else:
                 messages.warning(
