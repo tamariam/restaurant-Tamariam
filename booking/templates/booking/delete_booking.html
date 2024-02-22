@@ -7,10 +7,11 @@
     Cancel Booking
   </h2>
 <hr>
-<ul>
+<div>
   <p><span class="delete-span"> Date: </span>{{booking.date}}</p>
   <p><span class="delete-span"> Time: </span>{{booking.time}}</p>
   <p><span class="delete-span"> Number: </span>{{booking.num_of_people}}</p>
+</div>
   <h3 class="text-danger">Please confirm if you want to proceed with deleting the booking record.</h3>
   <form method="post" action="{% url 'delete_booking' pk=booking.id %}">
     {% csrf_token %}

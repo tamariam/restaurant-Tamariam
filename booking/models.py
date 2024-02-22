@@ -39,7 +39,7 @@ class Booking(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     email = models.EmailField(max_length=254)
-    status = models.CharField(max_length=20,choices=STATUS, default="pending")
+    status = models.CharField(max_length=20, choices=STATUS, default="pending")
     num_of_people = models.IntegerField(choices=PEOPLE, default=0)
     request_date = models.DateTimeField(auto_now_add=True)
     date = models.DateField()

@@ -19,7 +19,7 @@ def booking_page(request):
                 booking = form.save(commit=False)
                 # Check current bookings for the selected date
                 current_bookings = Booking.objects.filter(
-                    date=booking.date, status=1)
+                    date=booking.date, status="approved")
                 # Calculate total people already booked for the selected date
                 total_people_booked = sum(
                     booking.num_of_people for booking in current_bookings)
@@ -32,15 +32,15 @@ def booking_page(request):
                 if total_people_booked >= max_capacity:
                     messages.error(
                         request,
-                        'We are currently fully booked for this date.Please'
-                        'choose another date or time.'
-                        )
+                        'We are currently fully booked '
+                        'for this date.Please choose another date or time.'
+                    )
                 elif requested_people + total_people_booked > max_capacity:
                     messages.error(
                         request,
-                        'Sorry, your booking request exceeds the maximum '
-                        'capacity for this date. Please select fewer people or'
-                        'choose another date or time.'
+                        'Unfortunately, your booking request exceeds the '
+                        'maximum capacity for this date. Please select fewer '
+                        'people or choose another date or time.'
                         )
                 else:
                     # Update booking details and save to database
@@ -55,8 +55,7 @@ def booking_page(request):
                         )
                     if booked:
                         messages.add_message(
-                            request,
-                            messages.SUCCESS,
+                            request, messages.ERROR,
                             'You already have a booking for this date and '
                             'time. Please choose a different time slot.'
                             )
@@ -65,20 +64,20 @@ def booking_page(request):
                         messages.add_message(
                             request,
                             messages.SUCCESS,
-                            'Your booking request has been successfully'
-                            'submitted!You will receive feedback from us'
-                            'within the next 24 hours regarding the status'
+                            'Your booking request has been successfully '
+                            'submitted!You will receive feedback from us '
+                            'within the next 24 hours regarding the status '
                             'of your booking.'
                             )
                         return redirect('profile_page')
             else:
-                messages.warning(
+                messages.error(
                     request, "Booking failed. Please correct the errors below")
         return render(request, "booking/booking.html", {'form': form})
     else:
         messages.add_message(
             request,
-            messages.WARNING,
+            messages.INFO,
             'To make a booking, please sign up or log in first')
         return redirect('account_login')
 
@@ -101,7 +100,7 @@ def update_booking(request, pk):
         if edit_form.is_valid():
             booking = edit_form.save(commit=False)
             current_bookings = Booking.objects.filter(
-                date=booking.date, status=1)
+                date=booking.date, status="approved")
             total_people_booked = sum(
                 booking.num_of_people for booking in current_bookings)
             requested_people = booking.num_of_people
@@ -116,7 +115,7 @@ def update_booking(request, pk):
                 messages.error(
                     request,
                     'Sorry, your booking request exceeds the maximum capacity '
-                    'for this date. Please select fewer people or choose'
+                    'for this date. Please select fewer people or choose '
                     'another date or time.'
                     )
             else:
@@ -130,7 +129,7 @@ def update_booking(request, pk):
                     messages.add_message(
                         request,
                         messages.SUCCESS,
-                        'You already have a booking for this date and time.'
+                        'You already have a booking for this date and time. '
                         'Please choose a different time slot.'
                         )
                 else:

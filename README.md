@@ -404,12 +404,51 @@ Chrome DevTools Lighthouse was used to test Performance, Accessibility, Best Pra
 
 </details>
 
+
+<details>
+ <summary>lighthouse-Testing-Pofile-page-Desktop (click to expand)</summary>
+
+![Profile-page-Desktop](./docs/testing/lighthouse/profile-page-lh-desktop.png)
+
+</details>
+
+<details>
+ <summary>lighthouse-Testing-Pofile-page-Mobile (click to expand)</summary>
+
+![Profile-page-Mobile](./docs/testing/lighthouse/profile-page-lh-mobile.png)
+
+</details>
+
+<details>
+ <summary>lighthouse-Testing-Delete-account-Desktop (click to expand)</summary>
+
+![Delete-account-Desktop](./docs/testing/lighthouse/delete-accont-lh-desktop.png)
+
+</details>
+
+<details>
+ <summary>lighthouse-Testing-Delete-account-Desktop (click to expand)</summary>
+
+![Delete-account-Mobile](./docs/testing/lighthouse/delete-accont-lh-mobile.png)
+
+</details>
+
+
+<summary>lighthouse-Testing-Update-profile-Desktop (click to expand)</summary>
+
+![Update-Profile-Desktop](./docs/testing/lighthouse/updateprofile-lh-desktop.png)
+
+</details>
+
+
 <details>
   <summary>lighthouse-Testing-Update-profile-Mobile (click to expand)</summary>
 
 ![Update-Profile-Mobile](./docs/testing/lighthouse/updateprofile-mobile.png)
 
 </details>
+
+  
 
 <details>
   <summary>lighthouse-Testing-Logout-Desktop (click to expand)</summary>
@@ -471,19 +510,66 @@ Chrome DevTools Lighthouse was used to test Performance, Accessibility, Best Pra
 
 ### Menu testing with lighthouse
 
-  <summary>lighthouse-Testing-Password-Reset-Desktop (click to expand)</summary>
+
+<details>
+  <summary>lighthouse-Testing-Menu-Desktop (click to expand)</summary>
 
 ![Menu-Desktop](./docs/testing/lighthouse/menu-desktop.png)
 
 </details>
 
-  <summary>lighthouse-Testing-Password-Reset-Desktop (click to expand)</summary>
+
+<details>
+  <summary>lighthouse-Testing-Menu-Mobile (click to expand)</summary>
 
 ![menu-mobile](./docs/testing/lighthouse/menu-mobile.png)
 
 </details>
 
 
+### Booking page testing with lighthouse
+
+<details>
+<summary>lighthouse-Testing-Booking page-Desktop (click to expand)</summary>
+
+![Booking-page-desktop](./docs/testing/lighthouse/booking-page-lh-desktop.png)
+
+</details>
+
+<details>
+<summary>lighthouse-Testing-Booking page-Mobile (click to expand)</summary>
+
+![Booking-page-Mobile](./docs/testing/lighthouse/booking-page-lh-mobile.png)
+
+</details>
+
+<details>
+<summary>lighthouse-Testing-Update-Booking-Desktop (click to expand)</summary>
+
+![Update-booking-desktop](./docs/testing/lighthouse/update-booking-lh-desktop.png)
+
+</details>
+
+<details>
+<summary>lighthouse-Testing-Update-Booking-Mobile (click to expand)</summary>
+
+![Update-booking-desktop](./docs/testing/lighthouse/update-booking-lh-mobile.png)
+
+</details>
+
+<details>
+<summary>lighthouse-Testing-Delete-Booking-Desktop (click to expand)</summary>
+
+![Delete-booking-desktop](./docs/testing/lighthouse/delete-booking-lh-desktop.png)
+
+</details>
+
+<details>
+<summary>lighthouse-Testing-Delete-Booking-Mobile (click to expand)</summary>
+
+![Delete-booking-Mobile](./docs/testing/lighthouse/delete-booking-lh-Mobile.png)
+
+</details>
 
 # Deployment
 
