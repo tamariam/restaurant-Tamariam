@@ -32,11 +32,16 @@ def booking_page(request):
                 if total_people_booked >= max_capacity:
                     messages.error(
                         request,
-                        'We are currently fully booked for this date. Please choose another date or time.')
+                        'We are currently fully booked for this date.Please'
+                        'choose another date or time.'
+                        )
                 elif requested_people + total_people_booked > max_capacity:
                     messages.error(
                         request,
-                        'Sorry, your booking request exceeds the maximum capacity for this date. Please select fewer people or choose another date or time.')
+                        'Sorry, your booking request exceeds the maximum '
+                        'capacity for this date. Please select fewer people or'
+                        'choose another date or time.'
+                        )
                 else:
                     # Update booking details and save to database
                     booking.email = request.user.email
@@ -46,22 +51,29 @@ def booking_page(request):
                     # Check if user has already booked for the same date and
                     # time
                     booked = Booking.objects.filter(
-                        date=booking.date, time=booking.time, user=request.user)
+                        date=booking.date, time=booking.time, user=request.user
+                        )
                     if booked:
                         messages.add_message(
                             request,
                             messages.SUCCESS,
-                            'You already have a booking for this date and time. Please choose a different time slot.')
+                            'You already have a booking for this date and '
+                            'time. Please choose a different time slot.'
+                            )
                     else:
                         booking.save()
                         messages.add_message(
                             request,
                             messages.SUCCESS,
-                            'Your booking request has been successfully submitted!')
+                            'Your booking request has been successfully'
+                            'submitted!You will receive feedback from us'
+                            'within the next 24 hours regarding the status'
+                            'of your booking.'
+                            )
                         return redirect('profile_page')
             else:
                 messages.warning(
-                    request, "Booking failed. Please correct the errors below.")
+                    request, "Booking failed. Please correct the errors below")
         return render(request, "booking/booking.html", {'form': form})
     else:
         messages.add_message(
@@ -76,10 +88,12 @@ def update_booking(request, pk):
         Update a booking view:
         - Updates the booking with the provided primary key.
         - Performs additional validation to ensure the user does not:
-        - Update the booking with a date or time that overlaps with existing bookings.
+        - Update the booking with a date or time that overlaps with existing
+        'bookings.
         - Exceed the maximum capacity for the requested number of people.
         - Displays error messages if the validation fails.
-        - Redirects the user to the profile page upon successful booking update.
+        - Redirects the user to the profile page upon successful booking'
+        ' update.
     """
     booking = get_object_or_404(Booking, id=pk)
     if request.method == "POST":
@@ -95,11 +109,16 @@ def update_booking(request, pk):
             if total_people_booked >= max_capacity:
                 messages.error(
                     request,
-                    'We are currently fully booked for this date. Please choose another date or time.')
+                    'We are currently fully booked for this date. Please '
+                    'choose another date or time.'
+                    )
             elif requested_people + total_people_booked > max_capacity:
                 messages.error(
                     request,
-                    'Sorry, your booking request exceeds the maximum capacity for this date. Please select fewer people or choose another date or time.')
+                    'Sorry, your booking request exceeds the maximum capacity '
+                    'for this date. Please select fewer people or choose'
+                    'another date or time.'
+                    )
             else:
                 booking.email = request.user.email
                 booking.user = request.user
@@ -111,7 +130,9 @@ def update_booking(request, pk):
                     messages.add_message(
                         request,
                         messages.SUCCESS,
-                        'You already have a booking for this date and time. Please choose a different time slot.')
+                        'You already have a booking for this date and time.'
+                        'Please choose a different time slot.'
+                        )
                 else:
                     booking.save()
                     messages.success(request, 'Booking updated successfully')
@@ -128,7 +149,8 @@ def delete_booking(request, pk):
     '''
     This view is responsible for processing requests to delete a booking.
     When a user clicks "delete" on the profile page's "My Bookings" section,
-    this view is invoked to delete the specified booking identified by its primary key (pk).'''
+    this view is invoked to delete the specified booking identified by its
+    primary key (pk).'''
 
     booking = get_object_or_404(Booking, id=pk)
     if request.method == "POST":
