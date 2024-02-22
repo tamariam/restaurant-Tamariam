@@ -22,7 +22,7 @@
 {% else %}
 {% url 'account_email' as email_url %}
 
-<p>{% blocktrans %}Unable to confirm {{ email }} because it is expired or already confirmed by a different account.{% endblocktrans %}</p>
+<p>{% blocktrans %}Unable to confirm {{ email }} because it is expired or already confirmed. Please <a href="{{ email_url }}">issue a new email confirmation request</a>. {% endblocktrans %}</p>
 {% endif %}
 
 </div>
