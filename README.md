@@ -21,6 +21,7 @@ Please check live  [URL](https://tamariamrestaurant-d81c96b3d785.herokuapp.com)
    - [Footer](#footer)
    - [Account Managament](#account-managament)
    - [Menu](#menu)
+   - [Booking Page](#booking-page)
 - [Deployment](#dployment)
    - [Heroku Deployment](#heroku-deployment)
    - [ElephantSQL Database](#elephantsql-database)
@@ -244,7 +245,18 @@ The signup feature allows users to create a new account on the platform. Upon si
 ![logaut](/docs/features/logout.png)
 ![logout-message](/docs/features/logout-alert.png)
 
-- Update  Profile
+
+### Profile page
+- Profile page allows logged-in users to oversee and update their profile information and bookings conveniently.It conists with three section:
+  - Greeting and Profile Overview: Users are greeted with a personalized message and provided with an overview of the profile page instructions.
+  - Profile Management Area: In this section, users can update their profile details.
+  - Booking Management: Users can efficiently manage their bookings, including viewing, editing, or canceling them.
+
+![logaut](/docs/features/profile-page.png)
+
+
+### Update  Profile
+
   - Registered users have the ability to update their profile details by selecting the appropriate option from the profile page.When a user opts to modify their account, a form pre-filled with their existing information is presented. After submitting the updated details, the user's account is successfully modified.
 
 ![update-profile](/docs/features/update-profile.png)
@@ -286,6 +298,48 @@ After successfully resetting the password from the email, the user is redirected
 ![reset-password-sent](/docs/features/password-reset-done.png)
 
 
+###  My  bookings
+- In the 'My Bookings' section, users can view details of their existing bookings, including the status of each booking. Additionally, users have the option to update or delete their bookings as needed.
+
+![My-Bookings](/docs/features/booking-records.png)
+
+- When there are no bookings, the 'My Bookings' section will display an appropriate message indicating that there are no bookings currently associated with the user's account.
+
+![No-Bookings](/docs/features/no-bookings.png)
+
+- When a user clicks on the 'Update' button in the 'My Bookings' section, they will be redirected to the update booking page. The form on this page is identical to the booking form, with the only difference being that the booking details are prepopulated with the current booking information. Users can then make changes to these details as needed.
+
+The update booking system operates similarly to the booking system, ensuring that users cannot make duplicate bookings. Additionally, if the restaurant is fully booked or if the requested number of guests exceeds the maximum capacity, the user will be unable to proceed with the update request, and an appropriate message will be displayed to notify the user. Clicking the cancel button on the update booking form  will navigate the user back  to the profile page.
+
+
+![update-Bookings](/docs/features/update-booking.png)
+
+- When the user clicks 'Save' on the update booking form, a message will be displayed to notify the user that the booking details have been successfully updated.
+
+![Booking-message](/docs/features/booking-updated-message.png)
+
+### Delete booking
+
+-  Upon navigating to the cancellation booking page, users will see the details of their booking, including the date, time, and number of guests. A confirmation message will prompt users to confirm their decision to proceed with deleting the booking record.Clicking the cancel button will navigate the user back  to the profile page.
+
+![delete-booking](/docs/features/delete-booking-page.png)
+
+ <details>
+  <summary>Delete-booking - Mobile (click to expand)</summary>
+![delete-Bookings](/docs/features/delete-booking-page-mobile.png)
+</details>
+
+After confirming the deletion, a message will be displayed to notify the user that the booking record has been successfully deleted.
+
+![booking-deleted](/docs/features/booking-deleted-message.png).
+
+
+
+
+
+
+
+
 
 
 
@@ -315,6 +369,44 @@ To provide real-time information to our users, the menu page dynamically adjusts
 ![Menu -Mobile](/docs/features/menu-mobile.png)
 
 </details>
+
+
+## Booking page
+
+Upon clicking the "Book" button in the navbar or the "Book a Table" button on the home page, users will be directed to the booking page. Here, they can make reservations using a form that allows them to select the date, time, and number of guests for their booking. After submitting the form, users will receive a feedback message confirming their reservation submission.Clicking the cancel button will navigate the user back  to the Home page.
+
+![Booking-Desktop](/docs/features/booking-page.png) 
+![loginrequire](/docs/features/booking-submited-message.png)
+
+
+ <details>
+  <summary>Booking-page- Mobile (click to expand)</summary>
+
+![Booking -Mobile](/docs/features/booking-page-mobile.png)
+
+</details>
+
+To access the booking page, users need to be logged in to their account. If you are not logged in, they  will be redirected to the login page. Upon redirection, a message will prompt you to either log in or register if you do not have an account yet. 
+
+![loginrequire](/docs/features/loginrequire-message.png)
+
+
+If the restaurant is fully booked on the requested date,  message will display indicating that no reservations are available for that specific date.
+
+ ![fully-booked](/docs/features/fully-booked-message.png)
+
+
+If the user already has a booking for a specific date and time, a message will be displayed to notify them that they cannot make another booking for the same date and time.
+
+![double-booking](/docs/features/avoid-double-bookings.png)
+
+
+If there are already approved bookings for the specified date, and the number of people the user intends to book exceeds the available capacity,  the  message will display indicating that they cannot book for that date.
+
+![request-exceeds](/docs/features/booking-request-exceeds.png)
+
+
+
 
 
 # Testing 
