@@ -111,16 +111,31 @@ Please check all user storys[here](https://github.com/users/tamariam/projects/9)
 <details>
   <summary>Menu-Wireframe-Desktop (click to expand)</summary>
 
-![login-Wirefreame](/docs/wireframes/menu-wireframe-desktop.png)
+![menu-Wirefreame-desktop](/docs/wireframes/menu-wireframe-desktop.png)
 
 </details>
 
 <details>
   <summary>Menu-Wireframe-Mobile (click to expand)</summary>
 
-![login-Wirefreame](/docs/wireframes/menu-wireframe-mobile.png)
+![menu-Wirefreame-mobile](/docs/wireframes/menu-wireframe-mobile.png)
 
 </details>
+
+<details>
+  <summary>Booking-Wireframe (click to expand)</summary>
+
+![Booking-Wirefreame](/docs/wireframes/booking-wireframe.png)
+
+</details>
+
+<details>
+  <summary>Profile-page-wireframe (click to expand)</summary>
+
+![profile-page](/docs/wireframes/profile-page-wireframe.png)
+
+</details>
+
 
 ## Database Schema
 
@@ -326,6 +341,7 @@ The update booking system operates similarly to the booking system, ensuring tha
 
  <details>
   <summary>Delete-booking - Mobile (click to expand)</summary>
+  
 ![delete-Bookings](/docs/features/delete-booking-page-mobile.png)
 </details>
 
@@ -388,7 +404,7 @@ Upon clicking the "Book" button in the navbar or the "Book a Table" button on th
 
 To access the booking page, users need to be logged in to their account. If you are not logged in, they  will be redirected to the login page. Upon redirection, a message will prompt you to either log in or register if you do not have an account yet. 
 
-![loginrequire](/docs/features/loginrequire-message.png)
+![login-require](/docs/features/loginrequire-message.png)
 
 
 If the restaurant is fully booked on the requested date,  message will display indicating that no reservations are available for that specific date.
