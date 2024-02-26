@@ -1,5 +1,112 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>hello </h1>
+<div class="table-responsive col-md-8">
+    <div class="table">
+        {% if not bookings %}
+        <p class="fw-bold">There is no  bookings.</p>
+        {% else %}
+        <div>
+        <h2 class="my-bookings">Pending Bookings</h2>
+     <p class="scroll-note text-center">Scroll right for entire Approved Booking details <i class="fas fa-arrow-right"></i></p>
+     {% if not  pendings %}
+     <p class="fw-bold">There is no pending bookings.</p>
+     {% else %}
+     <table class="table">
+    <thead>
+         <tr class="table-primary">
+            <th scope="col">First Name</th>
+           <th scope="col">Last Name</th>
+         <th scope="col">Date</th>
+           <th scope="col">Time</th>
+           <th scope="col">Number of People</th>
+           <th scope="col">approve</th>
+           <th scope="col">Reject</th>
+         </tr>
+     </thead>
+     <tbody>
+         {% for pending in pendings %}
+              <tr class="table-danger">
+                <td>{{pending.first_name}}</td>
+                <td>{{pending.last_name}}</td>
+                 <td>{{pending.date}}</td>
+                 <td>{{pending.time}}</td>
+                 <td>{{pending.num_of_people}}</td>
+                 <td>Approve</a></td>
+                 <td>Reject</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+         </div>
+         {% endif %}
+        <div>
+           <h2 class="my-bookings">Approved Bookings</h2>
+     <p class="scroll-note text-center">Scroll right for entire Booking details <i class="fas fa-arrow-right"></i></p>
+     {% if not  approved %}
+     <p class="fw-bold">There is no Approved bookings.</p>
+     {% else %}
+     <table class="table">
+    <thead>
+         <tr class="table-primary">
+            <th scope="col">First Name</th>
+           <th scope="col">Last Name</th>
+         <th scope="col">Date</th>
+           <th scope="col">Time</th>
+           <th scope="col">Number of People</th>
+           <th scope="col">Reject</th>
+         </tr>
+     </thead>
+     <tbody>
+         {% for approve in approved %}
+              <tr class="table-danger">
+                <td>{{approve.first_name}}</td>
+                <td>{{approve.last_name}}</td>
+                 <td>{{approve.date}}</td>
+                 <td>{{approve.time}}</td>
+                 <td>{{approve.num_of_people}}</td>
+                 <td>Reject</a></td>
+             </tr>
+             {% endfor %}
+             </tbody>
+            </table> 
+         </div>
+         {% endif %}
+         <div>
+         <h2 class="my-bookings">Rejected Bookings</h2>
+         <p class="scroll-note text-center">Scroll right for entire Booking details <i class="fas fa-arrow-right"></i></p>
+         {% if not  rejected %}
+         <p class="fw-bold">There is no Rejected bookings.</p>
+         {% else %}
+         <table class="table">
+        <thead>
+             <tr class="table-primary">
+                <th scope="col">First Name</th>
+               <th scope="col">Last Name</th>
+             <th scope="col">Date</th>
+               <th scope="col">Time</th>
+               <th scope="col">Number of People</th>
+               <th scope="col">Reject</th>
+             </tr>
+         </thead>
+         <tbody>
+             {% for reject in rejected %}
+                  <tr class="table-danger">
+                    <td>{{reject.first_name}}</td>
+                    <td>{{reject.last_name}}</td>
+                     <td>{{reject.date}}</td>
+                     <td>{{reject.time}}</td>
+                     <td>{{reject.num_of_people}}</td>
+                 </tr>
+                 {% endfor %}
+                 </tbody>
+                 </table>
+                 </div>
+             {% endif %} 
+
+         {% endif %}
+         </div>
+        
+
+
 {% endblock content %}
