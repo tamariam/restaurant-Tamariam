@@ -8,6 +8,14 @@ def dashboard_page(request):
     bookings = Booking.objects.all()
     pendings = Booking.objects.filter(status='pending')
     approved = Booking.objects.filter(status='approved')
-    rejected = Booking.objects.filter(status = 'rejected')
-    return render(request, "staff/dashboard.html", {'dashboard_url': 'dashboard','bookings':bookings, 'pendings': pendings, 'approved': approved, 'rejected': rejected})
+    rejected = Booking.objects.filter(status='rejected')
+
+    context = {
+        'bookings': bookings,
+        'pendings': pendings,
+        'approved': approved,
+        'rejected': rejected,
+    }
+
+    return render(request, "staff/dashboard.html", context)
 
