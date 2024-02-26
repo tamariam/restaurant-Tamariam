@@ -5,7 +5,8 @@
 {% url 'account_logout' as logout_url %}
 {% url 'profile_page' as profile_url %}
 {% url 'menu' as menu_url%}
-{% url 'booking' as bookin_url %}
+{% url 'booking' as booking_url %}
+{% url 'dashboard' as dashboard_url %}
 
 <!DOCTYPE html>
 <html class="h-100" lang="en">
@@ -53,7 +54,7 @@
               <li class="nav-item">
                 <a class="nav-link  {% if request_path == booking_url%}active{% endif %}" aria-current = "page" href="{%url 'booking' %}">Book</a> 
               </li>
-              {% if user.is_authenticated and user.is_staff is false %}
+              {% if user.is_authenticated and  not user.is_staff  %}
                <!-- Display logout link when the user is authenticated -->
                <li class="nav-item">
                 <a class="nav-link {% if request.path == profile_url %}active{% endif %}" aria-current="page" href="{% url 'profile_page' %}">Profile</a>
@@ -63,7 +64,7 @@
                 </li> 
                 {% elif user.is_authenticated and user.is_staff %}
                 <li class="nav-item">
-                  <a class="nav-link {% if request.path == profile_url %}active{% endif %}" aria-current="page" href="{% url 'profile_page' %}">Dashboard</a>
+                  <a class="nav-link {% if request.path == dashboard_url %}active{% endif %}" aria-current="page" href="{% url 'dashboard' %}">Dashboard</a>
                 </li> 
                    <li class="nav-item">
                     <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
