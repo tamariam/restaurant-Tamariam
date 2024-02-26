@@ -94,6 +94,15 @@ Please check all user storys[here](https://github.com/users/tamariam/projects/9)
 
 </details>
 
+
+<details>
+  <summary>Profile-page-wireframe (click to expand)</summary>
+
+![profile-page](/docs/wireframes/profile-page-wireframe.png)
+
+</details>
+
+
 <details>
   <summary>Signup-Wireframe (click to expand)</summary>
 
@@ -129,12 +138,6 @@ Please check all user storys[here](https://github.com/users/tamariam/projects/9)
 
 </details>
 
-<details>
-  <summary>Profile-page-wireframe (click to expand)</summary>
-
-![profile-page](/docs/wireframes/profile-page-wireframe.png)
-
-</details>
 
 
 ## Database Schema
@@ -534,21 +537,21 @@ Chrome DevTools Lighthouse was used to test Performance, Accessibility, Best Pra
 <details>
  <summary>lighthouse-Testing-Delete-account-Desktop (click to expand)</summary>
 
-![Delete-account-Desktop](./docs/testing/lighthouse/delete-accont-lh-desktop.png)
+![Delete-account-Desktop](./docs/testing/lighthouse/delete-account-lh-desktop.png)
 
 </details>
 
 <details>
- <summary>lighthouse-Testing-Delete-account-Desktop (click to expand)</summary>
+ <summary>lighthouse-Testing-Delete-account-Mobile (click to expand)</summary>
 
-![Delete-account-Mobile](./docs/testing/lighthouse/delete-accont-lh-mobile.png)
+![Delete-account-Mobile](./docs/testing/lighthouse/delete-account-lh-mobile.png)
 
 </details>
 
-
+<details>
 <summary>lighthouse-Testing-Update-profile-Desktop (click to expand)</summary>
 
-![Update-Profile-Desktop](./docs/testing/lighthouse/updateprofile-lh-desktop.png)
+![Update-Profile-Desktop](./docs/testing/lighthouse/updateprofile-desktop.png)
 
 </details>
 
