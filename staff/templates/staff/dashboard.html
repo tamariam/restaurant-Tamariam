@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1 class="mx-auto text-center">Staff Management Area</h1>
+<h1 class="mx-auto text-center">Booking Management Area</h1>
 <div class="container-fluid">
     <div class="table-responsive col-md-8 col-12">
            <!-- Display message if no bookings -->
@@ -24,6 +24,7 @@
                     <th scope="col">Date</th>
                     <th scope="col">Time</th>
                     <th scope="col">People</th>
+                    <th scope="col">status</th>
                     <th scope="col">Approve</th>
                     <th scope="col">Reject</th>
                 </tr>
@@ -38,8 +39,15 @@
                     <td>{{pending.date}}</td>
                     <td>{{pending.time}}</td>
                     <td>{{pending.num_of_people}}</td>
-                    <td>Approve</td>
-                    <td>Reject</td>
+                    <td>{{pending.status}}</td>
+                    <!-- <td><a href="{% url 'dashboard'  %}" class="table-btn btn-warning p-2 text-decoration-none rounded-2">Approve</a></td>
+                    <td><a href="{% url 'dashboard' %}" class="table-btn btn-danger p-2 text-decoration-none rounded-2">Reject</a></td> -->
+                    <td>
+                        <form method="post" action="{% url 'approve' pk=pending.id %}">
+                            {% csrf_token %}
+                            <button type="submit" class="rounded">Approve</button>
+                        </form>
+                    </td>
                 </tr>
                 {% endfor %}
               <!-- end of loop  -->
@@ -59,7 +67,7 @@
                     <th scope="col">Last Name</th>
                     <th scope="col">Date</th>
                     <th scope="col">Time</th>
-                    <th scope="col">Number of People</th>
+                    <th scope="col">People</th>
                     <th scope="col">Approve</th>
                     <th scope="col">Reject</th>
                 </tr>
@@ -73,7 +81,7 @@
                     <td>{{approve.time}}</td>
                     <td>{{approve.num_of_people}}</td>
                     <td>N/A</td>
-                    <td>Reject</td>
+                    <td>N/A</td>
                 </tr>
                 {% endfor %}
             </tbody>
@@ -92,7 +100,7 @@
                     <th scope="col">Last Name</th>
                     <th scope="col">Date</th>
                     <th scope="col">Time</th>
-                    <th scope="col">Number of People</th>
+                    <th scope="col">People</th>
                     <th scope="col">Approve</th>
                     <th scope="col">Reject</th>
                 </tr>
