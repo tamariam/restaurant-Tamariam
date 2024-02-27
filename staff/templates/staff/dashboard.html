@@ -2,6 +2,19 @@
 
 {% block content %}
 <h1 class="mx-auto text-center">Booking Management Area</h1>
+   <!-- display django messages --> 
+   <div class=" text-centercol-md-2 d-flex justify-content-center align-items-center ">
+    {% if messages %}
+    {% for message in messages %}
+      
+        <div class="text-center bordered montserrat mt-2 alert {{ message.tags }} bg-warning alert-dismissible fade show " id="msg" role="alert">
+          {{ message | safe }}
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      </div>
+    {% endfor %}
+  {% endif %}
+
 <div class="container-fluid">
     <div class="table-responsive col-md-8 col-12">
            <!-- Display message if no bookings -->
@@ -41,13 +54,13 @@
                     <td>
                         <form method="post" action="{% url 'approve' pk=pending.id %}">
                             {% csrf_token %}
-                            <button type="submit" class="rounded">Approve</button>
+                            <button type="submit" class="rounded dashboard-btn btn-success">Approve</button>
                         </form>
                     </td>
                     <td>
                         <form method="post" action="{% url 'reject' pk=pending.id %}">
                             {% csrf_token %}
-                            <button type="submit" class="rounded">Reject</button>
+                            <button type="submit" class="rounded dashboard-btn btn-danger">Reject</button>
                         </form>
                     </td>
                 </tr>

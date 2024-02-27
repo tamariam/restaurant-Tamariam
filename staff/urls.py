@@ -8,5 +8,4 @@ urlpatterns = [
     path("dashboard/", dashboard_page, name='dashboard'),
     path("approve/booking/<int:pk>/", approve_booking, name='approve'),
     path("reject/booking/<int:pk>/", reject_booking, name='reject'),
-
 ]
