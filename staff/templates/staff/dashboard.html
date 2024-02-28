@@ -138,7 +138,10 @@
     </div>
     {% endif %}
     <div class="col-md-4 col-12">
-        <h3>dhdhhdhdhd</h3>
+        <form method="get" action="{% url 'search' %}" style="margin: 0">
+            <input  id="search_box" type="text" name="search_box"  placeholder="Search by Name" >
+            <button id="search_submit" type="submit" >Submit</button>
+        </form>
     </div>
 </div>
 {% endblock content %}

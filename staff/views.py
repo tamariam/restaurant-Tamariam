@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from booking.models import Booking
 from django.shortcuts import get_object_or_404
 from django.contrib import messages
+from simple_search import search_filter
 
 # Create your views here.
 
@@ -16,7 +17,6 @@ def dashboard_page(request):
         pendings = Booking.objects.filter(status='pending')
         approved = Booking.objects.filter(status='approved')
         rejected = Booking.objects.filter(status='rejected')
-
         context = {
             'bookings': bookings,
             'pendings': pendings,
@@ -82,3 +82,11 @@ def reject_booking(request, pk):
     else:
         messages.error(request, 'You are not authorised to view this page.')
         return redirect('home')
+
+
+def search(request):
+    query = request.GET.get('search_box', '')
+    search_fields = ['first_name', 'last_name']
+    f = search_filter(search_fields, query)
+    filtered = Booking.objects.filter(f, status='approved')
+    return render(request,'staff/search.html', {'filtered': filtered, 'query': query})
