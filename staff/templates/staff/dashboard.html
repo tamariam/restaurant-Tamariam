@@ -15,7 +15,7 @@
     {% endfor %}
   {% endif %}
 
-<div class="container-fluid">
+<div class="container-fluid d-flex justify-content-center align-items-center">
     <div class="table-responsive col-md-8 col-12">
            <!-- Display message if no bookings -->
             {% if not bookings %}
@@ -28,7 +28,7 @@
         <h3 class="fw-bold m-2 text-center">There are no pending bookings.</h3>
         {% else %}
          <!-- display pending bookings -->
-         <p class="scroll-note text-center">Scroll right for entire pending Booking details <i class="fas fa-arrow-right"></i></p>
+         <p class="scroll-note text-center">View complete details by scrolling right <i class="fas fa-arrow-right"></i></p>
         <table class="table">
             <thead>
                 <tr class="table-primary">
@@ -74,7 +74,7 @@
         {% if not approved %}
         <h3 class="fw-bold m-2">There are no approved bookings.</h3>
         {% else %}
-        <p class="scroll-note text-center">Scroll right for entire approved Booking details <i class="fas fa-arrow-right"></i></p>
+        <p class="scroll-note text-center">View complete details by scrolling right<i class="fas fa-arrow-right"></i></p>
         <table class="table">
             <thead>
                 <tr class="table-primary">
@@ -107,7 +107,7 @@
         {% if not rejected %}
         <h3 class="fw-bold m-2">There are no rejected bookings.</h3>
         {% else %}
-        <p class="scroll-note text-center">Scroll right for entire rejected Booking details <i class="fas fa-arrow-right"></i></p>
+        <p class="scroll-note text-center">View complete details by scrolling right <i class="fas fa-arrow-right"></i></p>
         <table class="table">
             <thead>
                 <tr class="table-primary">
@@ -137,5 +137,8 @@
         {% endif %}
     </div>
     {% endif %}
+    <div class="col-md-4 col-12">
+        <h3>dhdhhdhdhd</h3>
+    </div>
 </div>
 {% endblock content %}

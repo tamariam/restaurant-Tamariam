@@ -5,9 +5,10 @@ from .models import Booking
 
 
 class BookingAdmin(admin.ModelAdmin):
-    list_display = ('id','first_name', 'last_name', 'email', 'status', 'num_of_people', 'request_date', 'date', 'time')
+    list_display = ('id', 'first_name', 'last_name', 'email', 'status', 'num_of_people', 'request_date', 'date', 'time')
     list_editable = ('status', 'num_of_people', 'date', 'time')
-
+    list_filter = ('date', 'first_name', 'last_name')
+    
 
 admin.site.register(Booking, BookingAdmin)
 
