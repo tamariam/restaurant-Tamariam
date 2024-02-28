@@ -15,8 +15,9 @@
     {% endfor %}
   {% endif %}
 
-<div class="container-fluid d-flex justify-content-center align-items-center">
-    <div class="table-responsive col-md-8 col-12">
+ <div class="container-fluid"> 
+    <div class="row">
+    <div class="table-responsive col-md-8 col-12 mx-auto ">
            <!-- Display message if no bookings -->
             {% if not bookings %}
             <h2 class="fw-bold mx-auto text-center ">There are no bookings.</h2>
@@ -72,7 +73,7 @@
         <!-- Approved bookings -->
         <h2 class="my-bookings m-2">Approved Bookings</h2>
         {% if not approved %}
-        <h3 class="fw-bold m-2">There are no approved bookings.</h3>
+        <h3 class="fw-bold m-2 text-center">There are no approved bookings.</h3>
         {% else %}
         <p class="scroll-note text-center">View complete details by scrolling right<i class="fas fa-arrow-right"></i></p>
         <table class="table">
@@ -105,7 +106,7 @@
         <!-- Rejected bookings -->
         <h2 class="my-bookings m-2">Rejected Bookings</h2>
         {% if not rejected %}
-        <h3 class="fw-bold m-2">There are no rejected bookings.</h3>
+        <h3 class="fw-bold m-2 text-center ">There are no rejected bookings.</h3>
         {% else %}
         <p class="scroll-note text-center">View complete details by scrolling right <i class="fas fa-arrow-right"></i></p>
         <table class="table">
@@ -137,18 +138,25 @@
         {% endif %}
     </div>
     {% endif %}
-    <div class="col-md-4 col-12">
-        <form method="get" action="{% url 'search_name' %}" style="margin: 0">
-            <input  id="search_name" type="text" name="search_name"  placeholder="Search by Name" required >
-            <button id="search_submit" type="submit" >Search</button>
+    <div class="col-12 text-center border">
+        <form  method="get" action="{% url 'search_name' %}">
+            <label>Search approved bookings by name</label>
+            <div class="p-2">
+            <input  id="search_name" class="text-center" type="text" name="search_name"  placeholder="Search by Name" required >
+            <button id="search_submit" class="btn-success border-0 p-2 rounded" type="submit" >Search</button>
+            </div>
         </form>
         <form method="get" action="{% url 'search_date' %}" style="margin: 0">
-            <input  id="search_date" type="date" name="search_date"  placeholder="Search by Date" required >
-            <button id="search_submit" type="submit" >Search</button>
+            <label>Search approved bookings by Date</label>
+            <div class="p-2">
+            <input  id="search_date" class="p-2" type="date" name="search_date"  placeholder="Search by Date" required >
+            <button id="search_submit" class="btn-success border-0 p-2 rounded" type="submit" >Search</button>
+            </div>
         </form>
         <form method="get" action="{% url 'dashboard' %}" style="margin: 0">
-            <button id="search_submit" type="submit" >Todays Bookings</button>
+            <button id="search_submit" class="btn-danger p-2 rounded fw-bold text-dark" type="submit" >Todays Bookings</button>
         </form>
-    </div>
-</div>
+        </div>
+        </div>
+ </div> 
 {% endblock content %}

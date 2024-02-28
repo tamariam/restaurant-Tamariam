@@ -4,7 +4,6 @@ from django.shortcuts import get_object_or_404
 from django.contrib import messages
 from simple_search import search_filter
 from datetime import date
-from datetime import date, timedelta
 
 # Create your views here.
 
