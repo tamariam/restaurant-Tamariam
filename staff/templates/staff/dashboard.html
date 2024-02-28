@@ -143,8 +143,11 @@
             <button id="search_submit" type="submit" >Search</button>
         </form>
         <form method="get" action="{% url 'search_date' %}" style="margin: 0">
-            <input  id="search_date" type="date" name="search_date"  placeholder="Search by Date" required min="{{ today|date:'Y-m-d' }}" >
+            <input  id="search_date" type="date" name="search_date"  placeholder="Search by Date" required >
             <button id="search_submit" type="submit" >Search</button>
+        </form>
+        <form method="get" action="{% url 'dashboard' %}" style="margin: 0">
+            <button id="search_submit" type="submit" >Todays Bookings</button>
         </form>
     </div>
 </div>

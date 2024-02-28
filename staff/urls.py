@@ -9,6 +9,7 @@ urlpatterns = [
     path("approve/booking/<int:pk>/", approve_booking, name='approve'),
     path("reject/booking/<int:pk>/", reject_booking, name='reject'),
     path('search/', search_name, name='search_name'),
-    path('search/date/', search_date, name='search_date')
+    path('search/date/', search_date, name='search_date'),
+    # path('today/', today, name='today')
 
 ]

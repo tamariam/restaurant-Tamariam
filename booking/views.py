@@ -9,7 +9,7 @@ from django.shortcuts import get_object_or_404
 
 
 def booking_page(request):
-    if request.user.is_authenticated and not request.user.is_staff:
+    if request.user.is_authenticated:
         if not request.user.is_staff:
             # Initialize form with POST data if available, otherwise empty form
             form = BookingForm(data=request.POST) \
@@ -78,10 +78,11 @@ def booking_page(request):
                         request, "Booking failed.Correct the errors below")
             return render(request, "booking/booking.html", {'form': form})
         else:
-            messages.error(
+            messages.add_message(
                 request,
-                "as staff member You are not authorised to make booking")
-            return redirect('home')
+                messages.INFO,
+                'As staff member you are not authorised to view this page')
+        return redirect('home')
     else:
         messages.add_message(
             request,

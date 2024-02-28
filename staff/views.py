@@ -3,6 +3,8 @@ from booking.models import Booking
 from django.shortcuts import get_object_or_404
 from django.contrib import messages
 from simple_search import search_filter
+from datetime import date
+from datetime import date, timedelta
 
 # Create your views here.
 
@@ -97,4 +99,9 @@ def search_date(request):
     search_fields = ['date']
     f = search_filter(search_fields, query)
     filtered = Booking.objects.filter(f, status='approved')
-    return render(request, 'staff/search.html', {'filtered': filtered, 'query': query,'today' : today})
+    return render(request, 'staff/search.html', {'filtered': filtered, 'query': query})
+
+
+# def today(request):
+#     today = date.today()
+#     return render(request, 'staff/search.html', {'today': today})
