@@ -4,8 +4,8 @@
 {% block content %}
 
 {% if filtered %}
-<div class="container">
-    <h2 class="mt-2 montserrat fw-bold">Approved Bookings for <Span class="text-danger">{{query}}</Span></h2>
+<div class="container montserrat">
+    <h2 class="mt-2 fw-bold">Approved Bookings for <Span class="text-danger">{{query}}</Span></h2>
     <div class="table-responsive col-md-8 col-12 mt-5">
 <p class="scroll-note text-center">View complete details by scrolling right <i class="fas fa-arrow-right"></i></p>
 <table class="table">
@@ -15,7 +15,7 @@
             <th scope="col">Last Name</th>
             <th scope="col">Date</th>
             <th scope="col">Time</th>
-            <th scope="col">People</th>
+            <th scope="col">Number of People</th>
         </tr>
     </thead>
     <tbody>
@@ -33,7 +33,7 @@
         </tbody>
         </table>
         {% else %}
-        <h3>There are not approved bookings for the name  {{query}}</h3>
+        <h3 class="mt-5">There are not approved bookings for  <span class="text-danger">{{query}}</span></h3>
         {% endif %}
 </div>
 </div>

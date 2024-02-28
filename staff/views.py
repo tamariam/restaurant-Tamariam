@@ -84,9 +84,17 @@ def reject_booking(request, pk):
         return redirect('home')
 
 
-def search(request):
-    query = request.GET.get('search_box', '')
+def search_name(request):
+    query = request.GET.get('search_name')
     search_fields = ['first_name', 'last_name']
     f = search_filter(search_fields, query)
     filtered = Booking.objects.filter(f, status='approved')
-    return render(request,'staff/search.html', {'filtered': filtered, 'query': query})
+    return render(request, 'staff/search.html', {'filtered': filtered, 'query': query})
+
+
+def search_date(request):
+    query = request.GET.get('search_date')
+    search_fields = ['date']
+    f = search_filter(search_fields, query)
+    filtered = Booking.objects.filter(f, status='approved')
+    return render(request, 'staff/search.html', {'filtered': filtered, 'query': query,'today' : today})
