@@ -9,7 +9,7 @@ from django.shortcuts import get_object_or_404
 
 
 def booking_page(request):
-    if request.user.is_authenticated:
+    if request.user.is_authenticated and not request.user.is_staff:
         if not request.user.is_staff:
             # Initialize form with POST data if available, otherwise empty form
             form = BookingForm(data=request.POST) \
