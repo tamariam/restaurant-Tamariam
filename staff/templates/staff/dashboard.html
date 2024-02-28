@@ -23,12 +23,12 @@
             {% else %}
             <!-- pending bookings -->
         <h2 class="my-bookings m-2">Pending Bookings</h2>
-        <p class="scroll-note text-center">Scroll right for entire pending Booking details <i class="fas fa-arrow-right"></i></p>
          <!-- Check if there are pending bookings -->
         {% if not pendings %}
-        <p class="fw-bold m-2">There are no pending bookings.</p>
+        <h3 class="fw-bold m-2 text-center">There are no pending bookings.</h3>
         {% else %}
          <!-- display pending bookings -->
+         <p class="scroll-note text-center">Scroll right for entire pending Booking details <i class="fas fa-arrow-right"></i></p>
         <table class="table">
             <thead>
                 <tr class="table-primary">
@@ -71,10 +71,10 @@
         {% endif %}
         <!-- Approved bookings -->
         <h2 class="my-bookings m-2">Approved Bookings</h2>
-        <p class="scroll-note text-center">Scroll right for entire approved Booking details <i class="fas fa-arrow-right"></i></p>
         {% if not approved %}
-        <p class="fw-bold m-2">There are no approved bookings.</p>
+        <h3 class="fw-bold m-2">There are no approved bookings.</h3>
         {% else %}
+        <p class="scroll-note text-center">Scroll right for entire approved Booking details <i class="fas fa-arrow-right"></i></p>
         <table class="table">
             <thead>
                 <tr class="table-primary">
@@ -104,10 +104,10 @@
         {% endif %}
         <!-- Rejected bookings -->
         <h2 class="my-bookings m-2">Rejected Bookings</h2>
-        <p class="scroll-note text-center">Scroll right for entire rejected Booking details <i class="fas fa-arrow-right"></i></p>
         {% if not rejected %}
-        <p class="fw-bold m-2">There are no rejected bookings.</p>
+        <h3 class="fw-bold m-2">There are no rejected bookings.</h3>
         {% else %}
+        <p class="scroll-note text-center">Scroll right for entire rejected Booking details <i class="fas fa-arrow-right"></i></p>
         <table class="table">
             <thead>
                 <tr class="table-primary">
