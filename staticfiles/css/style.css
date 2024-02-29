@@ -324,6 +324,10 @@ form input:hover{
 .booking-guidelines-list{
     font-size:18px;
 }
+.dashboard-btn{
+    width:100px;
+    border:none;
+}
 .delete-span{
     font-size:18px;
     font-weight:700;
