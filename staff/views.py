@@ -2,9 +2,8 @@ from django.shortcuts import render, redirect
 from booking.models import Booking
 from django.shortcuts import get_object_or_404
 from django.contrib import messages
-from simple_search import search_filter
 from datetime import date
-
+from django.db.models import Q
 # Create your views here.
 
 
@@ -87,17 +86,22 @@ def reject_booking(request, pk):
 
 def search_name(request):
     query = request.GET.get('search_name')
-    search_fields = ['first_name', 'last_name']
-    f = search_filter(search_fields, query)
-    filtered = Booking.objects.filter(f, status='approved')
+    # Split the query string into first name and last name
+    names = query.split()
+    first_name = names[0] if names else ""
+    last_name = names[1] if len(names) > 1 else ""
+
+    # Filter bookings where either first_name or last_name matches
+    filtered = Booking.objects.filter(
+        Q(first_name__iexact=first_name) & Q(last_name__iexact=last_name),
+        status='approved'
+    )
     return render(request, 'staff/search.html', {'filtered': filtered, 'query': query})
 
 
 def search_date(request):
     query = request.GET.get('search_date')
-    search_fields = ['date']
-    f = search_filter(search_fields, query)
-    filtered = Booking.objects.filter(f, status='approved')
+    filtered = Booking.objects.filter(date=query, status='approved')
     return render(request, 'staff/search.html', {'filtered': filtered, 'query': query})
 
 
