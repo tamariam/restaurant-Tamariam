@@ -2,10 +2,13 @@
 
 
 {% block content %}
-
 {% if filtered %}
 <div class="container montserrat">
-    <h2 class="mt-2 fw-bold">Approved Bookings for <Span class="text-danger">{{query}}</Span></h2>
+    {% if today %}
+<h2 class="mt-2 fw-bold ">Approved Bookings for <span class="text-danger">Today</span></h2>
+{% else %}
+<h2 class="mt-2 fw-bold ">Approved Bookings for <span class="text-danger">{{ query }}</span></h2>
+{% endif %}
     <div class="table-responsive col-md-8 col-12 mt-5">
 <p class="scroll-note text-center">View complete details by scrolling right <i class="fas fa-arrow-right"></i></p>
 <table class="table">

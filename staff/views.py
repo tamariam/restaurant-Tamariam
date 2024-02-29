@@ -105,6 +105,7 @@ def search_date(request):
     return render(request, 'staff/search.html', {'filtered': filtered, 'query': query})
 
 
-# def today(request):
-#     today = date.today()
-#     return render(request, 'staff/search.html', {'today': today})
+def today_bookings(request):
+    filtered = Booking.objects.filter(date=date.today(), status='approved')
+    today = filtered.exists()
+    return render(request, 'staff/search.html', {'filtered': filtered, 'today': today})

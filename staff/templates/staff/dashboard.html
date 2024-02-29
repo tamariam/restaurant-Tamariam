@@ -140,6 +140,7 @@
     {% endif %}
     <div class="col-12 text-center border">
         <form  method="get" action="{% url 'search_name' %}">
+            {% csrf_token %}
             <label>Search approved bookings by name</label>
             <div class="p-2">
             <input  id="search_name" class="text-center" type="text" name="search_name"  placeholder="Search by Name" required >
@@ -147,13 +148,14 @@
             </div>
         </form>
         <form method="get" action="{% url 'search_date' %}" style="margin: 0">
+            {% csrf_token %}
             <label>Search approved bookings by Date</label>
             <div class="p-2">
             <input  id="search_date" class="p-2" type="date" name="search_date"  placeholder="Search by Date" required >
             <button id="search_submit" class="btn-success border-0 p-2 rounded" type="submit" >Search</button>
             </div>
         </form>
-        <form method="get" action="{% url 'dashboard' %}" style="margin: 0">
+        <form method="get" action="{% url 'today' %}" style="margin: 0">
             <button id="search_submit" class="btn-danger p-2 rounded fw-bold text-dark" type="submit" >Todays Bookings</button>
         </form>
         </div>
