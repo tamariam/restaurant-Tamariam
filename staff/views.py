@@ -4,6 +4,8 @@ from django.shortcuts import get_object_or_404
 from django.contrib import messages
 from datetime import date
 from django.db.models import Q
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
 # Create your views here.
 
 
@@ -35,6 +37,14 @@ def approve_booking(request, pk):
         if request.method == "POST":
             booking.status = "approved"
             booking.save()
+
+            send_mail(
+                "Tamariam Restaurant Confirmation of Approval",  # Subject
+                "tamariamrestaurant@gmail.com",  # Sender's email address
+                [booking.email],  # Recipient's email address(es)
+                html_message=render_to_string('staff/templates/staff/email.html', {'context': 'values'}),  # HTML content
+                fail_silently=False,
+            )
             messages.success(request, 'Booking Approved.')
             # Redirect back to the same page
             return redirect('dashboard')
@@ -62,6 +72,13 @@ def reject_booking(request, pk):
         if request.method == "POST":
             booking.status = 'rejected'
             booking.save()
+            send_mail(
+                "Tamariam Restaurant Confirmation of Approval",  # Subject
+                "tamariamrestaurant@gmail.com",  # Sender's email address
+                [booking.email],  # Recipient's email address(es)
+                html_message=render_to_string('staff/templates/staff/reject_email.html', {'context': 'values'}),  # HTML content
+                fail_silently=False,
+            )
             messages.error(request, 'Booking rejected.')
             # Redirect back to the same page
             return redirect('dashboard')
