@@ -40,6 +40,7 @@ def approve_booking(request, pk):
 
             send_mail(
                 "Tamariam Restaurant Confirmation of Approval",  # Subject
+                '',
                 "tamariamrestaurant@gmail.com",  # Sender's email address
                 [booking.email],  # Recipient's email address(es)
                 html_message=render_to_string('staff/email.html', {'context': 'values'}),  # HTML content
