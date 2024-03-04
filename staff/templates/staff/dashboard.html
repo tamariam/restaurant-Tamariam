@@ -138,6 +138,7 @@
         {% endif %}
     </div>
     {% endif %}
+      <!-- Forms for searching approved bookings by name, date and todays date -->
     <div class="col-12 text-center border">
         <form  method="get" action="{% url 'search_name' %}">
             {% csrf_token %}

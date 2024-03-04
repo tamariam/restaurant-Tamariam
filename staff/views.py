@@ -32,6 +32,7 @@ def dashboard_page(request):
 
 
 def approve_booking(request, pk):
+    '''  View function for approving a booking.'''
     if request.user.is_staff:
         booking = get_object_or_404(Booking, id=pk)
         if request.method == "POST":
@@ -68,6 +69,7 @@ def approve_booking(request, pk):
 
 
 def reject_booking(request, pk):
+    '''view function to reject a booking '''
     if request.user.is_staff:
         booking = get_object_or_404(Booking, id=pk)
         if request.method == "POST":
@@ -81,7 +83,7 @@ def reject_booking(request, pk):
                 html_message=render_to_string('staff/reject_email.html', {'booking': booking}),  # HTML content
                 fail_silently=False,
             )
-            messages.error(request, 'Booking rejected.')
+            messages.error(request, 'Booking rejected. An email notification has been sent to inform  the user')
             # Redirect back to the same page
             return redirect('dashboard')
         # If it's not a POST request, render the page as usual
