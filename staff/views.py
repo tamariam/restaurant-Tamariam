@@ -75,6 +75,7 @@ def reject_booking(request, pk):
             booking.save()
             send_mail(
                 "Tamariam Restaurant Rejects Your Booking Request",
+                '',
                 "tamariamrestaurant@gmail.com",  # Sender's email address
                 [booking.email],  # Recipient's email address(es)
                 html_message=render_to_string('staff/reject_email.html', {'booking': booking}),  # HTML content
