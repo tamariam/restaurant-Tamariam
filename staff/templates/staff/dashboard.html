@@ -97,7 +97,12 @@
                     <td>{{approve.time}}</td>
                     <td>{{approve.num_of_people}}</td>
                     <td>N/A</td>
-                    <td>N/A</td>
+                    <td>
+                        <form method="post" action="{% url 'reject' pk=approve.id %}">
+                            {% csrf_token %}
+                            <button type="submit" class="rounded dashboard-btn btn-danger">Reject</button>
+                        </form>
+                    </td>
                 </tr>
                 {% endfor %}
             </tbody>
