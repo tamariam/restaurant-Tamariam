@@ -74,10 +74,10 @@ def reject_booking(request, pk):
             booking.status = 'rejected'
             booking.save()
             send_mail(
-                "Tamariam Restaurant Confirmation of Approval",  # Subject
+                "Tamariam Restaurant Rejects Your Booking Request",
                 "tamariamrestaurant@gmail.com",  # Sender's email address
                 [booking.email],  # Recipient's email address(es)
-                html_message=render_to_string('staff/reject_email.html', {'context': 'values'}),  # HTML content
+                html_message=render_to_string('staff/reject_email.html', {'booking': booking}),  # HTML content
                 fail_silently=False,
             )
             messages.error(request, 'Booking rejected.')
