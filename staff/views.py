@@ -46,7 +46,7 @@ def approve_booking(request, pk):
                 html_message=render_to_string('staff/email.html', {'booking': booking}),  # HTML content
                 fail_silently=False,
             )
-            messages.success(request, 'Booking Approved.')
+            messages.success(request, 'Booking Approved, confirmation email has been sent')
             # Redirect back to the same page
             return redirect('dashboard')
         # If it's not a POST request, render the page as usual

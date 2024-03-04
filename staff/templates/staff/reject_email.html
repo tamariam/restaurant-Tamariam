@@ -1,14 +1,25 @@
-Subject: Tamariam Restaurant Booking Rejection
+{% load i18n %}{% autoescape off %}{% blocktrans with site_name=current_site.name %}Hello from {{ site_name }}!{% endblocktrans %}
 
-Dear {{ booking.first_name }},
+{% block content %}
 
-We regret to inform you that we are unable to accommodate your booking request at this time.
+<h1>Dear {{ booking.first_name }},</h1>
 
-We apologize for any inconvenience this may cause and hope to have the opportunity to serve you in the future.
+<p>We regret to inform you that we are unable to accommodate your booking request at this time.</p>
 
-If you have any further questions or require assistance, please feel free to contact us at tamariamrestaurant@gmail.com.
+<p>We apologize for any inconvenience this may cause and hope to have the opportunity to serve you in the future.</p>
 
-Thank you for considering Tamariam Restaurant.
+<p>If you have any further questions or require assistance, please feel free to contact us at tamariamrestaurant@gmail.com.</p>
 
-Warm regards,
-Tamariam Restaurant
+<p>Thank you for considering Tamariam Restaurant.</p>
+
+<p>Warm regards,</p>
+<p>Tamariam Restaurant</p>
+
+
+
+
+{% endblock content %}
+
+{% blocktrans with site_name=current_site.name site_domain=current_site.domain %}Thank you for using {{ site_name }}!
+{{ site_domain }}{% endblocktrans %}
+{% endautoescape %}
