@@ -1,49 +1,51 @@
 {% extends 'base.html' %}
-
-
 <!--
 This Django template extends a base HTML template named 'base.html'.
 The content block is overridden to display a list of approved bookings filtered by date.
 If there are filtered bookings, it displays them in a table with columns for first name, last name, date, time, and number of people.
 If there are no filtered bookings, it displays a message indicating that there are no approved bookings for the specified date.
 -->
+
 {% block content %}
 {% if filtered %}
 <div class="container montserrat">
     {% if today %}
-<h2 class="mt-2 fw-bold ">Approved Bookings for <span class="text-danger">Today</span></h2>
-{% else %}
-<h2 class="mt-2 fw-bold ">Approved Bookings for <span class="text-danger">{{ query }}</span></h2>
-{% endif %}
+        <h2 class="mt-2 fw-bold">Approved Bookings for <span class="text-danger">Today</span></h2>
+    {% else %}
+        <h2 class="mt-2 fw-bold">Approved Bookings for <span class="text-danger">{{ query }}</span></h2>
+    {% endif %}
     <div class="table-responsive col-md-8 col-12 mt-5">
-<p class="scroll-note text-center">View complete details by scrolling right <i class="fas fa-arrow-right"></i></p>
-<table class="table">
-    <thead>
-        <tr class="table-primary">
-            <th scope="col">First Name</th>
-            <th scope="col">Last Name</th>
-            <th scope="col">Date</th>
-            <th scope="col">Time</th>
-            <th scope="col">Number of People</th>
-        </tr>
-    </thead>
-    <tbody>
-      <!-- Loop through filtered bookings -->
-{% for filter in filtered %}
-        <tr class="table-danger">
-            <td>{{filter.first_name}}</td>
-            <td>{{filter.last_name}}</td>
-            <td>{{filter.date}}</td>
-            <td>{{filter.time}}</td>
-            <td>{{filter.num_of_people}}</td>
-        </tr>
-        {% endfor %}
-        </tbody>
+        <p class="scroll-note text-center">View complete details by scrolling right <i class="fas fa-arrow-right"></i></p>
+        <table class="table">
+            <thead>
+                <tr class="table-primary">
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Time</th>
+                    <th scope="col">Number of People</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Loop through filtered bookings -->
+                {% for filter in filtered %}
+                <tr class="table-danger">
+                    <td>{{ filter.first_name }}</td>
+                    <td>{{ filter.last_name }}</td>
+                    <td>{{ filter.date }}</td>
+                    <td>{{ filter.time }}</td>
+                    <td>{{ filter.num_of_people }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
         </table>
-        {% else %}
-        <h3 class="mt-5">There are not approved bookings for  <span class="text-danger">{{query}}</span></h3>
-        <h2 class="mt-2 fw-bold">No bookings for {{ today|yesno:"Today,":query }}</h2>
-        {% endif %}
+    </div>
 </div>
-</div>
+{% else %}
+    {% if query %}
+        <h2 class="mt-2 fw-bold">No approved Bookings for <span class="text-danger">{{query}}</span></h2>
+    {% else %}
+        <h2 class="mt-2 fw-bold">No bookings for <span class="text-danger">today</span></h2>
+    {% endif %}
+{% endif %}
 {% endblock content %}
