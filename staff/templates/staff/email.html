@@ -1,26 +1,27 @@
-Dear {{ booking.first_name }} ,
+<h1>Dear {{ booking.first_name }} ,</h1>
 
-We are delighted to confirm that your booking at Tamariam Restaurant has been approved. We are thrilled to have you join us for  on {{booking.date}} at {{booking.time}}.
+<p>We are delighted to confirm that your booking at Tamariam Restaurant has been approved. We are thrilled to have you join us for  on {{booking.date}} at {{booking.time}}.</p>
 
-Booking Details:
+<h2>Booking Details:</h2>
+<ul>
+<li>Date: {{ booking.date }} </li>
+<li>Time: {{ booking.date }}</li>
+<li>Number: {{ booking.num_of_people }}</li>
+</ul>
 
-Date: {{ booking.date }} 
-Time: {{ booking.date }}
-Number: {{ booking.num_of_people }}
+<h3>Please note the following:</h3>
 
-Please note the following:
+<p>Arrival Time: We kindly request that you arrive on time for your reservation to ensure a smooth and enjoyable dining experience.</p>
 
-Arrival Time: We kindly request that you arrive on time for your reservation to ensure a smooth and enjoyable dining experience.
+<p>Special Requests: If you have any dietary restrictions or special requests, please inform us in advance so we can accommodate your needs.</p>
 
-Special Requests: If you have any dietary restrictions or special requests, please inform us in advance so we can accommodate your needs.
+<p>Cancellation Policy: Should you need to make any changes to your booking, please notify us at least [2] hours in advance.</p>
 
-Cancellation Policy: Should you need to make any changes to your booking, please notify us at least [2] hours in advance.
+<p>If you would like to change or cancel your reservation, you can do so in your profile page on our website: https://tamariamrestaurant-d81c96b3d785.herokuapp.com/</p>
 
-If you would like to change or cancel your reservation, you can do so in your profile page on our website: https://tamariamrestaurant-d81c96b3d785.herokuapp.com/
+<p>If you have any further questions or require assistance, feel free to contact us at tamariamrestaurant@gmail.com. </p>
 
-If you have any further questions or require assistance, feel free to contact us at tamariamrestaurant@gmail.com.
+<p>We look forward to welcoming you to Tamariam Restaurant and hope you have a wonderful dining experience with us.</p>
 
-We look forward to welcoming you to Tamariam Restaurant and hope you have a wonderful dining experience with us.
-
-Warm regards,
-Tamariam Restaurant
+<h4>Warm regards,</h4>
+<h5>Tamariam Restaurant </h5>
