@@ -43,9 +43,9 @@ If there are no filtered bookings, it displays a message indicating that there a
 </div>
 {% else %}
     {% if query %}
-        <h2 class="mt-2 fw-bold">No approved Bookings for <span class="text-danger">{{query}}</span></h2>
+        <h2 class=" text-center mt-2 fw-bold">No approved Bookings for <span class="text-danger">{{query}}</span></h2>
     {% else %}
-        <h2 class="mt-2 fw-bold">No bookings for <span class="text-danger">today</span></h2>
+        <h2 class=" text-center mt-2 fw-bold">No  approved bookings for <span class="text-danger">today</span></h2>
     {% endif %}
 {% endif %}
 {% endblock content %}
