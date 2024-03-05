@@ -115,19 +115,18 @@ def search_name(request):
 
     # Filter bookings where either first_name or last_name matches
     filtered = Booking.objects.filter(
-        Q(first_name__iexact=first_name) & Q(last_name__iexact=last_name),
-        status='approved'
+        Q(first_name__iexact=first_name) & Q(last_name__iexact=last_name)
     )
     return render(request, 'staff/search.html', {'filtered': filtered, 'query': query})
 
 
 def search_date(request):
     query = request.GET.get('search_date')
-    filtered = Booking.objects.filter(date=query, status='approved')
+    filtered = Booking.objects.filter(date=query)
     return render(request, 'staff/search.html', {'filtered': filtered, 'query': query})
 
 
 def today_bookings(request):
-    filtered = Booking.objects.filter(date=date.today(), status='approved')
+    filtered = Booking.objects.filter(date=date.today(),status='approved')
     today = filtered.exists()
     return render(request, 'staff/search.html', {'filtered': filtered, 'today': today})
