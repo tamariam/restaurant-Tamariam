@@ -353,15 +353,6 @@ After confirming the deletion, a message will be displayed to notify the user th
 ![booking-deleted](/docs/features/booking-deleted-message.png).
 
 
-
-
-
-
-
-
-
-
-
 - Delete account
 
   - Registered users have the option to delete their accounts at any time directly from the profile page by clicking the "Delete Account" button. Upon clicking, they will receive a warning indicating that confirming deletion will result in the loss of all their data. Users can either change their minds and click "Cancel" or, if they confirm deletion, their account will be permanently deleted.
@@ -381,8 +372,7 @@ To provide real-time information to our users, the menu page dynamically adjusts
 ![Menu-Desktop-2](/docs/features/menu-desktop-2.png) 
 
 
-
- <details>
+<details>
   <summary>Menu - Mobile (click to expand)</summary>
 
 ![Menu -Mobile](/docs/features/menu-mobile.png)
@@ -425,7 +415,74 @@ If there are already approved bookings for the specified date, and the number of
 ![request-exceeds](/docs/features/booking-request-exceeds.png)
 
 
+## Dashboard Page
 
+The Staff Dashboard is made for  staf members to manage bookings.As a staff member logging in, you're directed to the home page initially. From there, you have the option to navigate to the dashboard from the menu. Once ypu are on  dashboard page  you can  review pending, approved, and rejected bookings. Additionally,  search functionality allows you to find bookings by name, date, or quickly check today's approved bookings.. 
+
+![request-exceeds](/docs/features/staff-dashboard-all-displayed.png)
+
+In cases where there are no bookings att all or there are no pending, approved, or rejected bookings, the dashboard displays appropriate text on the page instead of the booking lists. This ensures clarity for staff members, indicating that there are currently no bookings requiring action or review. By providing clear feedback, staff can easily understand the current status and focus on other tasks as necessary.
+
+![request-exceeds](/docs/features/no-bookings-att-all.png)
+
+![request-exceeds](/docs/features/no-approved-bookings.png)
+
+Staff members have the authority to accept or reject pending bookings directly from the dashboard. Upon accepting or rejecting a booking, an immediate message displays on the page confirming the action. Simultaneously, the booking is promptly moved to the appropriate section - either the approved or rejected bookings list. Additionally, an email notification is automatically sent to the user, informing them of the updated status of their booking.
+
+
+![request-exceeds](/docs/features/booking-approved-message.png)
+
+![request-exceeds](/docs/features/booking-rejected-message.png)
+
+
+
+If a staff member is searching for a specific booking by date, name, or today's bookings, they are redirected to another page dedicated to displaying the specific booking details. On this page, if the requested booking is found, its details are displayed. However, if no matching booking is found, appropriate text is displayed, providing feedback that the requested booking could not be found. This ensures a streamlined experience for staff members, allowing them to quickly locate specific bookings and providing clear feedback in cases where the requested booking is not available.
+
+ <details>
+  <summary>approved-bookings-by -date(click to expand)</summary>
+
+![approved-bookings-by-date](./docs/features/approbved-bookings-by-date.png)
+
+</details>
+
+ <details>
+  <summary>approved-bookings-by -name(click to expand)</summary>
+
+![approved-bookings-by-name](./docs/features/approbved-bookings-by-name.png)
+
+</details>
+
+ <details>
+  <summary>approved-bookings-for-today(click to expand)</summary>
+
+![approved-bookings-for-today](./docs/features/approved-bookings-for-today.png)
+
+</details>
+
+ <details>
+  <summary>no approved-bookings-by-date(click to expand)</summary>
+
+![no-approved-bookings-by-date](./docs/features/no-bookings-for-date.png)
+
+</details>
+
+ <details>
+  <summary>no approved-bookings-for-name(click to expand)</summary>
+
+![no-approved-bookings-for-name](./docs/features/no-bookings-for-name.png)
+
+</details>
+
+ <details>
+  <summary>no approved-bookings-today(click to expand)</summary>
+
+![no-approved-bookings-today](./docs/features/no-approved-bookings-today.png)
+
+</details>
+
+This project is designed to enforce specific restrictions for different user roles. Staff members are explicitly prohibited from accessing the booking page. Should a staff member attempt to navigate to the booking page by clicking on the "Book" option in the menu, an appropriate message will promptly notify them of their restricted access, preventing them from proceeding further. This tailored approach ensures that each user role has distinct permissions aligned with their responsibilities, promoting a secure and efficient system environment.
+
+![staff-not-allow](./docs/features/staff-not%20-allow-to%20-view-booking-page.png)
 
 
 # Testing 
@@ -685,6 +742,39 @@ Chrome DevTools Lighthouse was used to test Performance, Accessibility, Best Pra
 ![Delete-booking-Mobile](./docs/testing/lighthouse/delete-booking-lh-Mobile.png)
 
 </details>
+
+
+## staff dashboard testing with lighthouse
+
+
+<details>
+<summary>lighthouse-Testing-staff-dashboard-Mobile (click to expand)</summary>
+
+![staff-dashboard-Mobile](./docs/testing/lighthouse/dahsboard-mobile.png)
+
+</details>
+
+<details>
+<summary>lighthouse-Testing-staff-dashboard-Desktop (click to expand)</summary>
+
+![staff-dashboard-Desktop](./docs/testing/lighthouse/dahsboard-Desktop.png)
+
+</details>
+
+<summary>approved-bookings-by-date-Desktop (click to expand)</summary>
+
+![approved-bookings-by-date-Desktop](./docs/testing/lighthouse/search-by-date-desktop.png)
+
+</details>
+
+<summary>approved-bookings-by-Name-Mobile (click to expand)</summary>
+
+![approved-bookings-by-date-Desktop](./docs/testing/lighthouse/search-by-name-mobile.png)
+
+</details>
+
+
+
 
 # Deployment
 
