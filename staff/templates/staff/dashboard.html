@@ -1,23 +1,22 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
 <h1 class="mx-auto text-center">Booking Management Area</h1>
    <!-- display django messages --> 
-   <div class=" text-centercol-md-2 d-flex justify-content-center align-items-center ">
+   <div class=" text-center col-md-5 col-12 d-flex justify-content-center align-items-center ">
     {% if messages %}
     {% for message in messages %}
-      
-        <div class="text-center bordered montserrat mt-2 alert {{ message.tags }} bg-warning alert-dismissible fade show " id="msg" role="alert">
+      <div class="text-center bordered montserrat mt-2 alert {{ message.tags }} bg-warning alert-dismissible fade show " id="msg" role="alert">
           {{ message | safe }}
           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
       </div>
     {% endfor %}
   {% endif %}
-
- <div class="container-fluid"> 
+</div>
+<div class="container-fluid"> 
     <div class="row">
-    <div class="table-responsive col-md-8 col-12 mx-auto ">
+    <div class="table-responsive col-md-10 col-12 mx-auto ">
            <!-- Display message if no bookings -->
             {% if not bookings %}
             <h2 class="fw-bold mx-auto text-center mt-3 text-danger ">There are no bookings.</h2>
@@ -44,7 +43,6 @@
             </thead>
             <tbody>
               <!-- Loop through pending bookings -->
-
                 {% for pending in pendings %}
                 <tr class="table-danger">
                     <td>{{pending.first_name}}</td>
@@ -147,7 +145,7 @@
     <div class="col-12 text-center border">
         <form  method="get" action="{% url 'search_name' %}">
             {% csrf_token %}
-            <label>Search approved bookings by name</label>
+            <label>Search bookings by name</label>
             <div class="p-2">
             <input  id="search_name" class="text-center" type="text" name="search_name"  placeholder="Search by Name" required >
             <button id="search_submit" class="btn-success border-0 p-2 rounded" type="submit" >Search</button>
@@ -155,16 +153,17 @@
         </form>
         <form method="get" action="{% url 'search_date' %}" style="margin: 0">
             {% csrf_token %}
-            <label>Search approved bookings by Date</label>
+            <label>Search bookings by Date</label>
             <div class="p-2">
-            <input  id="search_date" class="p-2" type="date" name="search_date"  placeholder="Search by Date" required >
-            <button id="search_submit" class="btn-success border-0 p-2 rounded" type="submit" >Search</button>
+            <input  id="search_date" class="p-2" type="date" name="search_date" required >
+            <button id="search_submit_button" class="btn-success border-0 p-2 rounded" type="submit" >Search</button>
             </div>
         </form>
         <form method="get" action="{% url 'today' %}" style="margin: 0">
-            <button id="search_submit" class="btn-danger p-2 rounded fw-bold text-white" type="submit" >Todays Bookings</button>
+            <button id="search_submit_today" class="btn-danger p-2 rounded fw-bold text-white" type="submit" >Todays Bookings</button>
         </form>
         </div>
         </div>
  </div> 
+
 {% endblock content %}

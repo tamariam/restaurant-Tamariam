@@ -11,5 +11,4 @@ urlpatterns = [
     path('search/', search_name, name='search_name'),
     path('search/date/', search_date, name='search_date'),
     path('today/', today_bookings, name='today')
-
 ]

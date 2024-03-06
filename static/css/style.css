@@ -8,8 +8,8 @@ chosen colors:
 
 */
 
- /* Font Family Classes 
- Add these classes to elements to apply specific font families  */
+ /* Font Family Classes :
+Add these classes to elements to apply specific font families  */
 .lobster{
     font-family:"Lobster", cursive;
 }
@@ -41,20 +41,21 @@ chosen colors:
  .nav-link{
     color: #ffb703 !important;
     font-family:'Montserrat', sans-serif;
-    font-family:700;
+    font-weight:700;
     font-size:20px;
 } 
 
 .nav-link:hover{
     color:red !important;
 } 
+
 /* style for footer and its elements */
 .footer a{
     text-decoration:none;
 }
 
 .footer{
-    font-family:700;
+    font-weight:700;
 }
 
 .footer h3, .footer span{
@@ -81,10 +82,12 @@ chosen colors:
 .fab:hover {
     background-color:red; 
 }
+
 /* give style to footer text:for educational purposes only */
 .purpose{
     color:#fb5607 !important ;
 }
+
 /* styles for Home page main content */
 /* add background image */
 .background-image{
@@ -98,6 +101,7 @@ chosen colors:
     align-items: center;
     justify-content: center;
  } 
+
 /* styling main heading */
 .main-heading{
     color:black; 
@@ -195,16 +199,17 @@ chosen colors:
     font-weight:700;
 }
 
-
 form{
     padding:20px 0;
     border-radius:9px;
 }
+
  form label{
 font-size:20px;
 font-weight:600;
 text-align:Center;
 } 
+
 #id_login{
     font-size:18px;
   text-align:Center;
@@ -214,11 +219,13 @@ text-align:Center;
     font-size:18px;
     text-align:Center;
 }
+
  form input{
     border-radius:9px;
     padding:5px 0;
     outline:none;
 } 
+
 form input:hover{
     border:2px solid red;;
 }
@@ -233,12 +240,12 @@ form input:hover{
     font-weight:700;
     border-radius:9px;
     color:black;
-    
 }
 
 .btn-link:hover{
     color:white;
 }
+
 .password{
     text-decoration: none;
     font-size:19px;
@@ -249,13 +256,16 @@ form input:hover{
 .profile-h1{
     color:#540b0e
 }
+
 .my-bookings,.my-details,.profile-h2{
     color:#c1121f;
     font-weight:600;
 }
+
 .my-bookings{
     text-align: center;
 }
+
 .user-text{
     font-size:18px;
     font-weight:600;
@@ -266,10 +276,12 @@ form input:hover{
     font-size:20px;
     color:#540b0e;
 }
+
 .profile-management-list{
     font-size:18px;
     font-weight:500;
 }
+
 .table-btn,.details-btn{
     font-weight:700;
     color:black;
@@ -280,11 +292,13 @@ form input:hover{
     font-size:16px;
     font-weight:600;
 }
+
 .fas{
     color:#000814;
     font-size:18px;
     margin-left:5px;
 }
+
 /* styles for menu page */
 .menu-link{
     text-decoration: none;
@@ -297,6 +311,7 @@ form input:hover{
     border-bottom:2px solid red;
     color:black;
 }
+
 .menu-img{
     transition: transform 0.4s ease-in-out;
 }
@@ -306,7 +321,6 @@ form input:hover{
 }
 
 /* styles for booking app pages */
-
 .booking-h2{
     color:#c1121f;
     background-color: black;
@@ -321,17 +335,21 @@ form input:hover{
     font-weight:700;
     font-size:20px;
 }
+
 .booking-guidelines-list{
     font-size:18px;
 }
+
 .dashboard-btn{
     width:100px;
     border:none;
 }
+
 .delete-span{
     font-size:18px;
     font-weight:700;
 }
+
 /* breakpoint for scroll-note */
 @media only screen and (min-width:483px){
     .scroll-note{
@@ -339,6 +357,7 @@ form input:hover{
 
     }
 }
+
 /* styles for Tablet screen size */
  @media only screen and (min-width:767px) {
 .nav-link, .footer p {
@@ -368,10 +387,11 @@ form input:hover{
 .btn-link{
     padding:10px;
 }
+
 .my-bookings{
     text-align: start;
 }
- }
+}
 
 /* styles for Desktop screen */
 @media only screen and (min-width:992px) {
@@ -401,6 +421,7 @@ form input:hover{
    .main-heading span{
     font-size:42px;
    }
+
    .main-message{
     width:500px;
     height:230px;
@@ -413,22 +434,26 @@ form input:hover{
    .btn{
     width:250px;
    }
+
    .fab{
     font-size:40px;
    }
+
    .login-container{
     width:720px;
    }
+
    form button{
     width:200px;
    }
+
    .menu-heading{
     font-size:50px;
     letter-spacing:2px;
    }
+
    .booking-button{
     font-size:20px;
-   
 }
 }
 }

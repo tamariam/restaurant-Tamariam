@@ -6,6 +6,7 @@
 {% block head_title %}{% trans "Sign In" %}{% endblock head_title %}
 
 {% block content %}
+
 <div class=" text-centercol-md-2 d-flex justify-content-center align-items-center">
   <!-- display django messages -->
   {% if messages %}
@@ -27,7 +28,6 @@ data-bs-dismiss="alert" aria-label="Close"></button>
     <a class="primaryAction sign-up" href="{% url 'account_signup' %}">{% trans "Sign Up" %}</a><p></p>
   {% csrf_token %}
   {{ form|crispy }}
-  <!-- {{ form.as_p }} -->
   {% if redirect_field_value %}
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
   {% endif %}
@@ -36,4 +36,5 @@ data-bs-dismiss="alert" aria-label="Close"></button>
   </form>
 </div>
 </div>
+
 {% endblock content %}

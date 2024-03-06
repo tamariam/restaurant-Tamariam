@@ -1,13 +1,12 @@
 {% extends "base.html" %}
 {% load crispy_forms_tags %} 
-
 {% block content %}
-    <!-- display django messages --> 
+
+<!-- display django messages --> 
     <div class=" text-centercol-md-2 d-flex justify-content-center align-items-center ">
     {% if messages %}
     {% for message in messages %}
-      
-        <div class="text-center bordered montserrat mt-2 alert {{ message.tags }} bg-warning alert-dismissible fade show " id="msg" role="alert">
+    <div class="text-center bordered montserrat mt-2 alert {{ message.tags }} bg-warning alert-dismissible fade show " id="msg" role="alert">
           {{ message | safe }}
           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
@@ -15,7 +14,7 @@
     {% endfor %}
   {% endif %}
 
-
+<!-- profile content -->
 <div class="container mt-2  montserrat">
    <div class="row">
                 <div class="col-12">
@@ -28,7 +27,6 @@
                 <li>Manage your bookings by visiting the "My Bookings" section.You can view, modify, or delete, and check the status of your existing bookings.</li>
                 <li>You can only update bookings for future dates.</li>
                 <li>You cannot change rejected bookings.</li>
-
             </ul>
             <hr>
                </div>
@@ -42,13 +40,12 @@
             <a href="{% url 'update_profile' %}" class=" details-btn btn-warning  m-2 text-decoration-none p-2 rounded-3 " >Update profile</a>
             <a href="{% url 'account_delete_page' %}" class="details-btn btn-danger text-decoration-none m-2 p-2 rounded-3">Delete account</a>
             </div>
-                   
-                   </div>
+                </div>
                    </div>
                    <div class="table-responsive">
+                    <h2 class="my-bookings">My Bookings</h2>
+                    <p class="scroll-note text-center">View complete details by scrolling right <i class="fas fa-arrow-right"></i></p>
                        <table class="table">
-                        <h2 class="my-bookings">My Bookings</h2>
-                        <p class="scroll-note text-center">View complete details by scrolling right <i class="fas fa-arrow-right"></i></p>
                         {% if not  bookings %}
                         <p class="fw-bold">You have not Bookings, {{user.first_name}}, Book it now.</p>
                         {% else %}
@@ -80,11 +77,8 @@
                         {% endif %}
                         </tbody>
                         </table>
-                        </div>
-                </tbody>
-                        </table>
-                            </div>
+                    </div>
+                </div>
             </div>
    
-
 {% endblock content %}

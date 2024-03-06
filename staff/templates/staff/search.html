@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+
 <!--
 This Django template extends a base HTML template named 'base.html'.
 The content block is overridden to display a list of approved bookings filtered by date.
@@ -12,7 +13,7 @@ If there are no filtered bookings, it displays a message indicating that there a
     {% if today %}
         <h2 class="mt-2 fw-bold">Approved Bookings for <span class="text-danger">Today</span></h2>
     {% else %}
-        <h2 class="mt-2 fw-bold">Approved Bookings for <span class="text-danger">{{ query }}</span></h2>
+        <h2 class="mt-2 fw-bold">Bookings for <span class="text-danger">{{ query }}</span></h2>
     {% endif %}
     <div class="table-responsive col-md-8 col-12 mt-5">
         <p class="scroll-note text-center">View complete details by scrolling right <i class="fas fa-arrow-right"></i></p>
@@ -24,6 +25,7 @@ If there are no filtered bookings, it displays a message indicating that there a
                     <th scope="col">Date</th>
                     <th scope="col">Time</th>
                     <th scope="col">Number of People</th>
+                    <th scope="col">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -35,6 +37,8 @@ If there are no filtered bookings, it displays a message indicating that there a
                     <td>{{ filter.date }}</td>
                     <td>{{ filter.time }}</td>
                     <td>{{ filter.num_of_people }}</td>
+                    <td>{{ filter.status }}</td>
+
                 </tr>
                 {% endfor %}
             </tbody>
@@ -43,7 +47,7 @@ If there are no filtered bookings, it displays a message indicating that there a
 </div>
 {% else %}
     {% if query %}
-        <h2 class=" text-center mt-2 fw-bold">No approved Bookings for <span class="text-danger">{{query}}</span></h2>
+        <h2 class=" text-center mt-2 fw-bold">No Bookings for <span class="text-danger">{{query}}</span></h2>
     {% else %}
         <h2 class=" text-center mt-2 fw-bold">No  approved bookings for <span class="text-danger">today</span></h2>
     {% endif %}

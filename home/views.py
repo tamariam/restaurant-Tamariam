@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
-# from django.contrib.auth.models import User
 from .forms import CustomProfileUpdateForm
 from allauth.account.views import PasswordChangeView
 from django.urls import reverse_lazy

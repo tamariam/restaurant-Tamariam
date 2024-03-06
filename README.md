@@ -67,6 +67,11 @@ so that I can **quickly set up a robust development environment and kickstart my
    - As a **Logged in user** I can **view my booking details** so that i can **make sure everything is correct**.
    - As a **logged in user** I can **change my bookings** so that i can **change any details of booking** if i need.
    - As a **logged in user** I can **cancel my existing booking** so that i **do not need to call to restaurant to cancel it.**
+   - As a **Site owner** I want **limit access to specific functionalities to staff members** so that **prevent unauthorized users from interfering with its operations**
+   - As a **staff member** I can **access staff dashboard** so that i can **manage site content and bookings**
+   - As a **staff member** I can **search bookings by date** so that i can **easyly find out how meny bookings restaurant have on specific date**
+   - As a  **staff member**  I can **search bookings by name** so that **i can easily  find out reservation status for specific user**
+  - As a **staff member** I can  **search todays bookings**  so that i can **easily find out  how many  approved bookings does restaurant have for today**
 
 Please check all user storys[here](https://github.com/users/tamariam/projects/9)
 
@@ -486,7 +491,16 @@ This project is designed to enforce specific restrictions for different user rol
 
 
 # Testing 
+## Manual Testing
 
+I have manualy tested this project by doing the folowing:
+- I checked this project using DevTools' device toolbar and confirmed that it looks responsive on all screen types.
+- all sections are readeble and easy to understand.
+- The site works in different browsers:Firefox,Chrome,Safari.
+- I Tested that  links  on footer page works  and opens in new window.
+- I've tested each button to ensure they perform their designated tasks with excellence.
+### Home Page
+I checked this project using DevTools' device toolbar and confirmed that it looks responsive on all screen types.
 ## Lighthouse testing
 
 Chrome DevTools Lighthouse was used to test Performance, Accessibility, Best Practices and SEO.

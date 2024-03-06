@@ -5,11 +5,13 @@
 {% block head_title %}{% trans "Email Addresses" %}{% endblock head_title %}
 
 {% block content %}
-     <!-- display django messages -->
-     <div class=" text-center col-md-2 d-flex justify-content-center align-items-center">
-      {% if messages %}
+
+<div class="container-fluid mt-2 pt-3 pb-3">
+  <div class="row d-flex justify-content-center align-items-center montserrat">
+      <!-- display django messages -->
+  {% if messages %}
   {% for message in messages %}
-  <div class="text-center bg-warning text-dark border-radius-9 montserrat mt-2  alert {{ message.tags }} alert-dismissible
+  <div class="text-center mx-auto bg-warning text-dark border-radius-9 montserrat mt-2  alert {{ message.tags }} alert-dismissible
   fade show " id="msg" role="alert">
   {{ message | safe }}
   <button type="button" class="btn-close"
@@ -18,8 +20,6 @@
   {% endfor %}  
   {% endif %}
   </div>
-<div class="container mt-2 pt-3 pb-3">
-  <div class="row d-flex justify-content-center align-items-center montserrat">
     <h1>{% trans "Email Addresses" %}</h1>
 {% if emailaddresses %}
 <p>{% trans 'The following email addresses are associated with your account:' %}</p>

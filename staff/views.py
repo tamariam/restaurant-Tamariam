@@ -44,10 +44,16 @@ def approve_booking(request, pk):
                 '',
                 "tamariamrestaurant@gmail.com",  # Sender's email address
                 [booking.email],  # Recipient's email address(es)
-                html_message=render_to_string('staff/email.html', {'booking': booking}),  # HTML content
+                html_message=render_to_string(
+                    'staff/email.html',
+                    {'booking': booking}
+                ),
                 fail_silently=False,
             )
-            messages.success(request, 'Booking Approved, confirmation email has been sent')
+            messages.success(
+                request,
+                'Booking Approved, confirmation email has been sent'
+            )
             # Redirect back to the same page
             return redirect('dashboard')
         # If it's not a POST request, render the page as usual
@@ -81,10 +87,15 @@ def reject_booking(request, pk):
                 '',
                 "tamariamrestaurant@gmail.com",  # Sender's email address
                 [booking.email],  # Recipient's email address(es)
-                html_message=render_to_string('staff/reject_email.html', {'booking': booking}),  # HTML content
+                html_message=render_to_string(
+                    'staff/reject_email.html',
+                    {'booking': booking}),
                 fail_silently=False,
             )
-            messages.error(request, 'Booking rejected. An email notification has been sent to inform  the user')
+            messages.error(
+                request,
+                'Booking rejected. An email notification has been sent to '
+                'inform  the user')
             # Redirect back to the same page
             return redirect('dashboard')
         # If it's not a POST request, render the page as usual
@@ -117,16 +128,30 @@ def search_name(request):
     filtered = Booking.objects.filter(
         Q(first_name__iexact=first_name) & Q(last_name__iexact=last_name)
     )
-    return render(request, 'staff/search.html', {'filtered': filtered, 'query': query})
+    return render(
+        request,
+        'staff/search.html',
+        {'filtered': filtered, 'query': query}
+    )
 
 
 def search_date(request):
     query = request.GET.get('search_date')
     filtered = Booking.objects.filter(date=query)
-    return render(request, 'staff/search.html', {'filtered': filtered, 'query': query})
+    return render(
+        request,
+        'staff/search.html',
+        {'filtered': filtered,
+         'query': query}
+    )
 
 
 def today_bookings(request):
-    filtered = Booking.objects.filter(date=date.today(),status='approved')
+    filtered = Booking.objects.filter(date=date.today(), status='approved')
     today = filtered.exists()
-    return render(request, 'staff/search.html', {'filtered': filtered, 'today': today})
+    return render(
+        request,
+        'staff/search.html',
+        {'filtered': filtered,
+         'today': today}
+    )

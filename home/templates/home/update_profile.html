@@ -1,9 +1,7 @@
-
 {% extends "base.html" %}
 {% load i18n %}
 {% load crispy_forms_tags %} 
 {% block content %}
-
 
 <div class="container">
   <div class="row d-flex justify-content-center align-items-center montserrat">
@@ -15,8 +13,6 @@
   </p>
   <div>
     <div>
-    
-  
   <form method="post" action="{% url 'update_profile' %}">
     {% csrf_token %}
     {{ form|crispy }}
@@ -25,8 +21,7 @@
 </form>
 </div>
     </div> 
-    
-</div>
+  </div>
 </div>
 </div>
 {% endblock %}
