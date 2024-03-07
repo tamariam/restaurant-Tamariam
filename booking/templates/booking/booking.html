@@ -2,11 +2,10 @@
 {% load crispy_forms_tags %}
 {% block content %}
 
-<div class=" text-center col-md-2 d-flex justify-content-center align-items-center">
-    <!-- display django messages -->
+<!-- display django messages -->
     {% if messages %}
 {% for message in messages %}
-<div class="text-center bg-warning text-dark border-radius-9 montserrat mt-2  alert {{ message.tags }} alert-dismissible
+<div class="mx-auto text-center col-md-5 bg-warning text-dark border-radius-9 montserrat mt-2  alert {{ message.tags }} alert-dismissible
 fade show " id="msg" role="alert">
 {{ message | safe }}
 <button type="button" class="btn-close"
@@ -14,7 +13,6 @@ fade show " id="msg" role="alert">
 </div>
 {% endfor %}  
 {% endif %}
-</div>
 <div class="container-fluid mt-3 ">
     <div class="row d-flex justify-content-center align-items-center">
     <div class="col-md-7 montserrat"> 
