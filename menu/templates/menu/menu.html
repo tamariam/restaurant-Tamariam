@@ -23,13 +23,13 @@
           <h2 id="starter"  class="bg-danger p-2 rounded lobster ">Starters</h2>
         {% if starters %}
           {% for item in starters %}
-            <h3>{{ item.name }}</h3>
+            <h3 class=" menu-name">{{ item.name |  striptags}}</h3>
             {% if "placeholder" in item.featured_image.url %}
             <img  class="rounded menu-img"  src="https://res.cloudinary.com/dxleotfxz/image/upload/v1706365241/placeholder_althgk.jpg" alt="{{item.name}}">
         {% else %}
             <img class="rounded menu-img" src="{{ item.featured_image.url }}" alt="{{item.name}}">
         {% endif %}
-            <h4 class="text-center pt-2">{{ item.ingredients }}</h4>
+            <h4 class=" menu-ingredients text-center pt-2">{{ item.ingredients | striptags }}</h4>
             {% if not item.availability %}
             {% if forloop.last %}
             <p class="text-danger pb-3">Currently unavailable</p>
@@ -52,14 +52,14 @@
         <h2 id="main-course" class="bg-danger p-2 rounded  lobster">Main Course</h2>
         {% if mains %}
           {% for item in mains %}
-            <h3>{{ item.name }}</h3>
+            <h3>{{ item.name | striptags }}</h3>
             {% if "placeholder" in item.featured_image.url %}
             <img class="rounded menu-img" src="https://res.cloudinary.com/dxleotfxz/image/upload/v1706365241/placeholder_althgk.jpg" alt="{{item.name}}">
         {% else %}
             <img class="rounded menu-img " src="{{ item.featured_image.url }}"
              alt="{{item.name}}">
         {% endif %}
-            <h4 class="text-center pt-2">{{ item.ingredients }}</h4>
+            <h4 class="text-center pt-2">{{ item.ingredients | striptags }}</h4>
             {% if not item.availability %}
             {% if forloop.last %}
             <p class="text-danger pb-3">Currently unavailable</p>
@@ -82,13 +82,13 @@
         <h2 id="dessert" class="bg-danger p-2 rounded mt-2 lobster">Desserts</h2>
         {% if desserts %}
           {% for item in desserts %}
-            <h3>{{ item.name }}</h3>
+            <h3>{{ item.name |  striptags }}</h3>
             {% if "placeholder" in item.featured_image.url %}
             <img class="rounded menu-img" src="https://res.cloudinary.com/dxleotfxz/image/upload/v1706365241/placeholder_althgk.jpg" alt="{{item.name}}">
         {% else %}
             <img class="rounded menu-img" src="{{ item.featured_image.url }}" alt="{{item.name}}">
         {% endif %}
-            <h4 class="text-center pt-2">{{ item.ingredients }}</h4>
+            <h4 class="text-center pt-2">{{ item.ingredients | striptags }}</h4>
             {% if not item.availability %}
             {% if forloop.last %}
             <p class="text-danger pb-3">Currently unavailable</p>
