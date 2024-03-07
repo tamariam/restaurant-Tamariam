@@ -52,7 +52,7 @@
         <h2 id="main-course" class="bg-danger p-2 rounded  lobster">Main Course</h2>
         {% if mains %}
           {% for item in mains %}
-            <h3>{{ item.name | striptags }}</h3>
+            <h3>{{ item.name | striptags | safe }}</h3>
             {% if "placeholder" in item.featured_image.url %}
             <img class="rounded menu-img" src="https://res.cloudinary.com/dxleotfxz/image/upload/v1706365241/placeholder_althgk.jpg" alt="{{item.name}}">
         {% else %}

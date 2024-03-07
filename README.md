@@ -143,11 +143,18 @@ Please check all user storys[here](https://github.com/users/tamariam/projects/9)
 
 </details>
 
+<details>
+  <summary>Dashboard-Wireframe (click to expand)</summary>
+
+![dashboard-Wirefreame](/docs/wireframes/dashboard.png)
+
+</details>
+
 
 
 ## Database Schema
 
-![ERD-diagram](/docs/erd-diagram/erddiagram.png)
+![ERD-diagram](/docs/erd-diagram/erd-diagram.png)
 
 ## Design Elements
 
@@ -493,14 +500,117 @@ This project is designed to enforce specific restrictions for different user rol
 # Testing 
 ## Manual Testing
 
-I have manualy tested this project by doing the folowing:
-- I checked this project using DevTools' device toolbar and confirmed that it looks responsive on all screen types.
-- all sections are readeble and easy to understand.
-- The site works in different browsers:Firefox,Chrome,Safari.
-- I Tested that  links  on footer page works  and opens in new window.
-- I've tested each button to ensure they perform their designated tasks with excellence.
+- I have manualy tested this project by doing the folowing:
+  - I checked this project using DevTools' device toolbar and confirmed that it looks responsive on all screen types.
+  - all sections are readeble and easy to understand.
+  - The site works in different browsers:Firefox,Chrome,Safari.
+  - I Tested that  links  on footer page works  and opens in new window.
+  - I've tested each button to ensure they perform their designated tasks with excellence.
+- additoinal testing for each page:
 ### Home Page
-I checked this project using DevTools' device toolbar and confirmed that it looks responsive on all screen types.
+- Functionality Testing: Test navigation links, and  interactive elements.
+- Responsiveness Testing: Ensure the page layout adjusts correctly on different devices.
+- Content Review: Verify that the introductory content accurately represents the purpose of the website.
+
+### account managament
+- The manual testing of the account management functionality confirms that users can create accounts, log in, log out, change passwords, reset passwords, and delete accounts without encountering any significant issues. All expected features have been verified, and the application meets security standards: 
+
+#### Sign Up Option in Navigation:
+
+- The sign-up option is prominently displayed in the website navigation menu.
+- Users who are not registered can easily locate the sign-up option on the homepage alongside the login option.
+- Upon clicking the sign-up option, users are directed to the registration page without any errors or inconsistencies.
+
+
+### Sign Up Page
+
+- Users can successfully create accounts by providing required details.
+- Verification emails are sent promptly upon registration.
+- Clicking on the verification link activates the user account.
+- After activation, users are asking to  log in.
+- Password strength requirements are enforced during account creation.
+- Proper error  messages are displayed  for invalid input during registration.
+
+
+### User Authentication:
+
+- Users receive appropriate error messages for incorrect login credentials.
+- Session management is effective, and users remain logged in until they choose to log out or session expires.
+- Remember me functionality, if available, works as expected, allowing users to stay logged in across sessions.
+- Upon successful login, a confirmation message is displayed on the homepage indicating that the user has been logged in.
+
+
+### profile page
+- Confirmed that the "Profile" link is only visible and accessible to logged-in users.
+- Verified that user details such as username  email and bookings related to the user are correctly displayed on the profile page.
+
+### update profile 
+
+- Successfully updated account details (username, first name,last name email address)  changes were saved correctly and appropriate message is displayed.
+
+### Change Password:
+
+- Users can change their passwords without encountering any issues.
+- Password change form validates input and enforces password strength requirements.
+- Upon successful password change, users  redirect on profile page and confirmation message displays.
+- Users cannot change passwords without providing the correct current password.
+
+### Reset Password:
+
+- Users can reset their passwords  by clicking ''forgot password '' button on login page.
+- An email containing a password reset link is sent to the provided email address.
+- Clicking the reset link directs the user to a secure reset password page within the application, where they can enter a new password into the provided form fields.
+- After successfully resetting the password, the application displays a confirmation message to the user, confirming that the password has been changed.
+
+### Delete Account:
+
+- The account deletion process is successful, and the account is removed from the system.
+- Confirmation  question is displayed before account deletion to prevent accidental deletions.
+- Deleting an account removes all associated user data .
+- Users cannot access their accounts after deletion, and attempts to log in with deleted account credentials fail.
+
+
+### Menu
+- Successfully accessed the menu page from the navigation bar or designated menu link.
+- Verified that menu items, including their descriptions, pictures, and prices, are displayed correctly on the menu page.
+- Confirmed that changes made to menu items, descriptions, pictures, and prices from the admin panel reflect accurately on the menu page.
+- Tested the functionality to mark menu items as currently unavailable from the admin panel. Verified that unavailable menu items are appropriately displayed on menu page.
+- Tested the menu page across different web browsers to ensure consistent display and functionality.
+- Ensured that changes to prices from the admin panel are reflected accurately on the menu page.
+- Ensured that menu item pictures are of high quality and consistent in size and format.
+
+### Booking
+
+- Confirmed that non-logged-in users are redirected to the login page when attempting to access the booking page.
+- Ensured that only logged-in users can access the booking page directly.
+- Checked that the login prompt on the booking page is clear and instructive, informing users to log in to make a booking.
+- Verified that users can input required booking details such as date, time and number of people, without encountering any errors.
+- Verified that booking requests are successfully processed and stored in the backend database.
+- After successfully submitting a booking, verified that  confirmation message  displays indicating that their booking request has been  submited.
+- Tested the form validation to ensure users cannot select past dates.
+- Tested the booking process to ensure that users cannot make double bookings for the same  time slot.
+- Checked that the system prevents overbooking by limiting the number of available slots for each date.
+- Tested by submitting booking requests that exceed the available capacity for a specific date and confirmed that the system rejects the request with a notification indicating that the booking capacity has been reached.
+- Verified that users can access and modify their existing bookings from their profile page.
+- Attempted to update bookings that are pending or approved by changing the date, time, or number of people, and confirmed that the changes are saved correctly.
+- Attempted to delete bookings and confirmed that the deletion process removes the booking from the system without any errors.
+
+
+### staff
+- Verified that the staff dashboard link only appears on home page if user is  a staff member.
+- Tested by logging in with both staff and non-staff accounts to ensure the visibility of the dashboard link is correct.
+- Verified that staff members can access a list of pending bookings and  can approve or reject  on each booking request.
+- Ensured that the system updates the booking status accordingly and notifies users of the outcome.
+- Tested the functionality to display success/error messages o in the staff dashboard and verified they  work as expected.
+- Verified that staff members can search for specific bookings by customer name or booking date.
+- Verified that staff members can access a list of approved bookings for the current day.
+- Verified that if a staff member searches for bookings by a specific user and no bookings are found, a message indicating "No bookings found for [user] is displayed.
+- Verified that if a staff member searches for bookings by a specific date/current day and no bookings are found, a message indicating "No bookings found for [date] is displayed.
+
+
+
+- There is only  r line too long in settings py file which can not be shortened.
+
 ## Lighthouse testing
 
 Chrome DevTools Lighthouse was used to test Performance, Accessibility, Best Practices and SEO.
