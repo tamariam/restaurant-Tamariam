@@ -4,16 +4,14 @@
 
 <h1 class="mx-auto text-center">Booking Management Area</h1>
    <!-- display django messages --> 
-   <!-- <div class=" text-center col-md-5 col-12 d-flex justify-content-center align-items-center "> -->
     {% if messages %}
     {% for message in messages %}
-      <div class="mx-auto text-center bordered montserrat mt-2 alert {{ message.tags }} bg-warning alert-dismissible fade show " id="msg" role="alert">
+      <div class="mx-auto col-md-5 text-center bordered montserrat mt-2 alert {{ message.tags }} bg-warning alert-dismissible fade show " id="msg" role="alert">
           {{ message | safe }}
           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
     {% endfor %}
   {% endif %}
-<!-- </div> -->
 <div class="container-fluid"> 
     <div class="row">
     <div class="table-responsive col-md-10 col-12 mx-auto ">

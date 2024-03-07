@@ -5,9 +5,7 @@ from . models import Booking
 from django.shortcuts import get_object_or_404
 
 
-# Create your views here.Menu.objects.filter(status=1, category='starter')
-
-
+# Create your views here
 def booking_page(request):
     if request.user.is_authenticated:
         if not request.user.is_staff:
@@ -111,15 +109,8 @@ def update_booking(request, pk):
             # Check if only number of people is changed
             if (new_booking.date == booking.date and
                     new_booking.time == booking.time):
-                # If date and time are the same, only update number of people
-                booking.num_of_people = new_booking.num_of_people
-                booking.save()
-                messages.success(request, 'Booking updated successfully')
-                return redirect('profile_page')
-            else:
-                # checks if date or time is changed
                 current_bookings = Booking.objects.filter(
-                    date=new_booking.date, status="approved"
+                 date=new_booking.date, status="approved"
                 )
                 total_people_booked = sum(
                     booking.num_of_people for booking in current_bookings
@@ -134,21 +125,22 @@ def update_booking(request, pk):
                     )
                 elif requested_people + total_people_booked > max_capacity:
                     messages.error(
-                        request, 
+                        request,
                         'Sorry, your booking request exceeds '
                         'the maximum capacity for this date. Please  '
                         'fewer people or choose another date or time.'
                     )
-                else:
-                    # Update booking details and save to database
-                    booking.num_of_people = new_booking.num_of_people
-                    booking.email = request.user.email
-                    booking.user = request.user
-                    booking.first_name = request.user.first_name
-                    booking.last_name = request.user.last_name
-                    booking.save()
-                    messages.success(request, 'Booking updated successfully')
-                    return redirect('profile_page')
+                # If date and time are the same, only update number of people
+            else:
+                # Update booking details and save to database
+                booking.num_of_people = new_booking.num_of_people
+                booking.email = request.user.email
+                booking.user = request.user
+                booking.first_name = request.user.first_name
+                booking.last_name = request.user.last_name
+                booking.save()
+                messages.success(request, 'Booking updated successfully')
+                return redirect('profile_page')
         else:
             messages.error(request, 'There was an error updating the booking.')
     else:
