@@ -438,20 +438,21 @@ If there are already approved bookings for the specified date, and the number of
 
 The Staff Dashboard is made for  staf members to manage bookings.As a staff member logging in, you're directed to the home page initially. From there, you have the option to navigate to the dashboard from the menu. Once ypu are on  dashboard page  you can  review pending, approved, and rejected bookings. Additionally,  search functionality allows you to find bookings by name, date, or quickly check today's approved bookings.. 
 
-![request-exceeds](/docs/features/staff-dashboard-all-displayed.png)
+![staff-dashboard](/docs/features/dashboard-on-menu.png)
+![staff-dashboard](/docs/features/staff-dashboard-all-displayed.png)
 
 In cases where there are no bookings att all or there are no pending, approved, or rejected bookings, the dashboard displays appropriate text on the page instead of the booking lists. This ensures clarity for staff members, indicating that there are currently no bookings requiring action or review. By providing clear feedback, staff can easily understand the current status and focus on other tasks as necessary.
 
-![request-exceeds](/docs/features/no-bookings-att-all.png)
+![staff-dashboard](/docs/features/no-bookings-att-all.png)
 
-![request-exceeds](/docs/features/no-approved-bookings.png)
+![staff-dashboard](/docs/features/no-approved-bookings.png)
 
 Staff members have the authority to accept or reject pending bookings directly from the dashboard. Upon accepting or rejecting a booking, an immediate message displays on the page confirming the action. Simultaneously, the booking is promptly moved to the appropriate section - either the approved or rejected bookings list. Additionally, an email notification is automatically sent to the user, informing them of the updated status of their booking.
 
 
-![request-exceeds](/docs/features/booking-approved-message.png)
+![approved-message](/docs/features/booking-approved-message.png)
 
-![request-exceeds](/docs/features/booking-rejected-message.png)
+![rejected-message](/docs/features/booking-rejected-message.png)
 
 
 
@@ -503,6 +504,8 @@ This project is designed to enforce specific restrictions for different user rol
 
 ![staff-not-allow](./docs/features/staff-not%20-allow-to%20-view-booking-page.png)
 
+
+[Back to top](#contents)
 
 # Testing 
 ## Manual Testing
@@ -585,6 +588,7 @@ This project is designed to enforce specific restrictions for different user rol
 - Tested the menu page across different web browsers to ensure consistent display and functionality.
 - Ensured that changes to prices from the admin panel are reflected accurately on the menu page.
 - Ensured that menu item pictures are of high quality and consistent in size and format.
+- Verified that if no image is uploaded for a menu item, a placeholder image is displayed.
 
 ### Booking
 
@@ -906,7 +910,17 @@ Chrome DevTools Lighthouse was used to test Performance, Accessibility, Best Pra
 
 </details>
 
+### validation testing
 
+![html-validation-check](./docs/testing/validator-testing/html-validator.png)
+
+![css-validation-check](./docs/testing/validator-testing/css-validator.png.png)
+
+![js-validation-check](./docs/testing/validator-testing/js-shint.png)
+
+![python-validation-check](./docs/testing/validator-testing/python-validator.png)
+
+### Bugs 
 
 
 # Deployment
