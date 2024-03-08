@@ -1,8 +1,5 @@
 from django.db import models
-# from datetime import datetime, date
 from django.contrib.auth.models import User
-# from django.forms import ModelForm
-# Create your models here.
 from datetime import time
 
 # Choices for booking status

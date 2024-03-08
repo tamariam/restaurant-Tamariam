@@ -30,6 +30,7 @@ Please check live  [URL](https://tamariamrestaurant-d81c96b3d785.herokuapp.com)
    - [Cloning The Repository](#cloning-the-repository)
 - [Testing](#testing)
   - [lighthouse Testing](#lighthouse-testing)
+  - [Manual Testing](#manual-testing)
 
 
 
@@ -76,7 +77,9 @@ so that I can **quickly set up a robust development environment and kickstart my
 Please check all user storys[here](https://github.com/users/tamariam/projects/9)
 
 ## Wireframes
- I used [Balsamique](https://balsamiq.com/) to create wireframes for my project.These were adapted and improved upon throughout the development process.The wireframes encompass the main pages of the project, with each page extending the base HTML structure that includes navigation and footer elements Here are the wireframes for the main pages:
+
+ I used [Balsamique](https://balsamiq.com/) to create wireframes for my project.These were adapted and improved upon throughout the development process.The wireframes encompass the main pages of the project, with each page extending the base HTML structure that includes navigation and footer elements.The wireframes display designs for desktop, mobile, and tablet views, mainly focusing on the homepage. Additionally, I've created wireframes for the desktop and mobile menu. However, wireframes for other pages are specifically for desktop. On mobile screens, elements are arranged from top to bottom for readability and usability. Even though the content and features remain consistent across devices, I decided against creating separate wireframes for mobile and tablet views. Instead, I used the desktop wireframes as a base to guide adaptation for smaller screens, ensuring visual consistency throughout the application. Tablet screens closely resemble the desktop version, while mobile screens show slight variations, particularly in the menu layout. These wireframes offer a clear visual representation of device differences, with most pages following the desktop layout.
+
 
  <details>
   <summary>Homepage - Desktop (click to expand)</summary>
@@ -153,6 +156,10 @@ Please check all user storys[here](https://github.com/users/tamariam/projects/9)
 
 
 ## Database Schema
+
+ I used [lucid.app](https://lucid.app/) to create database schema for my project .  The primary model in the project is the Booking model, tightly integrated with Django's built-in User model via a foreign key relationship. This linkage guarantees that if a user decides to delete their account, all corresponding booking data will be  removed, maintaining database consistency and user privacy.Moreover, the booking process automatically populates user details. This feature ensures  efficient booking experience for users, as their personal information is automatically filled in, reducing manual input and improving usability..
+
+ I create separate menu model to provide better management of menu items.This model facilitates the addition, updating, and deletion of menu items. Each menu item includes details such as its name, ingredients, price, availability, status, category, and featured image.By separating the menu-related functionalities into its own model, it simplifies the process of menu management and ensures a more organized database structure.
 
 ![ERD-diagram](/docs/erd-diagram/erd-diagram.png)
 
@@ -606,6 +613,8 @@ This project is designed to enforce specific restrictions for different user rol
 - Verified that staff members can access a list of approved bookings for the current day.
 - Verified that if a staff member searches for bookings by a specific user and no bookings are found, a message indicating "No bookings found for [user] is displayed.
 - Verified that if a staff member searches for bookings by a specific date/current day and no bookings are found, a message indicating "No bookings found for [date] is displayed.
+- verified that when a staff member attempts to access the booking link in the navigation bar, the system appropriately denies access and displays a notification message informing the staff member that they are not authorized to view the page.
+
 
 
 
