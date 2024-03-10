@@ -17,6 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+# Set custom handler for 404 errors to redirect to 'custom_404'
+# view in the 'booking' app
+handler404 = 'booking.views.custom_404'
 
 urlpatterns = [
     path("accounts/", include("allauth.urls")),

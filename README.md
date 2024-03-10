@@ -898,12 +898,16 @@ Chrome DevTools Lighthouse was used to test Performance, Accessibility, Best Pra
 
 </details>
 
+
+<Details>
 <summary>approved-bookings-by-date-Desktop (click to expand)</summary>
 
 ![approved-bookings-by-date-Desktop](./docs/testing/lighthouse/search-by-date-desktop.png)
 
 </details>
 
+
+<details>
 <summary>approved-bookings-by-Name-Mobile (click to expand)</summary>
 
 ![approved-bookings-by-date-Desktop](./docs/testing/lighthouse/search-by-name-mobile.png)

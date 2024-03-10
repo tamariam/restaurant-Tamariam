@@ -169,3 +169,8 @@ def delete_booking(request, pk):
             messages.warning(request, "You can only delete your own bookings")
 
     return render(request, "booking/delete_booking.html", {'booking': booking})
+
+
+# custom view for error 404
+def custom_404(request, exception):
+    return render(request, '404.html', status=404)
