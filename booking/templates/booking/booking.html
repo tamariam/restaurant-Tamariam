@@ -35,7 +35,7 @@ fade show " id="msg" role="alert">
                 {{ form|crispy }}
                 <div class="d-flex justify-content-around align-items-center">
                 <button type="submit" class="btn-success rounded p-2 booking-button">Submit</button>
-                <button onclick="window.location.href='{% url 'home'}' ;"  class="btn-danger rounded p-2 booking-button" type="button">Cancel</button>
+                <button onclick="window.history.back();" class="btn-danger rounded p-2 booking-button" type="button">Go Back</button>
                 </div>
             </form>
         </div>

@@ -923,7 +923,7 @@ Chrome DevTools Lighthouse was used to test Performance, Accessibility, Best Pra
 
 ![html-validation-check](./docs/testing/validator-testing/html-validator.png)
 
-![css-validation-check](./docs/testing/validator-testing/css-validator.png.png)
+![css-validation-check](./docs/testing/validator-testing/css-validator.png)
 
 ![js-validation-check](./docs/testing/validator-testing/js-shint.png)
 

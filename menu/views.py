@@ -12,8 +12,7 @@ def menu_page(request):
     starters = Menu.objects.filter(status=1, category='starter')
     mains = Menu.objects.filter(status=1, category='main')
     desserts = Menu.objects.filter(status=1, category='dessert')
-
-    # Prepare context data to pass to the template
+    
     context = {
         'starters': starters,
         'mains': mains,
