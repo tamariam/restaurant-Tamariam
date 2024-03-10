@@ -26,8 +26,7 @@
             <h3 class=" menu-name">{{ item.name |  striptags}}</h3>
             {% if "placeholder" in item.featured_image.url %}
             <!-- <img  class="rounded menu-img"  src="https://res.cloudinary.com/dxleotfxz/image/upload/v1706365241/placeholder_althgk.jpg" alt="{{item.name}}"> -->
-            <img class="card-img-top" src="{% static 'images/placeholder.jpg' %}"
-            alt="placeholder image">
+            <img  src="{% static 'images/placeholder.avif' %}" alt="placeholder image">
         {% else %}
             <img class="rounded menu-img" src="{{ item.featured_image.url }}" alt="{{item.name}}" crossorigin="anonymous" >
         {% endif %}
@@ -57,7 +56,7 @@
             <h3>{{ item.name | striptags | safe }}</h3>
             {% if "placeholder" in item.featured_image.url %}
             <!-- <img class="rounded menu-img" src="https://res.cloudinary.com/dxleotfxz/image/upload/v1706365241/placeholder_althgk.jpg" alt="{{item.name}}"> -->
-            <img class="card-img-top" src="{% static 'images/placeholder.jpg' %}"
+            <img class="card-img-top" src="{% static 'images/placeholder.avif' %}"
             alt="placeholder image">
         {% else %}
             <img class="rounded menu-img " src="{{ item.featured_image.url }}"
@@ -89,7 +88,7 @@
             <h3>{{ item.name |  striptags }}</h3>
             {% if "placeholder" in item.featured_image.url %}
             <!-- <img class="rounded menu-img" src="https://res.cloudinary.com/dxleotfxz/image/upload/v1706365241/placeholder_althgk.jpg" alt="{{item.name}}"> -->
-            <img class="card-img-top" src="{% static 'images/placeholder.jpg' %}"
+            <img class="card-img-top" src="{% static 'images/placeholder.avif' %}"
             alt="placeholder image">
         {% else %}
             <img class="rounded menu-img" src="{{ item.featured_image.url }}" alt="{{item.name}}" crossorigin="anonymous">
