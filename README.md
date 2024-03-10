@@ -505,6 +505,11 @@ This project is designed to enforce specific restrictions for different user rol
 ![staff-not-allow](./docs/features/staff-not%20-allow-to%20-view-booking-page.png)
 
 
+## 404 Page Not Found Error Page:
+This error shows when a user types a URL into the browser which does not exist within the app's domain.
+
+![staff-not-allow](./docs/features/404-error.png)
+
 [Back to top](#contents)
 
 # Testing 
@@ -925,7 +930,9 @@ Chrome DevTools Lighthouse was used to test Performance, Accessibility, Best Pra
 ![python-validation-check](./docs/testing/validator-testing/python-validator.png)
 
 ### Bugs 
-
+### future features
+### credentials
+### acknoladgements
 
 # Deployment
 
