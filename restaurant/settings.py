@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-import cloudinary
 
 import os
 import dj_database_url
@@ -172,7 +171,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 # email settings Configuration
-EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = "smtp.gmail.com"
 EMAIL_PORT = 587

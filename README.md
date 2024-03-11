@@ -15,6 +15,7 @@ Please check live  [URL](https://tamariamrestaurant-d81c96b3d785.herokuapp.com)
   - [Database Schema](#database-schema) 
   - [Design Elements](#design-elements)
    - [Typography](#typography)
+   - [Colour Palette](#colour-palette)
 - [Features](#features)
    - [Navigation Bar](#navigation-bar) 
    - [Homepage](#homepage)
@@ -165,9 +166,28 @@ Please check all user storys[here](https://github.com/users/tamariam/projects/9)
 
 ## Design Elements
 
+### Colour Palette
+
+![Colour-palette](/docs/colour-palette/colour-palette.png)
+
+* The color palette was chosen with [coolers](https://coolors.co/) and consists of 4 simple colours as seen above.
+
+The main color is black, noticeable in the navbar and footer, giving the site a modern and stylish appearance.
+
+Touches of red and yellow are added to add some variety and match the restaurant theme.
+
+Additionally, a bit of pink is used for the login page and booking tables, giving the site a bit of flair.
+
+Alongside these colors, standard Bootstrap colors are used for buttons, links, and to highlight certain text and messages.
+
+Adapting the above throughout the development process. The final list of colors used has been placed in the below [color grid](https://contrast-grid.eightshapes.com/?version=1.1.0&background-colors=&foreground-colorscompact&es-color-form__show-contrast=aaa&es-color-form__show-contrast=aa&es-color-form__show-contrast=aa18&es-color-form__show-contrast=dnp) to check contrast scores.
+
+![Color gird](docs/images/color-grid.jpg)
+
+
 ### Typography  
 
-This project incorporates carefully selected Google Fonts to enhance the visual appeal:
+This project incorporates carefully selected Fonts to enhance the visual appeal:
 "Montserrat" with sans-serif as secondary font, "Lobster "
 "Dancing Script".
 The mix of these  fonts contributes to a visually engaging and invitind user experience.
@@ -522,6 +542,14 @@ This error shows when a user types a URL into the browser which does not exist w
   - I Tested that  links  on footer page works  and opens in new window.
   - I've tested each button to ensure they perform their designated tasks with excellence.
 - additoinal testing for each page:
+
+* ### Initial Django Setup
+    * This was development related and all criteria was met.
+    * Necessary packages were installed successfully.
+    * Config variables were successfully secured.
+    * The site was deployed successfully.
+
+
 ### Home Page
 - Functionality Testing: Test navigation links, and  interactive elements.
 - Responsiveness Testing: Ensure the page layout adjusts correctly on different devices.
@@ -921,20 +949,141 @@ Chrome DevTools Lighthouse was used to test Performance, Accessibility, Best Pra
 
 ### validation testing
 
-![html-validation-check](./docs/testing/validator-testing/html-validator.png)
 
-![css-validation-check](./docs/testing/validator-testing/css-validator.png)
+
+- HTML
+
+  -During validation [W3C HTML Validator](https://validator.w3.org/) a few problems were presented in different html files but after correcting the relevant issues, no warnings or errors were shown.This problemss are mentioned in Bugs section.
+
+  ![html-validation-check](./docs/testing/validator-testing/html-validator.png)
+
+- CSS
+
+  - No errors were found when passing through the official [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) validator.
+
+  ![css-validation-check](./docs/testing/validator-testing/css-validator.png)
+
+- Js
+
+  - No errors were found when final passing through the official  [JSHint](https://jshint.com/) validator.
 
 ![js-validation-check](./docs/testing/validator-testing/js-shint.png)
 
+
+PEP8:
+Before using the pep8 validator I ran autopep8 --in-place --aggressive --aggressive <file name> on all py files.
+
+Due to this, the only error I found was in settings.py with AUTH_PASSWORD_VALIDATORS .
+
+
+![auth-password-validators](./docs/testing/validator-testing/settings-file.png)
+
+I tried to solve this issue but Django seems to think shortening these lines is ill advisable. For this reason, I left them to be longer than 80 characters.All final python files presented no warnings or errors.
+
 ![python-validation-check](./docs/testing/validator-testing/python-validator.png)
 
+
+
+### Browser Compatibility
+
+The site was tested on the following browsers and the appearance, functionality and, responsiveness were consistent throughout.
+
+Google Chrome
+Mozila firefox
+Microsoft Edge
+Safari
+
 ### Bugs 
+
+### fixed
+
+HTML:
+
+During the HTML validation process, several errors were identified and resolved:
+
+1.Unclosed <div> Tags:
+
+Issue: The validation flagged unclosed <div> tags, which occurred due to reusing code blocks without removing unnecessary <div> tags.
+Resolution: The error was resolved by carefully reviewing and removing redundant <div> tags.
+
+2.Opening Tags Without Closing Tags:
+Issue: The validation detected opening tags without corresponding closing tags. This happened when a block of code was deleted, inadvertently removing a necessary closing <div> tag.
+Resolution: The error was resolved by reinstating the deleted closing <div> tag.
+Error: Start Tag <p> Seen in Table:
+
+3.Issue: The validation reported an error when a <p> tag was inadvertently placed inside a <table> element.
+Resolution: After recognizing the mistake, the <p> tag was moved outside the <table> tag, resolving the error.
+
+4.element p not allowed as child of element h4:
+ The problem caused from the use of the {{ item.name | safe }} filter. Despite not including any <p> tags in the template:<h4>{{ item.name }}</h4> the rendered HTML was unexpectedly displaying as:<h4><p>item.name </p></h4> Although this filter was meant to render the content safely, it led to the inclusion of unwanted <p> tags.To resolve the issue, the | safe filter was replaced with | striptags, which effectively removed any HTML tags from the rendered output. This approach ensured that only the item names and ingredients were displayed within the <h4> elements, resolving the validation error.
+
+5.Mixed Content The page at was loaded over HTTPS but requested an insecure resource This request has been blocked the content must be served over HTTPS :
+While  testing the menu page, a "Mixed Content" error occurred in the browser console, indicating that the page was loaded over HTTPS but requested insecure resources, causing the browser to block them. To address this issue, I added the following code to the base HTML:<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> This directive instructs the browser to automatically upgrade any HTTP requests to HTTPS. also in menu html add crossorigin="anonymous" to all img tags.  As a result, the Mixed Content errors were resolved, and the Lighthouse Best Practices score improved from 68 to 100.
+
+6. On the booking page, the notification message about a submitted booking was incorrectly displayed on the left side instead of the center. To correct this issue, the Bootstrap class mx-auto was applied to the message div, ensuring it is horizontally centered on the page.
+
+#### Python
+During the Python code validation process, the following warnings were identified and promptly resolved:
+
+Blank Spaces:
+
+Issue: Blank spaces were detected within the code.
+Resolution: Extr blank spaces were removed from the codebase, ensuring cleaner and more consistent formatting.
+Trailing Spaces:
+Issue: Trailing spaces were present at the end of lines in the code.
+Resolution: Trailing spaces were eliminated from the code, enhancing readability and adhering to coding standards.
+Line Length Exceeded:
+Issue: Some lines in the code exceeded the recommended maximum line length.
+Resolution: Long lines were refactored or split into shorter segments.
+
+####  Functrionality testing
+
+1. Issue:
+When users registered with their email addresses, confirmation emails were not being sent.
+Cause:
+The email settings in the settings.py file were incomplete, missing necessary configurations for handling outgoing emails.
+Solution:
+To resolve this issue, I added the following settings in the settings.py file:
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+(replace console. with smtp to handle email on signing up for the issue)
+These additional settings specified the email backend as SMTP allowing emails to be sent out when users sign up..
+2. Issue:
+After the first registration, three messages were displayed together on homepage: one indicating a successful email sent to the address, another confirming successful registration, and the third indicating successful log in.
+
+Cause:
+The message display code was not properly structured, resulting in multiple messages appearing  together on the homepage.
+Solution:
+To address this issue:
+I added specific message display code to the verification_sent.html template to ensure that messages are only displayed on the appropriate page after email verification.
+I implemented separate message displays on the profile page to provide accurate feedback when the verification process is completed.
+
+3. Issue: During testing of the booking functionality, an issue was encountered where error handling only worked for users who had previously booked. New users attempting to book on dates that were already fully booked were still able to proceed with their booking.
+
+Addressing the Issue: To resolve this issue, I updated the booking_page view to include a new variable called new_booking. This variable checks whether the new booking aligns with existing bookings. Now, the system examines all existing bookings, and if the new booking does not exceed the capacity, it can be confirmed. This ensures that both existing and new users are properly restricted from booking on fully booked dates.
+4. During testing of the update booking page, two issues were encountered. The first issue was the inability to update only the number of people in a booking.
+
+Addressing the Issue:
+To resolve this issue, I modified the update booking system to specifically check whether only the number of people had been changed. This modification ensures that updates are accurately applied without requiring changes to other booking details.and user can update number of people without any problem.
+
+5. The second issue occurred when users attempted to update their details along with the number of people in a booking. Despite exceeding the maximum capacity, the booking was still updated.
+Addressing the Issue:
+To resolve this issue, I further modified the update booking system. Now, the system verifies whether the updated booking request exceeds the maximum capacity of people before saving the changes. If the capacity is exceeded, the booking is not saved and appropriate message displays to notify user.
+
+6. 
+Issue:
+During testing of the staff dashboard's search functionality by name, bookings were displayed even when entering just one letter from the name.
+
+Addressing the Issue:
+To enhance the search functionality, I updated the search_name view to ensure that bookings are only displayed when the entire name is entered.
+
+### Unfixed bugs
+There is no unfixed bugs.
+
+
 ### future features
-### credentials
-### acknoladgements
 
 # Deployment
+
 
 ## Heroku Deployment
 
@@ -1015,3 +1164,56 @@ To create a copy of the repository for viewing and editing without affecting the
 
 1. In my repository[github repository](https://github.com/tamariam/restaurant-Tamariam) click on the "fork" tab in the top right corner.
 2. Then click **create fork**  and it will fork the repository in your github account.
+
+
+# **Technologies used**
+
+* Python
+  * The packages installed for the is project can be found in [the requirements.txt](requirements.txt)
+* Django
+  * Django was used as the python framework in the project.
+  * Django all auth was used to handle user authentication and related tasks i.e. sign in, sign up, sign out.
+* Heroku
+  * Used to deploy the page and make it publicly available.
+* Heroku PostgreSQL
+  * Used for the database during development and in deployment.
+* HTML
+  * HTML was the base language used to layout the skeleton of all templates.
+* CSS
+  * Custom CSS used to style the page and make the appearance look a little more unique.
+* Javascript
+  * I have used JavaScript to automatically hide displayed messages after a few seconds.
+* Bootstrap 5.0.1
+  * Used to style HTML and CSS
+* Font awesome
+  * All icons throughout the page.
+
+  
+# Credits
+* Balsamiq was used to create the wireframes.
+* [lucid.app](https://lucid.app/users/login#/login)
+* The site was developed using gitpod.
+* GitHub was used to store my repository.
+* Responsive screenshot made using [amiresponsive.com](https://ui.dev/amiresponsive)
+* [Article on writing good user stories](https://www.industriallogic.com/blog/as-a-developer-is-not-a-user-story/)
+* [coolers.co](https://coolors.co/603f3f-a0acca-e4b67c-de9f13-000000) was used to generate color scheme.
+* [eightshapes-contast grid](https://contrast-grid.eightshapes.com/) to check contrast of colours.
+* * Fonts were taken from [Google Fonts](https://fonts.google.com/)
+* Images:
+  * for all images used for site  taken from [pixels.com](https://www.pexels.com/) 
+* Multiple videos sourced from youtube :
+    * [django-wednesdays](https://www.youtube.com/watch?v=HHx3tTQWUx0&list=PLCC34OHNcOtqW9BJmgQPPzUpJ8hl49AGy)
+    * [Learn Django - Class-Based Views series](https://youtu.be/ScteNE1jB4g)
+* General references:
+    * [Stack Overflow](https://stackoverflow.com/)
+    * [Code Institute Learning Platform](https://codeinstitute.net/)
+    * [Django Documentation](https://docs.djangoproject.com/en/3.2/)
+    * [Bootstrap Documentation](https://getbootstrap.com/)
+
+
+## Acknowledgements
+
+This site was developed as a fourth portfolio project for the [Code Institute](https://codeinstitute.net/global/) course in Full Stack Software Development. I would like to thank the following for all of the support throughout the development phase.
+
+* The Code Institute community, including Tutor Support, Student Care and the Slack Community.
+* My mentor, [David Bowers](https://www.linkedin.com/in/dnlbowers/) for providing me with advice throughout the development process.
