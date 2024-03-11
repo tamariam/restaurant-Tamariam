@@ -23,6 +23,8 @@ Please check live  [URL](https://tamariamrestaurant-d81c96b3d785.herokuapp.com)
    - [Account Managament](#account-managament)
    - [Menu](#menu)
    - [Booking Page](#booking-page)
+   - [Dashboard Page](#dashboard-page)
+- [Future Development](#future-development)
 - [Deployment](#dployment)
    - [Heroku Deployment](#heroku-deployment)
    - [ElephantSQL Database](#elephantsql-database)
@@ -30,6 +32,7 @@ Please check live  [URL](https://tamariamrestaurant-d81c96b3d785.herokuapp.com)
    - [Forking the Repository](#forking-the-repository)
    - [Cloning The Repository](#cloning-the-repository)
 - [Testing](#testing)
+- [validator testing](#validation-testing)
   - [lighthouse Testing](#lighthouse-testing)
   - [Manual Testing](#manual-testing)
 
@@ -46,17 +49,17 @@ The  primary goal  of the site is to create a seamless and user-friendly reserva
  I developed this project applying Agile methodology. Even though it's a solo project, I followed Agile principles to learn about flexible development and delivering small improvements over time. The project reflects my commitment to understanding modern software development approaches.
 In adopting an Agile development approach, i start  creating epics which were broken down into user stories, each representing a specific feature. I utilized the MoSCoW prioritization (Must have, Should have, Could have, Won't have) to categorize and prioritize each user story based on its importance.
 
-For better planning and estimation, I assigned labels and story points to each user story, considering factors such as time and difficulty. This approach helped me gauge the relative effort required for different tasks and maintain a clear sense of priority. Also every user story includes acceptance criteria and associated tasks.
+For better planning and estimation, I assigned labels and story points to each user story, considering factors such as time and difficulty. This approach helped me gauge the relative effort required for different tasks and maintain a clear sense of priority. Also every user story includes acceptance criteria and associated tasks.Also I found it beneficial to transition to organizing my work into sprints with milestones. I structured the project into seven sprints, each with its own set of milestones. By grouping related user stories into each sprint, I could efficiently tackle tasks in a more focused manner.
 
 Presented below is a compilation of completed and closed user stories for this project organized by epics.
 
- - Epic- Setting up working enviroment
+ - Epic-1 Setting up working enviroment
    - As a developer I can **install Django and essential libraries**,
 so that I can **quickly set up a robust development environment and kickstart my web projects with confidence**..
    - As a developer, my goal is to **establish a secure environment for managing confidential configuration variables**., so that **sensitive information remains confidential, allowing me to uphold the privacy of critical data within the system**.
    - As a developer I want to **deploy the website on Heroku** so that i can **test its functionality in a live environment and make the completed site accessible to the public**.
 
-- Epic- User Experience
+- Epic-2 User Experience
    - As a **site user** I want to **navigate through landing page** so that **i can easily access various sections**
    - As a **user** I can **register my account** so that I can **log in and log out** in my account.
    - As a **user** I can **login or logout** from my account so that i **can use all features of site.**
@@ -69,11 +72,18 @@ so that I can **quickly set up a robust development environment and kickstart my
    - As a **Logged in user** I can **view my booking details** so that i can **make sure everything is correct**.
    - As a **logged in user** I can **change my bookings** so that i can **change any details of booking** if i need.
    - As a **logged in user** I can **cancel my existing booking** so that i **do not need to call to restaurant to cancel it.**
-   - As a **Site owner** I want **limit access to specific functionalities to staff members** so that **prevent unauthorized users from interfering with its operations**
+   - As a **logged in user** I can **receive feedback how successful was my booking** so that  **i can book it again if booking was not successful**
+- Epic-3 Staff 
+
+
    - As a **staff member** I can **access staff dashboard** so that i can **manage site content and bookings**
    - As a **staff member** I can **search bookings by date** so that i can **easyly find out how meny bookings restaurant have on specific date**
    - As a  **staff member**  I can **search bookings by name** so that **i can easily  find out reservation status for specific user**
   - As a **staff member** I can  **search todays bookings**  so that i can **easily find out  how many  approved bookings does restaurant have for today**
+  - As a **staff member** **manage menu items from admin panel** so that i can **keep menu page up to date**
+  - As a **Site owner** I can **limit access to specific features to registered users** so that **Encourage site membership to enhance participation and guarantee the accurate recording of reservations for known customers.**
+  - As a **Site owner** I want **limit access to specific functionalities to staff members** so that **prevent unauthorized users from interfering with its operations**
+  - As a **staff member** I can **manage booking requests** so that **i can control restauran bookings**
 
 Please check all user storys[here](https://github.com/users/tamariam/projects/9)
 
@@ -531,6 +541,16 @@ This error shows when a user types a URL into the browser which does not exist w
 ![staff-not-allow](./docs/features/404-error.png)
 
 [Back to top](#contents)
+
+##  Future Development
+
+There are some features which i can not imporve in this project due to time limited, but in future i wish to add them for better user experience:
+- give ability to user to sign in with social media
+- Add menu items from staff dashboard.
+- Update menu items from staff dashboard
+- Delete menu items from staff dashboard
+- I plan to implement a feature that restricts re-registration with email addresses that are already associated with existing accounts. By implementing this functionality, users will be notified during the signup process if they attempt to register with an email address that is already in use. This addition will contribute to the overall security and integrity of the system.
+
 
 # Testing 
 ## Manual Testing
