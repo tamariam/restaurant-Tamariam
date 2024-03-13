@@ -32,7 +32,7 @@ SECRET_KEY = 'SECRET_KEY = os.environ.get("SECRET_KEY")'
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    '8000-tamariam-restauranttama-644kgenlgv6.ws-eu108.gitpod.io',
+    '8000-tamariam-restauranttama-644kgenlgv6.ws-eu109.gitpod.io',
     '.herokuapp.com'
 ]
 
@@ -183,4 +183,3 @@ DEFAULT_FROM_EMAIL = os.environ.get("EMAIL_HOST_USER")
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-

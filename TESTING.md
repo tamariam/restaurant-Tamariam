@@ -1,35 +1,71 @@
-# Testing 
-## Manual Testing
+- [Manual Testing](#manual-testing)
+- [lighthouse Testing](#lighthouse-testing)
+- [validator testing](#validation-testing)
+- [Bugs](#bugs)
+  - [fixed Bugs](#fixed-bugs)
+  - [Unfixed Bugs](#unfixed-bugs)
 
+# Testing 
+
+## Manual Testing
 - I have manualy tested this project by doing the folowing:
   - I checked this project using DevTools' device toolbar and confirmed that it looks responsive on all screen types.
   - all sections are readeble and easy to understand.
-  - The site works in different browsers:Firefox,Chrome,Safari.
   - I Tested that  links  on footer page works  and opens in new window.
   - I've tested each button to ensure they perform their designated tasks with excellence.
-- additoinal testing for each page:
 
-* ### Initial Django Setup
-    * This was development related and all criteria was met.
+ Throughout the development process, each user story was tested and developed  To ensure correct functionality:
+
+  * ### Setting up working enviroment
+
     * Necessary packages were installed successfully.
     * Config variables were successfully secured.
     * The site was deployed successfully.
 
+* ### User experience
+
+ * Site users  are able to navigate through the landing page and access different sections of the website.
+ * new users are able to fill up form and make registration.
+ * registered users are able to login to the page.
+ * Logged-in users can view their personal information .
+ * Logged-in users  can update their account details successfully.
+ * registered users can  change their passwords successfully and log in with the new password.
+ * registered users can reset their passwords successfully and log in with the new password.
+ * all site users can visit menu page.
+ * logged in users can make a booking.
+ * logged in users can view their booking details
+ * logged in users can change booking details
+ * logged in users can cansel their bookings.
+ * after booking request submited  users get feedbacks regarding booking status.
+
+ * ### Staff Management and Administration
+
+  * if user is staff member he has acces to staff dashboard .
+  * staff members can search todays bookings.
+  * staff member can search all bookings by name.
+  * staff member can search all bookings by date
+  * staff member can manage menu items from admin panel.
+  * staff member can accept or reject bookings.
+  * if user is not staff member he can not acces to dashboard page.
+  * if user is staff member he have not acces to profile and booking page.
+
+More detailed testing was conducted during the manual testing phase,using related acceptance criteria and tasks.Described separately for each page below.
 
 ### Home Page
+
 - Functionality Testing: Test navigation links, and  interactive elements.
 - Responsiveness Testing: Ensure the page layout adjusts correctly on different devices.
 - Content Review: Verify that the introductory content accurately represents the purpose of the website.
 
 ### account managament
+
 - The manual testing of the account management functionality confirms that users can create accounts, log in, log out, change passwords, reset passwords, and delete accounts without encountering any significant issues. All expected features have been verified, and the application meets security standards: 
 
 #### Sign Up Option in Navigation:
 
 - The sign-up option is prominently displayed in the website navigation menu.
 - Users who are not registered can easily locate the sign-up option on the homepage alongside the login option.
-- Upon clicking the sign-up option, users are directed to the registration page without any errors or inconsistencies.
-
+- Upon clicking the sign-up option, users are directed to the registration page without any errors.
 
 ### Sign Up Page
 
@@ -40,16 +76,15 @@
 - Password strength requirements are enforced during account creation.
 - Proper error  messages are displayed  for invalid input during registration.
 
-
 ### User Authentication:
 
 - Users receive appropriate error messages for incorrect login credentials.
-- Session management is effective, and users remain logged in until they choose to log out or session expires.
+- Users remain logged in until they choose to log out.
 - Remember me functionality, if available, works as expected, allowing users to stay logged in across sessions.
 - Upon successful login, a confirmation message is displayed on the homepage indicating that the user has been logged in.
 
-
 ### profile page
+
 - Confirmed that the "Profile" link is only visible and accessible to logged-in users.
 - Verified that user details such as username  email and bookings related to the user are correctly displayed on the profile page.
 
@@ -78,8 +113,8 @@
 - Deleting an account removes all associated user data .
 - Users cannot access their accounts after deletion, and attempts to log in with deleted account credentials fail.
 
-
 ### Menu
+
 - Successfully accessed the menu page from the navigation bar or designated menu link.
 - Verified that menu items, including their descriptions, pictures, and prices, are displayed correctly on the menu page.
 - Confirmed that changes made to menu items, descriptions, pictures, and prices from the admin panel reflect accurately on the menu page.
@@ -105,37 +140,36 @@
 - Attempted to update bookings that are pending or approved by changing the date, time, or number of people, and confirmed that the changes are saved correctly.
 - Attempted to delete bookings and confirmed that the deletion process removes the booking from the system without any errors.
 
+### Staff Dashboard
 
-### staff
 - Verified that the staff dashboard link only appears on home page if user is  a staff member.
 - Tested by logging in with both staff and non-staff accounts to ensure the visibility of the dashboard link is correct.
 - Verified that staff members can access a list of pending bookings and  can approve or reject  on each booking request.
 - Ensured that the system updates the booking status accordingly and notifies users of the outcome.
-- Tested the functionality to display success/error messages o in the staff dashboard and verified they  work as expected.
+- Tested the functionality to display success/error messages  in the staff dashboard and verified they  work as expected.
 - Verified that staff members can search for specific bookings by customer name or booking date.
 - Verified that staff members can access a list of approved bookings for the current day.
 - Verified that if a staff member searches for bookings by a specific user and no bookings are found, a message indicating "No bookings found for [user] is displayed.
 - Verified that if a staff member searches for bookings by a specific date/current day and no bookings are found, a message indicating "No bookings found for [date] is displayed.
 - verified that when a staff member attempts to access the booking link in the navigation bar, the system appropriately denies access and displays a notification message informing the staff member that they are not authorized to view the page.
 
+### Lighthouse testing
 
+[Chrome DevTools Lighthouse](https://developers.google.com/web/tools/lighthouse) was used to test:
 
+* Performance
+* Accessibility
+* Best Practices
+* SEO.
 
-- There is only  r line too long in settings py file which can not be shortened.
+Below are the Lighthouse test results for all pages
 
-## Lighthouse testing
-
-Chrome DevTools Lighthouse was used to test Performance, Accessibility, Best Practices and SEO.
-- Desktop  Testing with [Chrome DevTools Lighthouse](https://developers.google.com/web/tools/lighthouse)
-
-
- <details>
-  <summary>lighthouse-Testing--Home-Desktop (click to expand)</summary>
+<details>
+  <summary>lighthouse-Testing-Home-Desktop (click to expand)</summary>
 
 ![Footer-Desktop](./docs/testing/lighthouse/dekstop-home.png)
 
 </details>
-
 
 - Mobile  Testing with [Chrome DevTools Lighthouse](https://developers.google.com/web/tools/lighthouse)
 
@@ -145,7 +179,6 @@ Chrome DevTools Lighthouse was used to test Performance, Accessibility, Best Pra
 ![Footer-Mobile](./docs/testing/lighthouse/Mobile-Homepage.png)
 
 </details>
-
 
 ### Account authentication testing with lighthouse:
 
@@ -293,7 +326,6 @@ Chrome DevTools Lighthouse was used to test Performance, Accessibility, Best Pra
 
 </details>
 
-
 <details>
   <summary>lighthouse-Testing-Password-Reset-form-mobile (click to expand)</summary>
 
@@ -315,9 +347,7 @@ Chrome DevTools Lighthouse was used to test Performance, Accessibility, Best Pra
 
 </details>
 
-
 ### Menu testing with lighthouse
-
 
 <details>
   <summary>lighthouse-Testing-Menu-Desktop (click to expand)</summary>
@@ -326,14 +356,12 @@ Chrome DevTools Lighthouse was used to test Performance, Accessibility, Best Pra
 
 </details>
 
-
 <details>
   <summary>lighthouse-Testing-Menu-Mobile (click to expand)</summary>
 
 ![menu-mobile](./docs/testing/lighthouse/menu-mobile.png)
 
 </details>
-
 
 ### Booking page testing with lighthouse
 
@@ -375,13 +403,11 @@ Chrome DevTools Lighthouse was used to test Performance, Accessibility, Best Pra
 <details>
 <summary>lighthouse-Testing-Delete-Booking-Mobile (click to expand)</summary>
 
-![Delete-booking-Mobile](./docs/testing/lighthouse/delete-booking-lh-Mobile.png)
+![Delete-booking-Mobile](./docs/testing/lighthouse/delete-booking-lh-mobile.png)
 
 </details>
 
-
 ## staff dashboard testing with lighthouse
-
 
 <details>
 <summary>lighthouse-Testing-staff-dashboard-Mobile (click to expand)</summary>
@@ -393,10 +419,9 @@ Chrome DevTools Lighthouse was used to test Performance, Accessibility, Best Pra
 <details>
 <summary>lighthouse-Testing-staff-dashboard-Desktop (click to expand)</summary>
 
-![staff-dashboard-Desktop](./docs/testing/lighthouse/dahsboard-Desktop.png)
+![staff-dashboard-Desktop](./docs/testing/lighthouse/dahsboard-desktop.png)
 
 </details>
-
 
 <Details>
 <summary>approved-bookings-by-date-Desktop (click to expand)</summary>
@@ -413,13 +438,11 @@ Chrome DevTools Lighthouse was used to test Performance, Accessibility, Best Pra
 
 </details>
 
-### validation testing
-
-
+### Validator Testing
 
 - HTML
 
-  -During validation [W3C HTML Validator](https://validator.w3.org/) a few problems were presented in different html files but after correcting the relevant issues, no warnings or errors were shown.This problemss are mentioned in Bugs section.
+  -During validation [W3C HTML Validator](https://validator.w3.org/) a few problems were presented in different html files but after correcting the relevant issues, no warnings or errors were shown.All pages are validated.This problemss are mentioned in Bugs section.
 
   ![html-validation-check](./docs/testing/validator-testing/html-validator.png)
 
@@ -435,71 +458,67 @@ Chrome DevTools Lighthouse was used to test Performance, Accessibility, Best Pra
 
 ![js-validation-check](./docs/testing/validator-testing/js-shint.png)
 
+- PEP8:
 
-PEP8:
-Before using the pep8 validator I ran autopep8 --in-place --aggressive --aggressive <file name> on all py files.
-
-Due to this, the only error I found was in settings.py with AUTH_PASSWORD_VALIDATORS .
-
+The only error I can not fix was in settings.py with AUTH_PASSWORD_VALIDATORS .
 
 ![auth-password-validators](./docs/testing/validator-testing/settings-file.png)
 
-I tried to solve this issue but Django seems to think shortening these lines is ill advisable. For this reason, I left them to be longer than 80 characters.All final python files presented no warnings or errors.
+I tried to solve this issue but Django seems to think shortening these lines is ill advisable. For this reason, I left them to be longer than 80 characters.All final python files presented no warnings or errors.more about python validator errors in fixed bugs section.
 
 ![python-validation-check](./docs/testing/validator-testing/python-validator.png)
-
-
 
 ### Browser Compatibility
 
 The site was tested on the following browsers and the appearance, functionality and, responsiveness were consistent throughout.
 
-Google Chrome
-Mozila firefox
-Microsoft Edge
-Safari
+- Google Chrome
+- Mozila firefox
+- Microsoft Edge
+- Safari
 
-### Bugs 
+## Bugs 
 
-### fixed
+### Fixed Bugs
 
-HTML:
+#### HTML:
 
 During the HTML validation process, several errors were identified and resolved:
 
-1.Unclosed <div> Tags:
+- Error: Unclosed [div] Tags:
 
-Issue: The validation flagged unclosed <div> tags, which occurred due to reusing code blocks without removing unnecessary <div> tags.
-Resolution: The error was resolved by carefully reviewing and removing redundant <div> tags.
+Issue: The validation flagged unclosed [div] tags, which occurred due to reusing code blocks without removing unnecessary [div] tags.
+Resolution: The error was resolved by carefully reviewing and removing redundant [div] tags.
 
-2.Opening Tags Without Closing Tags:
-Issue: The validation detected opening tags without corresponding closing tags. This happened when a block of code was deleted, inadvertently removing a necessary closing <div> tag.
-Resolution: The error was resolved by reinstating the deleted closing <div> tag.
-Error: Start Tag <p> Seen in Table:
+- Error: Opening Tags Without Closing Tags:
 
-3.Issue: The validation reported an error when a <p> tag was inadvertently placed inside a <table> element.
-Resolution: After recognizing the mistake, the <p> tag was moved outside the <table> tag, resolving the error.
+Issue: The validation detected opening tags without corresponding closing tags. This happened when a block of code was deleted, inadvertently removing a necessary closing [div] tag.
+Resolution: The error was resolved by reinstating the deleted closing [div] tag.
 
-4.element p not allowed as child of element h4:
- The problem caused from the use of the {{ item.name | safe }} filter. Despite not including any <p> tags in the template:<h4>{{ item.name }}</h4> the rendered HTML was unexpectedly displaying as:<h4><p>item.name </p></h4> Although this filter was meant to render the content safely, it led to the inclusion of unwanted <p> tags.To resolve the issue, the | safe filter was replaced with | striptags, which effectively removed any HTML tags from the rendered output. This approach ensured that only the item names and ingredients were displayed within the <h4> elements, resolving the validation error.
+- Error: Start Tag p Seen in Table
 
-5.Mixed Content The page at was loaded over HTTPS but requested an insecure resource This request has been blocked the content must be served over HTTPS :
-While  testing the menu page, a "Mixed Content" error occurred in the browser console, indicating that the page was loaded over HTTPS but requested insecure resources, causing the browser to block them. To address this issue, I added the following code to the base HTML:<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> This directive instructs the browser to automatically upgrade any HTTP requests to HTTPS. also in menu html add crossorigin="anonymous" to all img tags.  As a result, the Mixed Content errors were resolved, and the Lighthouse Best Practices score improved from 68 to 100.
+Issue: The validation reported an error when a [p] tag was inadvertently placed inside a [table] element.
+Resolution: After recognizing the mistake, the [p] tag was moved outside the [table] tag, resolving the error.
 
-6. On the booking page, the notification message about a submitted booking was incorrectly displayed on the left side instead of the center. To correct this issue, the Bootstrap class mx-auto was applied to the message div, ensuring it is horizontally centered on the page.
+- Error: Element p not allowed as child of element h4:
+
+ The problem caused from the use of the {{ item.name | safe }} filter. Despite not including any [p] tags in the template:[h4]{{ item.name }}[h4] the rendered HTML was unexpectedly displaying as:[h4][p]item.name[p][h4] Although this filter was meant to render the content safely, it led to the inclusion of unwanted [p] tags.To resolve the issue, the | safe filter was replaced with | striptags, which effectively removed any HTML tags from the rendered output. This approach ensured that only the item names and ingredients were displayed within the [h4] elements, resolving the validation error.
+
+-  Error: Mixed Content the page  at [URL] was  loaded over HTTPS but requested an insecure resource This request has been blocked the content must be served over HTTPS :
+
+While  testing the menu page, a "Mixed Content" error occurred in the browser console, indicating that the page was loaded over HTTPS but requested insecure resources, causing the browser to block them. To address this issue, I added the following code to the base HTML: [meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"]This directive instructs the browser to automatically upgrade any HTTP requests to HTTPS. also in menu html add crossorigin="anonymous" to all img tags.  As a result, the Mixed Content errors were resolved, and the Lighthouse Best Practices score improved from 68 to 100.
+
+-  On the booking page, the notification message about  submitted booking was incorrectly displayed on the left side instead of the center. To correct this issue, the Bootstrap class mx-auto was applied to the message div, ensuring it is horizontally centered on the page.
 
 #### Python
+
 During the Python code validation process, the following warnings were identified and promptly resolved:
 
-Blank Spaces:
-
-Issue: Blank spaces were detected within the code.
-Resolution: Extr blank spaces were removed from the codebase, ensuring cleaner and more consistent formatting.
-Trailing Spaces:
-Issue: Trailing spaces were present at the end of lines in the code.
+* Issue: Blank spaces were detected within the code.
+Resolution: Extra blank spaces were removed from the codebase, ensuring cleaner and more consistent formatting.
+* Issue: Trailing spaces were present at the end of lines in the code.
 Resolution: Trailing spaces were eliminated from the code, enhancing readability and adhering to coding standards.
-Line Length Exceeded:
-Issue: Some lines in the code exceeded the recommended maximum line length.
+* Issue: Some lines in the code exceeded the recommended maximum line length.
 Resolution: Long lines were refactored or split into shorter segments.
 
 ####  Functrionality testing
@@ -508,40 +527,31 @@ Resolution: Long lines were refactored or split into shorter segments.
 When users registered with their email addresses, confirmation emails were not being sent.
 Cause:
 The email settings in the settings.py file were incomplete, missing necessary configurations for handling outgoing emails.
-Solution:
 To resolve this issue, I added the following settings in the settings.py file:
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 (replace console. with smtp to handle email on signing up for the issue)
 These additional settings specified the email backend as SMTP allowing emails to be sent out when users sign up..
+
 2. Issue:
 After the first registration, three messages were displayed together on homepage: one indicating a successful email sent to the address, another confirming successful registration, and the third indicating successful log in.
-
-Cause:
 The message display code was not properly structured, resulting in multiple messages appearing  together on the homepage.
-Solution:
 To address this issue:
 I added specific message display code to the verification_sent.html template to ensure that messages are only displayed on the appropriate page after email verification.
 I implemented separate message displays on the profile page to provide accurate feedback when the verification process is completed.
 
 3. Issue: During testing of the booking functionality, an issue was encountered where error handling only worked for users who had previously booked. New users attempting to book on dates that were already fully booked were still able to proceed with their booking.
-
 Addressing the Issue: To resolve this issue, I updated the booking_page view to include a new variable called new_booking. This variable checks whether the new booking aligns with existing bookings. Now, the system examines all existing bookings, and if the new booking does not exceed the capacity, it can be confirmed. This ensures that both existing and new users are properly restricted from booking on fully booked dates.
-4. During testing of the update booking page, two issues were encountered. The first issue was the inability to update only the number of people in a booking.
-
-Addressing the Issue:
-To resolve this issue, I modified the update booking system to specifically check whether only the number of people had been changed. This modification ensures that updates are accurately applied without requiring changes to other booking details.and user can update number of people without any problem.
-
+4. During testing of the update booking page, two issues were encountered.
+The first issue was the inability to update only the number of people in a booking.
+Addressing the  issue, I modified the update booking system to specifically check whether only the number of people had been changed. This modification ensures that updates are accurately applied without requiring changes to other booking details.and user can update number of people without any problem.
 5. The second issue occurred when users attempted to update their details along with the number of people in a booking. Despite exceeding the maximum capacity, the booking was still updated.
-Addressing the Issue:
-To resolve this issue, I further modified the update booking system. Now, the system verifies whether the updated booking request exceeds the maximum capacity of people before saving the changes. If the capacity is exceeded, the booking is not saved and appropriate message displays to notify user.
-
-6. 
-Issue:
+Addressing the Issue: I further modified the update booking system. Now, the system verifies whether the updated booking request exceeds the maximum capacity of people before saving the changes. If the capacity is exceeded, the booking is not saved and appropriate message displays to notify user.
+6. Issue:
 During testing of the staff dashboard's search functionality by name, bookings were displayed even when entering just one letter from the name.
-
 Addressing the Issue:
 To enhance the search functionality, I updated the search_name view to ensure that bookings are only displayed when the entire name is entered.
 
-### Unfixed bugs
+### Unfixed Bugs
+
 There is no unfixed bugs.
 

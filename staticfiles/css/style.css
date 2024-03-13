@@ -1,14 +1,11 @@
-/* 
-chosen colors:
-#c1121f red
-#FFD700 golden
-#fb5607 orange;
-#f5cac3;pink
-#f0e6ef; white
+/* general rule*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-*/
-
- /* Font Family Classes :
+/* Font Family Classes :
 Add these classes to elements to apply specific font families  */
 .lobster{
     font-family:"Lobster", cursive;
@@ -22,12 +19,7 @@ Add these classes to elements to apply specific font families  */
 
 /* Common styles for mobile ,tablet and desktop screens */
 /* styles for base html:nav and footer  */
-@media only screen and (min-width:360px) {
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} 
+
 
 /*give styles for Logo *  */ 
 .navbar-brand{
@@ -94,13 +86,13 @@ Add these classes to elements to apply specific font families  */
     background-image:url("/static/images/background-image.avif");
     background-size: cover;
     background-position:center;
-    width:100vw;;
+    width:100vw;
     height:100%;
-    display: flex;
+    display:flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
- } 
+   } 
 
 /* styling main heading */
 .main-heading{
@@ -372,6 +364,10 @@ form input:hover{
     font-size:38px;
 }
 
+.background-image{
+    height:100vh;
+} 
+
 .login-container{
     padding-bottom:10px;
     height:90%;
@@ -395,65 +391,60 @@ form input:hover{
 
 /* styles for Desktop screen */
 @media only screen and (min-width:992px) {
-    .navbar-brand{
-        letter-spacing:5px;
-    }
+.navbar-brand{
+    letter-spacing:5px;
+}
 
-    .nav-link, .footer p {
-        font-size:24px;
-    }
+.nav-link, .footer p {
+    font-size:24px;
+}
 
-    .footer h3{
-        font-size:26px;
-    }
+.footer h3{
+    font-size:26px;
+}
 
-   .background-image{
-    height:100%;
-   }
+.main-heading{
+width:60vw;
+letter-spacing: 5px;
+margin-top: 30px;
+font-size:38px;
+} 
 
-   .main-heading{
-    width:60vw;
-    letter-spacing: 5px;
-    margin-top: 30px;
-    font-size:38px;
-   } 
- 
-   .main-heading span{
-    font-size:42px;
-   }
+.main-heading span{
+font-size:42px;
+}
 
-   .main-message{
-    width:500px;
-    height:230px;
+.main-message{
+width:500px;
+height:230px;
 }
 
 .about-us{
-    width:500px;
-    height:330px;
+width:500px;
+height:330px;
 }
-   .btn{
-    width:250px;
-   }
-
-   .fab{
-    font-size:40px;
-   }
-
-   .login-container{
-    width:720px;
-   }
-
-   form button{
-    width:200px;
-   }
-
-   .menu-heading{
-    font-size:50px;
-    letter-spacing:2px;
-   }
-
-   .booking-button{
-    font-size:20px;
+.btn{
+width:250px;
 }
+
+.fab{
+font-size:40px;
+}
+
+.login-container{
+width:720px;
+}
+
+form button{
+width:200px;
+}
+
+.menu-heading{
+font-size:50px;
+letter-spacing:2px;
+}
+
+.booking-button{
+font-size:20px;
 }
 }

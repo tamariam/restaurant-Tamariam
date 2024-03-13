@@ -1,13 +1,12 @@
 # Restaurant Tamariam 
+
 ![amIresponsive](/docs/features/amiresponsive.png)
 
+Welcome to the Django Restaurant Booking Site! This web application empowers users to explore our restaurant's delightful menu and  make Bookings online. Built on Django, a high-level Python web framework, this project aims to provide a comprehensive solution for managing restaurant reservations while offering an exceptional user experience.
 
-Welcome to the Django Restaurant Reservation Site! This web application empowers users to explore our restaurant's delightful menu and seamlessly make reservations online. Built on Django, a high-level Python web framework, this project aims to provide a comprehensive solution for managing restaurant reservations while offering an exceptional user experience.
-Please check live  [URL](https://tamariamrestaurant-d81c96b3d785.herokuapp.com)
-
+Please check  [live link](https://tamariamrestaurant-d81c96b3d785.herokuapp.com)
 
 # Table of Contents
-
 - [Planning and Design](#planning-and-design)
   - [Project-Goalss](#project-goals)
   - [User Stories and Epics](#user-stories-and-epics)
@@ -25,28 +24,27 @@ Please check live  [URL](https://tamariamrestaurant-d81c96b3d785.herokuapp.com)
    - [Booking Page](#booking-page)
    - [Dashboard Page](#dashboard-page)
 - [Future Development](#future-development)
+- [Testing](#testing)
 - [Deployment](#dployment)
    - [Heroku Deployment](#heroku-deployment)
    - [ElephantSQL Database](#elephantsql-database)
    - [Cloudinary API](#cloudinary-api)
    - [Forking the Repository](#forking-the-repository)
    - [Cloning The Repository](#cloning-the-repository)
-- [Testing](#testing)
-- [validator testing](#validation-testing)
-  - [lighthouse Testing](#lighthouse-testing)
-  - [Manual Testing](#manual-testing)
-
+- [Tecnologies used](#technologies-used)
+- [Credits](#credits)
+- [Acknowledgements](#acknowledgements)
 
 
 # Planning and Design
 
 ## Project Goals
 
-The  primary goal  of the site is to create a seamless and user-friendly reservation experience for customers and staff members. We aim to streamline the process of booking a table, making it intuitive and efficient. Users should be able to easily choose their preferred date and time, enhancing their overall dining experience. The goal is to provide users with a visually appealing and informative interface where they can explore menu items and view descriptions.For administrators, the focus is on creating a powerful reservation management system. This includes tools to view, edit, and update reservations seamlessly.
+The  primary goal  of the site is to create user-friendly reservation experience for customers and staff members. Wemy  aim is to streamline the process of booking a table, making it intuitive and efficient. Users should be able to easily choose their preferred date and time, enhancing their overall dining experience. The goal is to provide users with a visually appealing and informative interface where they can explore menu items and view descriptions.For administrators, the focus is on creating a powerful reservation management system. This includes tools to view, edit, and update reservations.
 
 ## User Stories and epics
 
- I developed this project applying Agile methodology. Even though it's a solo project, I followed Agile principles to learn about flexible development and delivering small improvements over time. The project reflects my commitment to understanding modern software development approaches.
+I developed this project applying Agile methodology. Even though it's a solo project, I followed Agile principles to learn about flexible development and delivering small improvements over time. The project reflects my commitment to understanding modern software development approaches.
 In adopting an Agile development approach, i start  creating epics which were broken down into user stories, each representing a specific feature. I utilized the MoSCoW prioritization (Must have, Should have, Could have, Won't have) to categorize and prioritize each user story based on its importance.
 
 For better planning and estimation, I assigned labels and story points to each user story, considering factors such as time and difficulty. This approach helped me gauge the relative effort required for different tasks and maintain a clear sense of priority. Also every user story includes acceptance criteria and associated tasks.Also I found it beneficial to transition to organizing my work into sprints with milestones. I structured the project into seven sprints, each with its own set of milestones. By grouping related user stories into each sprint, I could efficiently tackle tasks in a more focused manner.
@@ -54,12 +52,14 @@ For better planning and estimation, I assigned labels and story points to each u
 Presented below is a compilation of completed and closed user stories for this project organized by epics.
 
  - Epic-1 Setting up working enviroment
+
    - As a developer I can **install Django and essential libraries**,
 so that I can **quickly set up a robust development environment and kickstart my web projects with confidence**..
    - As a developer, my goal is to **establish a secure environment for managing confidential configuration variables**., so that **sensitive information remains confidential, allowing me to uphold the privacy of critical data within the system**.
    - As a developer I want to **deploy the website on Heroku** so that i can **test its functionality in a live environment and make the completed site accessible to the public**.
 
 - Epic-2 User Experience
+
    - As a **site user** I want to **navigate through landing page** so that **i can easily access various sections**
    - As a **user** I can **register my account** so that I can **log in and log out** in my account.
    - As a **user** I can **login or logout** from my account so that i **can use all features of site.**
@@ -73,15 +73,15 @@ so that I can **quickly set up a robust development environment and kickstart my
    - As a **logged in user** I can **change my bookings** so that i can **change any details of booking** if i need.
    - As a **logged in user** I can **cancel my existing booking** so that i **do not need to call to restaurant to cancel it.**
    - As a **logged in user** I can **receive feedback how successful was my booking** so that  **i can book it again if booking was not successful**
-- Epic-3 Staff 
 
+- Epic-3 Staff Management and Administration.
 
-   - As a **staff member** I can **access staff dashboard** so that i can **manage site content and bookings**
-   - As a **staff member** I can **search bookings by date** so that i can **easyly find out how meny bookings restaurant have on specific date**
-   - As a  **staff member**  I can **search bookings by name** so that **i can easily  find out reservation status for specific user**
+  - As a **staff member** I can **access staff dashboard** so that i can **manage site content and bookings**
+  - As a **staff member** I can **search bookings by date** so that i can **easyly find out how meny bookings restaurant have on specific date**
+  - As a  **staff member**  I can **search bookings by name** so that **i can easily  find out reservation status for specific user**
   - As a **staff member** I can  **search todays bookings**  so that i can **easily find out  how many  approved bookings does restaurant have for today**
   - As a **staff member** **manage menu items from admin panel** so that i can **keep menu page up to date**
-  - As a **Site owner** I can **limit access to specific features to registered users** so that **Encourage site membership to enhance participation and guarantee the accurate recording of reservations for known customers.**
+  - As a **Site owner** I can **limit access to specific features to registered users** so that **Encourage site membership to enhance participation and guarantee the accurate recording of reservations for known customers**
   - As a **Site owner** I want **limit access to specific functionalities to staff members** so that **prevent unauthorized users from interfering with its operations**
   - As a **staff member** I can **manage booking requests** so that **i can control restauran bookings**
 
@@ -91,8 +91,7 @@ Please check all user storys[here](https://github.com/users/tamariam/projects/9)
 
  I used [Balsamique](https://balsamiq.com/) to create wireframes for my project.These were adapted and improved upon throughout the development process.The wireframes encompass the main pages of the project, with each page extending the base HTML structure that includes navigation and footer elements.The wireframes display designs for desktop, mobile, and tablet views, mainly focusing on the homepage. Additionally, I've created wireframes for the desktop and mobile menu. However, wireframes for other pages are specifically for desktop. On mobile screens, elements are arranged from top to bottom for readability and usability. Even though the content and features remain consistent across devices, I decided against creating separate wireframes for mobile and tablet views. Instead, I used the desktop wireframes as a base to guide adaptation for smaller screens, ensuring visual consistency throughout the application. Tablet screens closely resemble the desktop version, while mobile screens show slight variations, particularly in the menu layout. These wireframes offer a clear visual representation of device differences, with most pages following the desktop layout.
 
-
- <details>
+<details>
   <summary>Homepage - Desktop (click to expand)</summary>
 
 ![Homepage - Desktop](/docs/wireframes/homepage-wireframe.png)
@@ -117,7 +116,7 @@ Please check all user storys[here](https://github.com/users/tamariam/projects/9)
 <details>
   <summary>Profile-page-wireframe (click to expand)</summary>
 
-![profile-page](/docs/wireframes/profile-page-wireframe.png)
+![profile-page](/docs/wireframes/Profile-page-wireframe.png)
 
 </details>
 
@@ -139,7 +138,7 @@ Please check all user storys[here](https://github.com/users/tamariam/projects/9)
 <details>
   <summary>Menu-Wireframe-Desktop (click to expand)</summary>
 
-![menu-Wirefreame-desktop](/docs/wireframes/menu-wireframe-desktop.png)
+![menu-Wirefreame-desktop](/docs/wireframes/Menu-wireframe-desktop.png)
 
 </details>
 
@@ -192,16 +191,11 @@ Alongside these colors, standard Bootstrap colors are used for buttons, links, a
 
 Adapting the above throughout the development process. The final list of colors used has been placed in the below [color grid](https://contrast-grid.eightshapes.com/?version=1.1.0&background-colors=&foreground-colorscompact&es-color-form__show-contrast=aaa&es-color-form__show-contrast=aa&es-color-form__show-contrast=aa18&es-color-form__show-contrast=dnp) to check contrast scores.
 
-![Color gird](docs/images/color-grid.jpg)
-
+![Color gird](docs/colour-palette/contrast-grid.png)
 
 ### Typography  
 
-This project incorporates carefully selected Fonts to enhance the visual appeal:
-"Montserrat" with sans-serif as secondary font, "Lobster "
-"Dancing Script".
-The mix of these  fonts contributes to a visually engaging and invitind user experience.
-
+This project incorporates carefully selected Fonts to enhance the visual appeal:"Montserrat" with sans-serif as primary font, "Lobster" and "dancing script"  as secondary fonts.The mix of these  fonts contributes to a visually engaging and invitind user experience.
 
 # Features
 
@@ -216,7 +210,7 @@ Navbar Toggler:
 - A responsive toggle button is incorporated for smaller screens, enabling easy access to navigation links on mobile devices.
 Navigation Links:
 
-The navigation links consist of:
+- The navigation links consist of:
 Home: Users are directed to the home page, with an 'active' indicator if the current page is the home page.
 Menu: Navigates to the menu section.
 Book: Provides a link to the booking section.
@@ -230,9 +224,8 @@ Book: Provides a link to the booking section.
 
 </details>
 
-
-
 ## Homepage
+
 The responsive homepage starts with a captivating background image, setting the mood for a delightful dining experience.
 - the homepage includes essential information about the restaurant. This ensures that visitors not only enjoy the aesthetics but also gather key details about what makes place special.
 - To enhance user experience, two prominent buttons are strategically placed:
@@ -249,14 +242,12 @@ The responsive homepage starts with a captivating background image, setting the 
 
 </details>
 
-
- <details>
+<details>
   <summary>Homepage - Mobile (click to expand)</summary>
 
-![Homepage - mobile](./docs/features/homepage-mobile.png)
+![Homepage - mobile](./docs/features/Homepage-mobile.png)
 
 </details>
-
 
 ## Footer
 
@@ -264,7 +255,7 @@ The footer of  Tamariam Restaurant website provides essential information and ad
 
 ![Footer-detktop](/docs/features/footer-desktop.png)
 
- <details>
+<details>
   <summary>Footer - Tablet (click to expand)</summary>
 
 ![Footer - Tablet](./docs/features/footer-tablet.png)
@@ -278,42 +269,41 @@ The footer of  Tamariam Restaurant website provides essential information and ad
 
 </details>
 
-
 ## Account Managment
+
 In my project, I utilized Django Allauth to implement a user-friendly and well-designed account management system.
 
- - Sign Up
+- Sign Up
 
 The signup feature allows users to create a new account on the platform. Upon signing up, users are required to verify their email address for account activation. This feature is implemented using django-allauth.
 
-
 ![SIgnUp](/docs/features/signup.png)
 
-
-  - Upon submitting the signup form, the system sends a verification link to the user's provided email address and users are redirected to a page confirming that a verification link has been sent to their email address.
-
+- Upon submitting the signup form, the system sends a verification link to the user's provided email address and users are redirected to a page confirming that a verification link has been sent to their email address.
 
 ![SIgnUp](/docs/features/signup-verify-email.png)
 
-
- - Login 
-   - A registered user can log in to the page by clicking on the login button in the navigation menu. The user only needs to enter their username and password.
+- Login 
+  - A registered user can log in to the page by clicking on the login button in the navigation menu. The user only needs to enter their username and password.
 
 ![login](/docs/features/login.png)
 
- Once logged in, a message will be displayed on the page to confirm that user is logged in.
+- Once logged in, a message will be displayed on the page to confirm that user is logged in.
   
 ![login-message](/docs/features/login-alert.png)
 
 - logout
   - When a user is already logged in, they can access the logout option in the navigation menu. Upon clicking this option, the user will be prompted to confirm if they wish to log out. If the user confirms, they will be logged out, and an appropriate message will be displayed on the page to confirm that the user has been successfully logged out.
 
-
 ![logaut](/docs/features/logout.png)
+
 ![logout-message](/docs/features/logout-alert.png)
 
+## Profile page
+- loged in users  have the option to navigate to the profile page  from the menu.
 
-### Profile page
+![profile-page-in-navbar](/docs/features/profile-nav-bar.png)
+
 - Profile page allows logged-in users to oversee and update their profile information and bookings conveniently.It conists with three section:
   - Greeting and Profile Overview: Users are greeted with a personalized message and provided with an overview of the profile page instructions.
   - Profile Management Area: In this section, users can update their profile details.
@@ -321,51 +311,45 @@ The signup feature allows users to create a new account on the platform. Upon si
 
 ![logaut](/docs/features/profile-page.png)
 
+## Update  Profile
 
-### Update  Profile
-
-  - Registered users have the ability to update their profile details by selecting the appropriate option from the profile page.When a user opts to modify their account, a form pre-filled with their existing information is presented. After submitting the updated details, the user's account is successfully modified.
+- Registered users have the ability to update their profile details by selecting the appropriate option from the profile page.When a user opts to modify their account, a form pre-filled with their existing information is presented. After submitting the updated details, the user's account is successfully modified.
 
 ![update-profile](/docs/features/update-profile.png)
 
-
 After the profile is updated, a relevant message will be displayed on the page.
-
 
 ![update-message](/docs/features/update-alert.png)
 
 - Change password 
 
-  - Logged-in users also have the option to change their passwords if they wish. A link to facilitate password changes is provided on the update profile page. Upon clicking the link, users will be redirected to the change password page. After entering their current password, confirming the new one, and clicking the "Change Password" button, the password will be updated, and a relevant message will be displayed.
-
+- Logged-in users also have the option to change their passwords if they wish. A link to facilitate password changes is provided on the update profile page. Upon clicking the link, users will be redirected to the change password page. After entering their current password, confirming the new one, and clicking the "Change Password" button, the password will be updated, and a relevant message will be displayed.
 
 ![change-password](/docs/features/change-password.png)
-![update-message](/docs/features/changepassword-alert.png) 
 
+![update-message](/docs/features/changepassword-alert.png) 
 
 - Password Reset
 
-  - The password reset feature allows users to reset their passwords in case they forget them. This feature is also implemented using django-allauth.
+- The password reset feature allows users to reset their passwords in case they forget them. This feature is also implemented using django-allauth.
 If a user forgets their password, they can click on the "Forgot Password" link on the login page.Upon clicking the "Forgot Password" link, the user is redirected to the password reset page.On the password reset page, the user can enter their email address associated with their account and click the "Reset Password" button.
 
 ![reset-password](/docs/features/password-reset.png)
 
-  - Clicking on the password reset link redirects the user to a page confirming that the password reset link has been sent to their email address.
+- Clicking on the password reset link redirects the user to a page confirming that the password reset link has been sent to their email address.
 
-  
 ![reset-password-sent](/docs/features/password-reset-sent.png)
 
-  - The user follows the instructions in the email and clicks on the password reset link.
+- The user follows the instructions in the email and clicks on the password reset link.
 This action redirects the user to a page where they can enter a new password and confirm it.
 After successfully resetting the password from the email, the user is redirected to a page confirming that their password has been successfully reset.
-
 
 ![reset-password-form](/docs/features/password-reset-form.png)
 
 ![reset-password-sent](/docs/features/password-reset-done.png)
 
+##  My  bookings
 
-###  My  bookings
 - In the 'My Bookings' section, users can view details of their existing bookings, including the status of each booking. Additionally, users have the option to update or delete their bookings as needed.
 
 ![My-Bookings](/docs/features/booking-records.png)
@@ -378,16 +362,15 @@ After successfully resetting the password from the email, the user is redirected
 
 The update booking system operates similarly to the booking system, ensuring that users cannot make duplicate bookings. Additionally, if the restaurant is fully booked or if the requested number of guests exceeds the maximum capacity, the user will be unable to proceed with the update request, and an appropriate message will be displayed to notify the user. Clicking the cancel button on the update booking form  will navigate the user back  to the profile page.
 
-
 ![update-Bookings](/docs/features/update-booking.png)
 
 - When the user clicks 'Save' on the update booking form, a message will be displayed to notify the user that the booking details have been successfully updated.
 
 ![Booking-message](/docs/features/booking-updated-message.png)
 
-### Delete booking
+## Delete booking
 
--  Upon navigating to the cancellation booking page, users will see the details of their booking, including the date, time, and number of guests. A confirmation message will prompt users to confirm their decision to proceed with deleting the booking record.Clicking the cancel button will navigate the user back  to the profile page.
+- Upon navigating to the cancellation booking page, users will see the details of their booking, including the date, time, and number of guests. A confirmation message will prompt users to confirm their decision to proceed with deleting the booking record.Clicking the cancel button will navigate the user back  to the profile page.
 
 ![delete-booking](/docs/features/delete-booking-page.png)
 
@@ -395,31 +378,28 @@ The update booking system operates similarly to the booking system, ensuring tha
   <summary>Delete-booking - Mobile (click to expand)</summary>
   
 ![delete-Bookings](/docs/features/delete-booking-page-mobile.png)
+
 </details>
 
 After confirming the deletion, a message will be displayed to notify the user that the booking record has been successfully deleted.
 
 ![booking-deleted](/docs/features/booking-deleted-message.png).
 
-
 - Delete account
-
-  - Registered users have the option to delete their accounts at any time directly from the profile page by clicking the "Delete Account" button. Upon clicking, they will receive a warning indicating that confirming deletion will result in the loss of all their data. Users can either change their minds and click "Cancel" or, if they confirm deletion, their account will be permanently deleted.
-
+ - Registered users have the option to delete their accounts at any time directly from the profile page by clicking the "Delete Account" button. Upon clicking, they will receive a warning indicating that confirming deletion will result in the loss of all their data. Users can either change their minds and click "Cancel" or, if they confirm deletion, their account will be permanently deleted.
 
 ![update-message](/docs/features/delete-account.png) 
-![update-message](/docs/features/delete-alert.png) 
 
+![update-message](/docs/features/delete-alert.png) 
 
 ## Menu
 
-Menu page provides a smooth navigation experience, particularly on mobile devices. Users can easily navigate through different sections of the menu using the navigation links.
+- Menu page provides a smooth navigation experience, particularly on mobile devices. Users can easily navigate through different sections of the menu using the navigation links.
 To provide real-time information to our users, the menu page dynamically adjusts the display based on item availability. If a menu item is unavailable, it's clearly indicated as "Currently Unavailable" instead of displaying the price.The menu page showcases three types of dish courses: starters, mains, and desserts. Each course is presented with its name, price, and a visually appealing image, enhancing the overall user interface.
 
 ![Menu-Desktop-1](/docs/features/menu-desktop-1.png) 
 
 ![Menu-Desktop-2](/docs/features/menu-desktop-2.png) 
-
 
 <details>
   <summary>Menu - Mobile (click to expand)</summary>
@@ -428,16 +408,16 @@ To provide real-time information to our users, the menu page dynamically adjusts
 
 </details>
 
-
 ## Booking page
 
 Upon clicking the "Book" button in the navbar or the "Book a Table" button on the home page, users will be directed to the booking page. Here, they can make reservations using a form that allows them to select the date, time, and number of guests for their booking. After submitting the form, users will receive a feedback message confirming their reservation submission.Clicking the cancel button will navigate the user back  to the Home page.
+Our system checks the availability of tables for the specified date and time.
 
 ![Booking-Desktop](/docs/features/booking-page.png) 
+
 ![loginrequire](/docs/features/booking-submited-message.png)
 
-
- <details>
+<details>
   <summary>Booking-page- Mobile (click to expand)</summary>
 
 ![Booking -Mobile](/docs/features/booking-page-mobile.png)
@@ -448,27 +428,24 @@ To access the booking page, users need to be logged in to their account. If you 
 
 ![login-require](/docs/features/loginrequire-message.png)
 
+If the restaurant is fully booked on the requested date,  message will display indicating that no reservations are available for that specific date.Given that this restaurant is evening-only operation, once a full reservation is made for any time slot during restaurant operating hours (6:00 PM to 11:00 PM), it indicates that the restaurant is fully booked for the entire evening. As a result, no additional bookings can be accepted for that evening, ensuring an exclusive dining experience for our guests.
 
-If the restaurant is fully booked on the requested date,  message will display indicating that no reservations are available for that specific date.
-
- ![fully-booked](/docs/features/fully-booked-message.png)
-
+![fully-booked](/docs/features/fully-booked-message.png)
 
 If the user already has a booking for a specific date and time, a message will be displayed to notify them that they cannot make another booking for the same date and time.
 
 ![double-booking](/docs/features/avoid-double-bookings.png)
 
-
 If there are already approved bookings for the specified date, and the number of people the user intends to book exceeds the available capacity,  the  message will display indicating that they cannot book for that date.
 
 ![request-exceeds](/docs/features/booking-request-exceeds.png)
-
 
 ## Dashboard Page
 
 The Staff Dashboard is made for  staf members to manage bookings.As a staff member logging in, you're directed to the home page initially. From there, you have the option to navigate to the dashboard from the menu. Once ypu are on  dashboard page  you can  review pending, approved, and rejected bookings. Additionally,  search functionality allows you to find bookings by name, date, or quickly check today's approved bookings.. 
 
 ![staff-dashboard](/docs/features/dashboard-on-menu.png)
+
 ![staff-dashboard](/docs/features/staff-dashboard-all-displayed.png)
 
 In cases where there are no bookings att all or there are no pending, approved, or rejected bookings, the dashboard displays appropriate text on the page instead of the booking lists. This ensures clarity for staff members, indicating that there are currently no bookings requiring action or review. By providing clear feedback, staff can easily understand the current status and focus on other tasks as necessary.
@@ -479,47 +456,44 @@ In cases where there are no bookings att all or there are no pending, approved, 
 
 Staff members have the authority to accept or reject pending bookings directly from the dashboard. Upon accepting or rejecting a booking, an immediate message displays on the page confirming the action. Simultaneously, the booking is promptly moved to the appropriate section - either the approved or rejected bookings list. Additionally, an email notification is automatically sent to the user, informing them of the updated status of their booking.
 
-
 ![approved-message](/docs/features/booking-approved-message.png)
 
 ![rejected-message](/docs/features/booking-rejected-message.png)
 
-
-
 If a staff member is searching for a specific booking by date, name, or today's bookings, they are redirected to another page dedicated to displaying the specific booking details. On this page, if the requested booking is found, its details are displayed. However, if no matching booking is found, appropriate text is displayed, providing feedback that the requested booking could not be found. This ensures a streamlined experience for staff members, allowing them to quickly locate specific bookings and providing clear feedback in cases where the requested booking is not available.
 
- <details>
-  <summary>approved-bookings-by -date(click to expand)</summary>
+<details>
+  <summary>bookings-by -date(click to expand)</summary>
 
-![approved-bookings-by-date](./docs/features/approbved-bookings-by-date.png)
+![bookings-by-date](./docs/features/bookings-by-date.png)
 
 </details>
 
- <details>
-  <summary>approved-bookings-by -name(click to expand)</summary>
+<details>
+  <summary>bookings-by -name(click to expand)</summary>
 
-![approved-bookings-by-name](./docs/features/approbved-bookings-by-name.png)
+![bookings-by-name](./docs/features/bookings-by-name.png)
 
 </details>
 
  <details>
   <summary>approved-bookings-for-today(click to expand)</summary>
 
-![approved-bookings-for-today](./docs/features/approved-bookings-for-today.png)
+![bookings-by-today](./docs/features/approved-bookings-for-today.png)
 
 </details>
 
  <details>
-  <summary>no approved-bookings-by-date(click to expand)</summary>
+  <summary>no bookings-by-date(click to expand)</summary>
 
-![no-approved-bookings-by-date](./docs/features/no-bookings-for-date.png)
+![no-bookings-by-date](./docs/features/no-bookings-by-date.png)
 
 </details>
 
  <details>
-  <summary>no approved-bookings-for-name(click to expand)</summary>
+  <summary>no-bookings-by-name(click to expand)</summary>
 
-![no-approved-bookings-for-name](./docs/features/no-bookings-for-name.png)
+![no-bookings-for-name](./docs/features/no-bookings-by-name.png)
 
 </details>
 
@@ -534,8 +508,8 @@ This project is designed to enforce specific restrictions for different user rol
 
 ![staff-not-allow](./docs/features/staff-not%20-allow-to%20-view-booking-page.png)
 
-
 ## 404 Page Not Found Error Page:
+
 This error shows when a user types a URL into the browser which does not exist within the app's domain.
 
 ![staff-not-allow](./docs/features/404-error.png)
@@ -544,569 +518,27 @@ This error shows when a user types a URL into the browser which does not exist w
 
 ##  Future Development
 
-There are some features which i can not imporve in this project due to time limited, but in future i wish to add them for better user experience:
-- give ability to user to sign in with social media
-- Add menu items from staff dashboard.
-- Update menu items from staff dashboard
-- Delete menu items from staff dashboard
-- I plan to implement a feature that restricts re-registration with email addresses that are already associated with existing accounts. By implementing this functionality, users will be notified during the signup process if they attempt to register with an email address that is already in use. This addition will contribute to the overall security and integrity of the system.
+While the current project iteration meets immediate requirements, there are several features that i plan to  implementing in the future to enhance user experience:
 
+* Social Media Sign-In: 
 
-# Testing 
-## Manual Testing
+Provide users with the ability to sign in using their social media accounts, offering convenience and flexibility in authentication.
+* Menu Management from Staff Dashboard: 
 
-- I have manualy tested this project by doing the folowing:
-  - I checked this project using DevTools' device toolbar and confirmed that it looks responsive on all screen types.
-  - all sections are readeble and easy to understand.
-  - The site works in different browsers:Firefox,Chrome,Safari.
-  - I Tested that  links  on footer page works  and opens in new window.
-  - I've tested each button to ensure they perform their designated tasks with excellence.
-- additoinal testing for each page:
+Enable staff members to add, update, and delete menu items directly from the dashboard instead of admin panel.
+* Email Address Restriction: 
 
-* ### Initial Django Setup
-    * This was development related and all criteria was met.
-    * Necessary packages were installed successfully.
-    * Config variables were successfully secured.
-    * The site was deployed successfully.
+Implement a feature to prevent re-registration with email addresses already associated with existing accounts. 
+* Automated Login After Sign-Up/Password Reset:
 
+ Update sign-up and password reset functionality to automatically log users in to their accounts upon successful completion, eliminating the need for additional login steps and providing a smoother user experience.
+## Testing
 
-### Home Page
-- Functionality Testing: Test navigation links, and  interactive elements.
-- Responsiveness Testing: Ensure the page layout adjusts correctly on different devices.
-- Content Review: Verify that the introductory content accurately represents the purpose of the website.
+I have included testing details in a separate document called [testing](TESTING.md).
 
-### account managament
-- The manual testing of the account management functionality confirms that users can create accounts, log in, log out, change passwords, reset passwords, and delete accounts without encountering any significant issues. All expected features have been verified, and the application meets security standards: 
+## Deployment
 
-#### Sign Up Option in Navigation:
-
-- The sign-up option is prominently displayed in the website navigation menu.
-- Users who are not registered can easily locate the sign-up option on the homepage alongside the login option.
-- Upon clicking the sign-up option, users are directed to the registration page without any errors or inconsistencies.
-
-
-### Sign Up Page
-
-- Users can successfully create accounts by providing required details.
-- Verification emails are sent promptly upon registration.
-- Clicking on the verification link activates the user account.
-- After activation, users are asking to  log in.
-- Password strength requirements are enforced during account creation.
-- Proper error  messages are displayed  for invalid input during registration.
-
-
-### User Authentication:
-
-- Users receive appropriate error messages for incorrect login credentials.
-- Session management is effective, and users remain logged in until they choose to log out or session expires.
-- Remember me functionality, if available, works as expected, allowing users to stay logged in across sessions.
-- Upon successful login, a confirmation message is displayed on the homepage indicating that the user has been logged in.
-
-
-### profile page
-- Confirmed that the "Profile" link is only visible and accessible to logged-in users.
-- Verified that user details such as username  email and bookings related to the user are correctly displayed on the profile page.
-
-### update profile 
-
-- Successfully updated account details (username, first name,last name email address)  changes were saved correctly and appropriate message is displayed.
-
-### Change Password:
-
-- Users can change their passwords without encountering any issues.
-- Password change form validates input and enforces password strength requirements.
-- Upon successful password change, users  redirect on profile page and confirmation message displays.
-- Users cannot change passwords without providing the correct current password.
-
-### Reset Password:
-
-- Users can reset their passwords  by clicking ''forgot password '' button on login page.
-- An email containing a password reset link is sent to the provided email address.
-- Clicking the reset link directs the user to a secure reset password page within the application, where they can enter a new password into the provided form fields.
-- After successfully resetting the password, the application displays a confirmation message to the user, confirming that the password has been changed.
-
-### Delete Account:
-
-- The account deletion process is successful, and the account is removed from the system.
-- Confirmation  question is displayed before account deletion to prevent accidental deletions.
-- Deleting an account removes all associated user data .
-- Users cannot access their accounts after deletion, and attempts to log in with deleted account credentials fail.
-
-
-### Menu
-- Successfully accessed the menu page from the navigation bar or designated menu link.
-- Verified that menu items, including their descriptions, pictures, and prices, are displayed correctly on the menu page.
-- Confirmed that changes made to menu items, descriptions, pictures, and prices from the admin panel reflect accurately on the menu page.
-- Tested the functionality to mark menu items as currently unavailable from the admin panel. Verified that unavailable menu items are appropriately displayed on menu page.
-- Tested the menu page across different web browsers to ensure consistent display and functionality.
-- Ensured that changes to prices from the admin panel are reflected accurately on the menu page.
-- Ensured that menu item pictures are of high quality and consistent in size and format.
-- Verified that if no image is uploaded for a menu item, a placeholder image is displayed.
-
-### Booking
-
-- Confirmed that non-logged-in users are redirected to the login page when attempting to access the booking page.
-- Ensured that only logged-in users can access the booking page directly.
-- Checked that the login prompt on the booking page is clear and instructive, informing users to log in to make a booking.
-- Verified that users can input required booking details such as date, time and number of people, without encountering any errors.
-- Verified that booking requests are successfully processed and stored in the backend database.
-- After successfully submitting a booking, verified that  confirmation message  displays indicating that their booking request has been  submited.
-- Tested the form validation to ensure users cannot select past dates.
-- Tested the booking process to ensure that users cannot make double bookings for the same  time slot.
-- Checked that the system prevents overbooking by limiting the number of available slots for each date.
-- Tested by submitting booking requests that exceed the available capacity for a specific date and confirmed that the system rejects the request with a notification indicating that the booking capacity has been reached.
-- Verified that users can access and modify their existing bookings from their profile page.
-- Attempted to update bookings that are pending or approved by changing the date, time, or number of people, and confirmed that the changes are saved correctly.
-- Attempted to delete bookings and confirmed that the deletion process removes the booking from the system without any errors.
-
-
-### staff
-- Verified that the staff dashboard link only appears on home page if user is  a staff member.
-- Tested by logging in with both staff and non-staff accounts to ensure the visibility of the dashboard link is correct.
-- Verified that staff members can access a list of pending bookings and  can approve or reject  on each booking request.
-- Ensured that the system updates the booking status accordingly and notifies users of the outcome.
-- Tested the functionality to display success/error messages o in the staff dashboard and verified they  work as expected.
-- Verified that staff members can search for specific bookings by customer name or booking date.
-- Verified that staff members can access a list of approved bookings for the current day.
-- Verified that if a staff member searches for bookings by a specific user and no bookings are found, a message indicating "No bookings found for [user] is displayed.
-- Verified that if a staff member searches for bookings by a specific date/current day and no bookings are found, a message indicating "No bookings found for [date] is displayed.
-- verified that when a staff member attempts to access the booking link in the navigation bar, the system appropriately denies access and displays a notification message informing the staff member that they are not authorized to view the page.
-
-
-
-
-- There is only  r line too long in settings py file which can not be shortened.
-
-## Lighthouse testing
-
-Chrome DevTools Lighthouse was used to test Performance, Accessibility, Best Practices and SEO.
-- Desktop  Testing with [Chrome DevTools Lighthouse](https://developers.google.com/web/tools/lighthouse)
-
-
- <details>
-  <summary>lighthouse-Testing--Home-Desktop (click to expand)</summary>
-
-![Footer-Desktop](./docs/testing/lighthouse/dekstop-home.png)
-
-</details>
-
-
-- Mobile  Testing with [Chrome DevTools Lighthouse](https://developers.google.com/web/tools/lighthouse)
-
-<details>
- <summary>lighthouse-Testing-Home-Mobile (click to expand)</summary>
-
-![Footer-Mobile](./docs/testing/lighthouse/Mobile-Homepage.png)
-
-</details>
-
-
-### Account authentication testing with lighthouse:
-
-<details>
-  <summary>lighthouse-Testing-SignUp-Desktop (click to expand)</summary>
-
-![Signup-Desktop](./docs/testing/lighthouse/signup-desktop.png)
-
-</details>
-
-<details>
-  <summary>lighthouse-Testing-SignUp-Mobile (click to expand)</summary>
-
-![Signup-Mobile](./docs/testing/lighthouse/signup-mobile.png)
-
-</details>
-
-<details>
-  <summary>lighthouse-Testing-Verification-Sent(click to expand)</summary>
-
-![verification-sent](./docs/testing/lighthouse/verification-sent.png)
-
-</details>
-
-<details>
-  <summary>lighthouse-Testing-Confirm-Email-mobile (click to expand)</summary>
-
-![confirm-email-mobile](./docs/testing/lighthouse/confirm-email-mobile.png)
-
-</details>
-
-<details>
-  <summary>lighthouse-Testing-Confirm-Email-Desktop (click to expand)</summary>
-
-![confirm-email-desktop](./docs/testing/lighthouse/confirm-email-desktop.png)
-
-</details>
-
-<details>
-  <summary>lighthouse-Testing-Login-Mobile (click to expand)</summary>
-
-![Login-Mobile](./docs/testing/lighthouse/login-mobile.png)
-
-</details>
-
-<details>
-  <summary>lighthouse-Testing-Login-Desktop (click to expand)</summary>
-
-![Login-Desktop](./docs/testing/lighthouse/login-desktop.png)
-
-</details>
-
-<details>
-  <summary>lighthouse-Testing-Logout-Desktop (click to expand)</summary>
-
-![Logout-Desktop](./docs/testing/lighthouse/logout-desktop.png)
-
-</details>
-
-<details>
-  <summary>lighthouse-Testing-Logout-Mobile (click to expand)</summary>
-
-![Logout-Mobile](./docs/testing/lighthouse/logout-mobile.png)
-
-</details>
-
-
-<details>
- <summary>lighthouse-Testing-Pofile-page-Desktop (click to expand)</summary>
-
-![Profile-page-Desktop](./docs/testing/lighthouse/profile-page-lh-desktop.png)
-
-</details>
-
-<details>
- <summary>lighthouse-Testing-Pofile-page-Mobile (click to expand)</summary>
-
-![Profile-page-Mobile](./docs/testing/lighthouse/profile-page-lh-mobile.png)
-
-</details>
-
-<details>
- <summary>lighthouse-Testing-Delete-account-Desktop (click to expand)</summary>
-
-![Delete-account-Desktop](./docs/testing/lighthouse/delete-account-lh-desktop.png)
-
-</details>
-
-<details>
- <summary>lighthouse-Testing-Delete-account-Mobile (click to expand)</summary>
-
-![Delete-account-Mobile](./docs/testing/lighthouse/delete-account-lh-mobile.png)
-
-</details>
-
-<details>
-<summary>lighthouse-Testing-Update-profile-Desktop (click to expand)</summary>
-
-![Update-Profile-Desktop](./docs/testing/lighthouse/updateprofile-desktop.png)
-
-</details>
-
-
-<details>
-  <summary>lighthouse-Testing-Update-profile-Mobile (click to expand)</summary>
-
-![Update-Profile-Mobile](./docs/testing/lighthouse/updateprofile-mobile.png)
-
-</details>
-
-  
-
-<details>
-  <summary>lighthouse-Testing-Logout-Desktop (click to expand)</summary>
-
-![Logout-Desktop](./docs/testing/lighthouse/updateprofile-desktop.png)
-
-</details>
-
-<details>
-  <summary>lighthouse-Testing-Change-Password-Mobile (click to expand)</summary>
-
-![Change Password-Mobile](./docs/testing/lighthouse/changepassword-mobile.png)
-
-</details>
-
-<details>
-  <summary>lighthouse-Testing-Change-Password-Desktop (click to expand)</summary>
-
-![Change-Password-Desktop](./docs/testing/lighthouse/changepassword-desktop.png)
-
-</details>
-
-<details>
-  <summary>lighthouse-Testing-Password-Reset-Mobile (click to expand)</summary>
-
-![Password-Reset-Mobile](./docs/testing/lighthouse/passwordreset-mobile.png)
-
-</details>
-
-<details>
-  <summary>lighthouse-Testing-Password-Reset-Desktop (click to expand)</summary>
-
-![Password-Reset-Desktop](./docs/testing/lighthouse/passwordreset-desktop.png)
-
-</details>
-
-
-<details>
-  <summary>lighthouse-Testing-Password-Reset-form-mobile (click to expand)</summary>
-
-![Password-Reset-form-mobile](./docs/testing/lighthouse/password-reset-form-mobile.png)
-
-</details>
-
-<details>
-  <summary>lighthouse-Testing-Password-Reset-form-desktop (click to expand)</summary>
-
-![Password-Reset-form-desktop](./docs/testing/lighthouse/password-reset-form-desktop.png)
-
-</details>
-
-<details>
-  <summary>lighthouse-Testing-succesfully-reset-password (click to expand)</summary>
-
-![succesfully-reset-password](./docs/testing/lighthouse/succesfully-reset-password.png)
-
-</details>
-
-
-### Menu testing with lighthouse
-
-
-<details>
-  <summary>lighthouse-Testing-Menu-Desktop (click to expand)</summary>
-
-![Menu-Desktop](./docs/testing/lighthouse/menu-desktop.png)
-
-</details>
-
-
-<details>
-  <summary>lighthouse-Testing-Menu-Mobile (click to expand)</summary>
-
-![menu-mobile](./docs/testing/lighthouse/menu-mobile.png)
-
-</details>
-
-
-### Booking page testing with lighthouse
-
-<details>
-<summary>lighthouse-Testing-Booking page-Desktop (click to expand)</summary>
-
-![Booking-page-desktop](./docs/testing/lighthouse/booking-page-lh-desktop.png)
-
-</details>
-
-<details>
-<summary>lighthouse-Testing-Booking page-Mobile (click to expand)</summary>
-
-![Booking-page-Mobile](./docs/testing/lighthouse/booking-page-lh-mobile.png)
-
-</details>
-
-<details>
-<summary>lighthouse-Testing-Update-Booking-Desktop (click to expand)</summary>
-
-![Update-booking-desktop](./docs/testing/lighthouse/update-booking-lh-desktop.png)
-
-</details>
-
-<details>
-<summary>lighthouse-Testing-Update-Booking-Mobile (click to expand)</summary>
-
-![Update-booking-desktop](./docs/testing/lighthouse/update-booking-lh-mobile.png)
-
-</details>
-
-<details>
-<summary>lighthouse-Testing-Delete-Booking-Desktop (click to expand)</summary>
-
-![Delete-booking-desktop](./docs/testing/lighthouse/delete-booking-lh-desktop.png)
-
-</details>
-
-<details>
-<summary>lighthouse-Testing-Delete-Booking-Mobile (click to expand)</summary>
-
-![Delete-booking-Mobile](./docs/testing/lighthouse/delete-booking-lh-Mobile.png)
-
-</details>
-
-
-## staff dashboard testing with lighthouse
-
-
-<details>
-<summary>lighthouse-Testing-staff-dashboard-Mobile (click to expand)</summary>
-
-![staff-dashboard-Mobile](./docs/testing/lighthouse/dahsboard-mobile.png)
-
-</details>
-
-<details>
-<summary>lighthouse-Testing-staff-dashboard-Desktop (click to expand)</summary>
-
-![staff-dashboard-Desktop](./docs/testing/lighthouse/dahsboard-Desktop.png)
-
-</details>
-
-
-<Details>
-<summary>approved-bookings-by-date-Desktop (click to expand)</summary>
-
-![approved-bookings-by-date-Desktop](./docs/testing/lighthouse/search-by-date-desktop.png)
-
-</details>
-
-
-<details>
-<summary>approved-bookings-by-Name-Mobile (click to expand)</summary>
-
-![approved-bookings-by-date-Desktop](./docs/testing/lighthouse/search-by-name-mobile.png)
-
-</details>
-
-### validation testing
-
-
-
-- HTML
-
-  -During validation [W3C HTML Validator](https://validator.w3.org/) a few problems were presented in different html files but after correcting the relevant issues, no warnings or errors were shown.This problemss are mentioned in Bugs section.
-
-  ![html-validation-check](./docs/testing/validator-testing/html-validator.png)
-
-- CSS
-
-  - No errors were found when passing through the official [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) validator.
-
-  ![css-validation-check](./docs/testing/validator-testing/css-validator.png)
-
-- Js
-
-  - No errors were found when final passing through the official  [JSHint](https://jshint.com/) validator.
-
-![js-validation-check](./docs/testing/validator-testing/js-shint.png)
-
-
-PEP8:
-Before using the pep8 validator I ran autopep8 --in-place --aggressive --aggressive <file name> on all py files.
-
-Due to this, the only error I found was in settings.py with AUTH_PASSWORD_VALIDATORS .
-
-
-![auth-password-validators](./docs/testing/validator-testing/settings-file.png)
-
-I tried to solve this issue but Django seems to think shortening these lines is ill advisable. For this reason, I left them to be longer than 80 characters.All final python files presented no warnings or errors.
-
-![python-validation-check](./docs/testing/validator-testing/python-validator.png)
-
-
-
-### Browser Compatibility
-
-The site was tested on the following browsers and the appearance, functionality and, responsiveness were consistent throughout.
-
-Google Chrome
-Mozila firefox
-Microsoft Edge
-Safari
-
-### Bugs 
-
-### fixed
-
-HTML:
-
-During the HTML validation process, several errors were identified and resolved:
-
-1.Unclosed <div> Tags:
-
-Issue: The validation flagged unclosed <div> tags, which occurred due to reusing code blocks without removing unnecessary <div> tags.
-Resolution: The error was resolved by carefully reviewing and removing redundant <div> tags.
-
-2.Opening Tags Without Closing Tags:
-Issue: The validation detected opening tags without corresponding closing tags. This happened when a block of code was deleted, inadvertently removing a necessary closing <div> tag.
-Resolution: The error was resolved by reinstating the deleted closing <div> tag.
-Error: Start Tag <p> Seen in Table:
-
-3.Issue: The validation reported an error when a <p> tag was inadvertently placed inside a <table> element.
-Resolution: After recognizing the mistake, the <p> tag was moved outside the <table> tag, resolving the error.
-
-4.element p not allowed as child of element h4:
- The problem caused from the use of the {{ item.name | safe }} filter. Despite not including any <p> tags in the template:<h4>{{ item.name }}</h4> the rendered HTML was unexpectedly displaying as:<h4><p>item.name </p></h4> Although this filter was meant to render the content safely, it led to the inclusion of unwanted <p> tags.To resolve the issue, the | safe filter was replaced with | striptags, which effectively removed any HTML tags from the rendered output. This approach ensured that only the item names and ingredients were displayed within the <h4> elements, resolving the validation error.
-
-5.Mixed Content The page at was loaded over HTTPS but requested an insecure resource This request has been blocked the content must be served over HTTPS :
-While  testing the menu page, a "Mixed Content" error occurred in the browser console, indicating that the page was loaded over HTTPS but requested insecure resources, causing the browser to block them. To address this issue, I added the following code to the base HTML:<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> This directive instructs the browser to automatically upgrade any HTTP requests to HTTPS. also in menu html add crossorigin="anonymous" to all img tags.  As a result, the Mixed Content errors were resolved, and the Lighthouse Best Practices score improved from 68 to 100.
-
-6. On the booking page, the notification message about a submitted booking was incorrectly displayed on the left side instead of the center. To correct this issue, the Bootstrap class mx-auto was applied to the message div, ensuring it is horizontally centered on the page.
-
-#### Python
-During the Python code validation process, the following warnings were identified and promptly resolved:
-
-Blank Spaces:
-
-Issue: Blank spaces were detected within the code.
-Resolution: Extr blank spaces were removed from the codebase, ensuring cleaner and more consistent formatting.
-Trailing Spaces:
-Issue: Trailing spaces were present at the end of lines in the code.
-Resolution: Trailing spaces were eliminated from the code, enhancing readability and adhering to coding standards.
-Line Length Exceeded:
-Issue: Some lines in the code exceeded the recommended maximum line length.
-Resolution: Long lines were refactored or split into shorter segments.
-
-####  Functrionality testing
-
-1. Issue:
-When users registered with their email addresses, confirmation emails were not being sent.
-Cause:
-The email settings in the settings.py file were incomplete, missing necessary configurations for handling outgoing emails.
-Solution:
-To resolve this issue, I added the following settings in the settings.py file:
-EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-(replace console. with smtp to handle email on signing up for the issue)
-These additional settings specified the email backend as SMTP allowing emails to be sent out when users sign up..
-2. Issue:
-After the first registration, three messages were displayed together on homepage: one indicating a successful email sent to the address, another confirming successful registration, and the third indicating successful log in.
-
-Cause:
-The message display code was not properly structured, resulting in multiple messages appearing  together on the homepage.
-Solution:
-To address this issue:
-I added specific message display code to the verification_sent.html template to ensure that messages are only displayed on the appropriate page after email verification.
-I implemented separate message displays on the profile page to provide accurate feedback when the verification process is completed.
-
-3. Issue: During testing of the booking functionality, an issue was encountered where error handling only worked for users who had previously booked. New users attempting to book on dates that were already fully booked were still able to proceed with their booking.
-
-Addressing the Issue: To resolve this issue, I updated the booking_page view to include a new variable called new_booking. This variable checks whether the new booking aligns with existing bookings. Now, the system examines all existing bookings, and if the new booking does not exceed the capacity, it can be confirmed. This ensures that both existing and new users are properly restricted from booking on fully booked dates.
-4. During testing of the update booking page, two issues were encountered. The first issue was the inability to update only the number of people in a booking.
-
-Addressing the Issue:
-To resolve this issue, I modified the update booking system to specifically check whether only the number of people had been changed. This modification ensures that updates are accurately applied without requiring changes to other booking details.and user can update number of people without any problem.
-
-5. The second issue occurred when users attempted to update their details along with the number of people in a booking. Despite exceeding the maximum capacity, the booking was still updated.
-Addressing the Issue:
-To resolve this issue, I further modified the update booking system. Now, the system verifies whether the updated booking request exceeds the maximum capacity of people before saving the changes. If the capacity is exceeded, the booking is not saved and appropriate message displays to notify user.
-
-6. 
-Issue:
-During testing of the staff dashboard's search functionality by name, bookings were displayed even when entering just one letter from the name.
-
-Addressing the Issue:
-To enhance the search functionality, I updated the search_name view to ensure that bookings are only displayed when the entire name is entered.
-
-### Unfixed bugs
-There is no unfixed bugs.
-
-
-### future features
-
-# Deployment
-
-
-## Heroku Deployment
-
+### Heroku Deployment
 
 The project was deployed using [Heroku](https://id.heroku.com/login).
 
@@ -1114,22 +546,20 @@ After account setup, deployment steps are as follows:
 
 1. Select **New** in the top-right corner of your Heroku Dashboard, and select **Create new app** from the dropdown menu.
 2. App name must be unique, and then choose a region closest to you (EU or USA), and finally, select **Create App**.
-3.Navigate to the settings tab and click **Reveal config vars**  and add the config vars necessary for the project:
+3. Navigate to the settings tab and click **Reveal config vars**  and add the config vars necessary for the project:
  `CLOUDINARY_URL`(insert your own Cloudinary API key here )                        
  `DATABASE_URL`           (insert your own ElephantSQL database URL ) 
  `DISABLE_COLLECTSTATIC`  1 (temporary) 
  `SECRET_KEY`             (random secret key )                                  
  
- Also make sure you create Procfile and requirements.txt file.
+Also make sure you create Procfile and requirements.txt file.
 
 4. Navigate to the **Deploy** section by clicking the "Deploy" tab in the navbar, Select **GitHub** as the deployment method and click **Connect to GitHub**.
 5. Find the repository wehich you want to deploy and click on **connect**.
 6. Find button **Deploy Branch** at the bottom of page.
 7. After clicking **Deploy Branch** button it will take few minutes to deploy site and you will have ability to view it  clicking on **view** button.
 
-
-##  ElephantSQL Database
-
+###  ElephantSQL Database
 
 This project uses [ElephantSQL](https://www.elephantsql.com) for the PostgreSQL Database.
 
@@ -1143,23 +573,16 @@ To set up a database, please follow these steps:
 6. Click **Select Region**.
 7. Select a data center near you.
 8. Click **Review**, make sure that all details are correct and then click "Create instance".
-9.Once created, click on the new database name, where you can view the database URL and Password.
+9. Once created, click on the new database name, where you can view the database URL and Password.
 
-
-## Cloudinary Api
-
+### Cloudinary Api
 
 [Cloudinary](https://cloudinary.com/) is used in this project to store media assets. 
 
-
 Follow these steps to  create Cloudinary Api Key :
 
-
 1. Login/sign up to Cloudinary.
-2.On your Cloudinary  dashboard to view the **API Environment Variable**.
-
-
-
+2. On your Cloudinary  dashboard to view the **API Environment Variable**.
 
 ### Cloning the Repository
 
@@ -1176,7 +599,6 @@ You can clone the repository by following these steps:
 5. Change the current working directory to the one where you want the cloned directory
 6. In your IDE Terminal, type the following command to clone my repository:
   `git clone https://github.com/tamariam/restaurant-Tamariam`  then press Enterr.
-
 
 ### Forking the Repository
 
@@ -1208,17 +630,17 @@ To create a copy of the repository for viewing and editing without affecting the
 * Font awesome
   * All icons throughout the page.
 
-  
-# Credits
-* Balsamiq was used to create the wireframes.
-* [lucid.app](https://lucid.app/users/login#/login)
-* The site was developed using gitpod.
-* GitHub was used to store my repository.
+  # Credits
+
+* [Balsamiq](https://balsamiq.com/wireframes/) was used to create the wireframes.
+* [lucid.app](https://lucid.app/users/login#/login) was used to create ERD
+* The site was developed using [gitpod](https://www.gitpod.io/).
+* [GitHub](https://github.com/) was used to store my repository.
 * Responsive screenshot made using [amiresponsive.com](https://ui.dev/amiresponsive)
 * [Article on writing good user stories](https://www.industriallogic.com/blog/as-a-developer-is-not-a-user-story/)
 * [coolers.co](https://coolors.co/603f3f-a0acca-e4b67c-de9f13-000000) was used to generate color scheme.
 * [eightshapes-contast grid](https://contrast-grid.eightshapes.com/) to check contrast of colours.
-* * Fonts were taken from [Google Fonts](https://fonts.google.com/)
+* Fonts were taken from [Google Fonts](https://fonts.google.com/)
 * Images:
   * for all images used for site  taken from [pixels.com](https://www.pexels.com/) 
 * Multiple videos sourced from youtube :
@@ -1231,7 +653,7 @@ To create a copy of the repository for viewing and editing without affecting the
     * [Bootstrap Documentation](https://getbootstrap.com/)
 
 
-## Acknowledgements
+# Acknowledgements
 
 This site was developed as a fourth portfolio project for the [Code Institute](https://codeinstitute.net/global/) course in Full Stack Software Development. I would like to thank the following for all of the support throughout the development phase.
 
