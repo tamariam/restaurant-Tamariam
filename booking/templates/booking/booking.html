@@ -1,5 +1,7 @@
 {% extends "base.html" %}
+
 {% load crispy_forms_tags %}
+
 {% block content %}
 
 <!-- display django messages -->
@@ -13,9 +15,10 @@ fade show " id="msg" role="alert">
 </div>
 {% endfor %}  
 {% endif %}
+
 <div class="container-fluid mt-3 ">
     <div class="row d-flex justify-content-center align-items-center">
-    <div class="col-md-7 montserrat"> 
+    <section class="col-md-7 montserrat"> 
         <h2 class="text-center booking-h2 mb-3 ">Reservation Guidelines</h2>
     <h3 class="text-center">Please note the following instructions before proceeding:</h3>
     <hr>
@@ -25,10 +28,10 @@ fade show " id="msg" role="alert">
         <li>Upon submitting your booking request, you will receive feedback from us regarding the status of your booking,If you do not get any feedback from us within 24 hours, please call us.</li>
         <li>You can also check the status of your booking in the "My Bookings" section of your profile page.</li>
     </ul>
-    </div>
+</section>
     </div>
     <div class="row justify-content-center align-items-center">
-        <div class="col-md-7"> 
+        <section class="col-md-7"> 
             <form method="post" action="{% url 'booking' %}">
                 <h2 class="text-center booking-h2 mb-3">Book a Table</h2>
                 {% csrf_token %}
@@ -38,7 +41,7 @@ fade show " id="msg" role="alert">
                 <button onclick="window.history.back();" class="btn-danger rounded p-2 booking-button" type="button">Go Back</button>
                 </div>
             </form>
-        </div>
+        </section>
         </div>
     </div>
     

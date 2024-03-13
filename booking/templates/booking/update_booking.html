@@ -1,6 +1,9 @@
 {% extends "base.html" %}
+
 {% load i18n %}
+
 {% load crispy_forms_tags %} 
+
 {% block content %}
 
 <div class=" text-centercol-md-2 d-flex justify-content-center align-items-center">
@@ -27,7 +30,7 @@ data-bs-dismiss="alert" aria-label="Close"></button>
   {% csrf_token %}
   {{ form|crispy }}
 <button type="submit" class="btn-success rounded p-2">Save</button>
-<button onclick="window.history.back();" class="btn-danger rounded p-2" type="button">Cancel</button>
+<button onclick="window.history.back();" class="btn-danger rounded p-2" type="button">Go back</button>
 </form>
 </div>
     </div> 

@@ -91,15 +91,16 @@ def booking_page(request):
 
 def update_booking(request, pk):
     """
-        Update a booking view:
-        - Updates the booking with the provided primary key.
-        - Performs additional validation to ensure the user does not:
-        - Update the booking with a date or time that overlaps with existing
-        'bookings.
-        - Exceed the maximum capacity for the requested number of people.
-        - Displays error messages if the validation fails.
-        - Redirects the user to the profile page upon successful booking'
-        ' update.
+    Update a booking view:
+    - Updates the booking with the provided primary key.
+    - Performs additional validation to ensure the user does not:
+    - Update the booking with a date or time that overlaps with existing '
+    'bookings.
+    - Exceed the maximum capacity for the requested number of people.
+    - Attempt to book a time slot on a specific date that has already been '
+    ' booked by him.
+    - Displays error messages if the validation fails.
+    - Redirects the user to the profile page upon successful booking update.
     """
     booking = get_object_or_404(Booking, id=pk)
     if request.method == "POST":
@@ -110,8 +111,8 @@ def update_booking(request, pk):
             if (new_booking.date == booking.date and
                     new_booking.time == booking.time):
                 current_bookings = Booking.objects.filter(
-                 date=new_booking.date, status="approved"
-                )
+                    date=new_booking.date, status="approved"
+                ).exclude(id=booking.id)
                 total_people_booked = sum(
                     booking.num_of_people for booking in current_bookings
                 )
@@ -127,10 +128,25 @@ def update_booking(request, pk):
                     messages.error(
                         request,
                         'Sorry, your booking request exceeds '
-                        'the maximum capacity for this date. Please  '
-                        'fewer people or choose another date or time.'
+                        'the maximum capacity for this date. Please '
+                        'choose fewer people or choose another date or time.'
                     )
-                # If date and time are the same, only update number of people
+                elif Booking.objects.filter(
+                    user=request.user,
+                        date=new_booking.date,
+                        time=new_booking.time).exclude(id=booking.id).exists():
+                    messages.error(
+                        request,
+                        'You already have a booking for this date and time. '
+                        'Please choose another time slot.'
+                    )
+
+                else:
+                    # Update booking details and save to database
+                    booking.num_of_people = new_booking.num_of_people
+                    booking.save()
+                    messages.success(request, 'Booking updated successfully')
+                    return redirect('profile_page')
             else:
                 # Update booking details and save to database
                 booking.num_of_people = new_booking.num_of_people
