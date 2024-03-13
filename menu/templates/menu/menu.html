@@ -21,7 +21,7 @@
   </div>
 
 <!-- Starters Section -->
-<div class="col-md-6"> 
+<section class="col-md-6"> 
           <h2 id="starter"  class="bg-danger p-2 rounded lobster ">Starters</h2>
         {% if starters %}
           {% for item in starters %}
@@ -48,10 +48,10 @@
         {% endif %}
           {% endfor %}
         {% endif %}
-       </div>  
+</section>  
 
 <!-- Main Course Section -->
-<div class="col-md-6  ">
+<section class="col-md-6  ">
         <h2 id="main-course" class="bg-danger p-2 rounded  lobster">Main Course</h2>
         {% if mains %}
           {% for item in mains %}
@@ -80,10 +80,10 @@
         {% endif %}
           {% endfor %}
         {% endif %}
-      </div>
+</section>
 
   <!-- Desserts Section -->
-<div class="col-md-5 mx-auto ">
+<section class="col-md-5 mx-auto ">
         <h2 id="dessert" class="bg-danger p-2 rounded mt-2 lobster">Desserts</h2>
         {% if desserts %}
           {% for item in desserts %}
@@ -111,8 +111,8 @@
         {% endif %}
           {% endfor %}
         {% endif %}
-      </div>
-  </div>
+</section>
+    </div>
 </div>
 
 {% endblock content %}

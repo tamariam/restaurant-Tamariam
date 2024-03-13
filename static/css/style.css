@@ -20,8 +20,8 @@ Add these classes to elements to apply specific font families  */
 }
 
 /* styles for mobile screens */ 
-/* styles for footer and navbar*/
-/*give styles to Logo *  */ 
+
+/*give styles to Logo */ 
 .navbar-brand{
     color:red !important;
     font-size:40px;
@@ -160,6 +160,7 @@ Add these classes to elements to apply specific font families  */
     border:none;
     
 }
+
 /* give styles to form elements */
 .login-container{
     background-color: #f5cac3;
@@ -169,12 +170,14 @@ Add these classes to elements to apply specific font families  */
     font-size:30px;
     font-weight:700;
 }
+
 .form-text{
     font-size:18px;
     font-weight:600;
      width:90%; 
     color:black;
 }
+
 .sign-up{
     text-decoration: none;
     font-size:20px;
@@ -192,7 +195,7 @@ form{
     border-radius:9px;
 }
 
- form label{
+form label{
 font-size:20px;
 font-weight:600;
 text-align:Center;
@@ -218,7 +221,7 @@ form input:hover{
     border:2px solid red;;
 }
 
-/* / give style to user-profile buttons */
+/* give style to user-profile buttons */
 .btn-link{
     text-decoration:none;
     text-align:Center;

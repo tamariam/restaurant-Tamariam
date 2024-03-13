@@ -10,18 +10,18 @@ Add these classes to elements to apply specific font families  */
 .lobster{
     font-family:"Lobster", cursive;
 }
+
 .montserrat{
     font-family:'Montserrat', sans-serif;
 }
+
 .dancing-script{
     font-family:"Dancing-Script",cursive, sans-serif;
 }
 
-/* Common styles for mobile ,tablet and desktop screens */
-/* styles for base html:nav and footer  */
+/* styles for mobile screens */ 
 
-
-/*give styles for Logo *  */ 
+/*give styles to Logo */ 
 .navbar-brand{
     color:red !important;
     font-size:40px;
@@ -88,10 +88,6 @@ Add these classes to elements to apply specific font families  */
     background-position:center;
     width:100vw;
     height:100%;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
    } 
 
 /* styling main heading */
@@ -164,6 +160,7 @@ Add these classes to elements to apply specific font families  */
     border:none;
     
 }
+
 /* give styles to form elements */
 .login-container{
     background-color: #f5cac3;
@@ -173,12 +170,14 @@ Add these classes to elements to apply specific font families  */
     font-size:30px;
     font-weight:700;
 }
+
 .form-text{
     font-size:18px;
     font-weight:600;
      width:90%; 
     color:black;
 }
+
 .sign-up{
     text-decoration: none;
     font-size:20px;
@@ -196,7 +195,7 @@ form{
     border-radius:9px;
 }
 
- form label{
+form label{
 font-size:20px;
 font-weight:600;
 text-align:Center;
@@ -222,7 +221,7 @@ form input:hover{
     border:2px solid red;;
 }
 
-/* / give style to user-profile buttons */
+/* give style to user-profile buttons */
 .btn-link{
     text-decoration:none;
     text-align:Center;

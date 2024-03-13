@@ -3,7 +3,6 @@ from .views import dashboard_page
 from .views import approve_booking
 from .views import reject_booking, search_name, search_date, today_bookings
 
-
 urlpatterns = [
     path("dashboard/", dashboard_page, name='dashboard'),
     path("approve/booking/<int:pk>/", approve_booking, name='approve'),
