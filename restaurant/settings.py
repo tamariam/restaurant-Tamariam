@@ -32,7 +32,7 @@ SECRET_KEY = 'SECRET_KEY = os.environ.get("SECRET_KEY")'
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    '8000-tamariam-restauranttama-644kgenlgv6.ws-eu109.gitpod.io',
+    '8000-tamariam-restauranttama-644kgenlgv6.ws-eu110.gitpod.io',
     '.herokuapp.com'
 ]
 
